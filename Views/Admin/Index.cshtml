@@ -1,0 +1,492 @@
+﻿@model babiltr.Models.Admin.AdminStatsViewModel
+@using Newtonsoft.Json
+<!DOCTYPE html>
+@{
+    Layout = "~/Views/Shared/adminLayout.cshtml";
+}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/adminthema/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="~/adminthema/assets/img/favicon.png">
+    <title>
+        BabilTR Admin Sayfası
+    </title>
+   
+</head>
+
+<body class="g-sidenav-show  bg-gray-200">
+    <div class="menu-extras d-lg-none">
+        <div class="menu-item">
+            <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                <div class="lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="/Admin/Index">Pano</a></li>
+            <li><a href="/Admin/AllUsers">Kullanıcılar</a></li>
+            <li><a href="/Admin/AllJobs">İş İlanları</a></li>
+            <li><a href="/Admin/AllApplications">Başvurular</a></li>
+            <li><a href="/Admin/AllMessages">Destek Talepleri</a></li>
+            <li><a href="/Admin/Commission">Ücretlendirme</a></li>
+            <li><a href="/Blog/BlogAdd">Blog Ekle</a></li>
+            <li><a href="/Account/RegisterAdmin">Admin Kayıt</a></li>
+            <li><a href="/Home/MainPage">Ana Menüye Dön</a></li>
+            <li><a href="/Account/Logout">Çıkış Yap</a></li>
+        </ul>
+    </div>
+
+    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+        <div class="sidenav-header">
+            <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+            <a class="navbar-brand m-0" href="/Admin/Index">
+                <img src="~/images/logos/babillogoligth.png" class="navbar-brand-img h-100" alt="main_logo">
+                <span class="ms-1 font-weight-bold text-white mt-2">Admin Pano</span>
+            </a>
+        </div>
+        <hr class="horizontal light mt-0 mb-2">
+        <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white active bg-gradient-white" href="/Admin/Index">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">dashboard</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Pano</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Admin/AllUsers">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">person</i> 
+                        </div>
+                        <span class="nav-link-text ms-1">Kullanıcılar</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Admin/AllJobs">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">work</i> 
+                        </div>
+                        <span class="nav-link-text ms-1">İş İlanları</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Admin/AllApplications">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">description</i> 
+                        </div>
+                        <span class="nav-link-text ms-1">Başvurular</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Admin/AllMessages">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">message</i> 
+                        </div>
+                        <span class="nav-link-text ms-1">Destek Talepleri</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Admin/Commission">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">attach_money</i> 
+                        </div>
+                        <span class="nav-link-text ms-1">Ücretlendirme</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Blog/BlogAdd">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">post_add</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Blog Ekle</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Account/RegisterAdmin">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">person_add</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Admin Kayıt</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Home/MainPage">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">home</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Ana Menüye Dön</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="/Account/Logout">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">login</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Çıkış Yap</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <!-- Navbar -->
+        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
+            <div class="container-fluid py-1 px-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                        <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Sayfalar</a></li>
+                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Pano</li>
+                    </ol>
+                    <h6 class="font-weight-bolder mb-0">Pano</h6>
+                </nav>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+
+        <div class="container-fluid py-4">
+            <div class="row">
+                <!-- Users Card -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <div class="card-header p-3 pt-2">
+                            <div class="icon icon-lg icon-shape bg-gradient-danger shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+                                <i class="material-icons opacity-10">person</i>
+                            </div>
+                            <div class="text-end pt-1">
+                                <p class="text-sm mb-0 text-capitalize">Kullanıcılar</p>
+                                <h4 class="mb-0">@Model.TotalUsers</h4>
+                            </div>
+                        </div>
+                        <hr class="dark horizontal my-0">
+                        <div class="card-footer p-3 text-end">
+                            <p class="mb-0">
+                                @if (Model.UserGrowth > 0)
+                                {
+                                    <span class="text-success text-sm font-weight-bolder">@Model.UserGrowth Kişilik Artış </span>
+                                }
+                                else
+                                {
+                                    <span class="text-muted text-sm font-weight-bolder">No change </span>
+                                }
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jobs Card -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <div class="card-header p-3 pt-2">
+                            <div class="icon icon-lg icon-shape bg-gradient-info shadow-primary text-center border-radius-xl mt-n4 position-absolute">
+                                <i class="material-icons opacity-10">work</i>
+                            </div>
+                            <div class="text-end pt-1">
+                                <p class="text-sm mb-0 text-capitalize">İşler</p>
+                                <h4 class="mb-0">@Model.TotalJobs</h4>
+                            </div>
+                        </div>
+                        <hr class="dark horizontal my-0">
+                        <div class="card-footer p-3 text-end">
+                            <p class="mb-0">
+                                @if (Model.JobGrowth > 0)
+                                {
+                                    <span class="text-success text-sm font-weight-bolder">@Model.JobGrowth İş Artışı </span>
+                                }
+                                else if (Model.JobGrowth < 0)
+                                {
+                                    <span class="text-danger text-sm font-weight-bolder">@Model.JobGrowth İş Azalışı </span>
+                                }
+                                else
+                                {
+                                    <span class="text-muted text-sm font-weight-bolder">No change </span>
+                                }
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Applications Card -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <div class="card-header p-3 pt-2">
+                            <div class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
+                                <i class="material-icons opacity-10">description</i>
+                            </div>
+                            <div class="text-end pt-1">
+                                <p class="text-sm mb-0 text-capitalize">Başvurular</p>
+                                <h4 class="mb-0">@Model.TotalApplications</h4>
+                            </div>
+                        </div>
+                        <hr class="dark horizontal my-0">
+                        <div class="card-footer p-3 text-end">
+                            <p class="mb-0">
+                                @if (Model.ApplicationGrowth > 0)
+                                {
+                                    <span class="text-success text-sm font-weight-bolder">@Model.ApplicationGrowth Başvuru Artışı </span>
+                                }
+                                else if (Model.ApplicationGrowth < 0)
+                                {
+                                    <span class="text-danger text-sm font-weight-bolder">@Model.ApplicationGrowth Başvuru Azalışı </span>
+                                }
+                                else
+                                {
+                                    <span class="text-muted text-sm font-weight-bolder">No change </span>
+                                }
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="row mt-4">
+                <!-- Users Chart -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card z-index-2">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                            <div class="bg-gradient-danger shadow-dark border-radius-lg py-3 pe-1">
+                                <div class="chart">
+                                    <canvas id="chart-users" class="chart-canvas" height="170"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="mb-0">Kullanıcılar</h6>
+                            <p class="text-sm">Haftalık Kullanıcı Artışı</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jobs Chart -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card z-index-2">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                            <div class="bg-gradient-info shadow-pink border-radius-lg py-3 pe-1">
+                                <div class="chart">
+                                    <canvas id="chart-jobs" class="chart-canvas" height="170"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="mb-0">İşler</h6>
+                            <p class="text-sm">Haftalık İş Artışı</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Applications Chart -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card z-index-2">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                            <div class="bg-gradient-success shadow-success border-radius-lg py-3 pe-1">
+                                <div class="chart">
+                                    <canvas id="chart-applications" class="chart-canvas" height="170"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="mb-0">Başvurular</h6>
+                            <p class="text-sm">Haftalık Başvuru Artışı</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="~/adminthema/assets/js/plugins/chartjs.min.js"></script>
+    <script>
+        // Kullanıcılar Chart
+        var ctxUsers = document.getElementById("chart-users").getContext("2d");
+        new Chart(ctxUsers, {
+            type: "bar",
+            data: {
+                labels: ["Pts", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"],
+                datasets: [{
+                    label: "Kullanıcılar",
+                    backgroundColor: "rgba(255, 255, 255, 1)", // Renk
+                    data: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.WeeklyUsers)),
+                    maxBarThickness: 20, // Oval barlar için kalınlık artırıldı
+                    borderRadius: 10 // Oval görünüm için kenar yuvarlama
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        labels: {
+                            font: {
+                                weight: 'bold' // Kalın font
+                            },
+                            color: "#fff" // Beyaz yazı rengi
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            drawBorder: false,
+                            color: 'rgba(255, 255, 255, .2)',
+                            borderDash: [5, 5]
+                        },
+                        ticks: {
+                            color: "#fff" // Beyaz yazı rengi
+                        },
+                    },
+                    x: {
+                        grid: {
+                            drawBorder: false,
+                            display: false,
+                            borderDash: [5, 5]
+                        },
+                        ticks: {
+                            color: '#fff', // Beyaz yazı rengi
+                            font: {
+                                weight: 'bold' // Kalın font
+                            }
+                        }
+                    },
+                },
+            },
+        });
+
+        // İşler Chart
+        var ctxJobs = document.getElementById("chart-jobs").getContext("2d");
+        new Chart(ctxJobs, {
+            type: "bar",
+            data: {
+                labels: ["Pts", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"],
+                datasets: [{
+                    label: "İşler",
+                    backgroundColor: "rgba(255, 255, 255, 1)", // Renk
+                    data: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.WeeklyJobs)),
+                    maxBarThickness: 20, // Oval barlar için kalınlık artırıldı
+                    borderRadius: 10 // Oval görünüm için kenar yuvarlama
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        labels: {
+                            font: {
+                                weight: 'bold' // Kalın font
+                            },
+                            color: "#fff" // Beyaz yazı rengi
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            drawBorder: false,
+                            color: 'rgba(255, 255, 255, .2)',
+                            borderDash: [5, 5]
+                        },
+                        ticks: {
+                            color: "#fff" // Beyaz yazı rengi
+                        },
+                    },
+                    x: {
+                        grid: {
+                            drawBorder: false,
+                            display: false,
+                            borderDash: [5, 5]
+                        },
+                        ticks: {
+                            color: '#fff', // Beyaz yazı rengi
+                            font: {
+                                weight: 'bold' // Kalın font
+                            }
+                        }
+                    },
+                },
+            },
+        });
+
+        // Başvurular Chart
+        var ctxApplications = document.getElementById("chart-applications").getContext("2d");
+        new Chart(ctxApplications, {
+            type: "bar",
+            data: {
+                labels: ["Pts", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"],
+                datasets: [{
+                    label: "Başvurular",
+                    backgroundColor: "rgba(255, 255, 255, 1)", // Renk
+                    data: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.WeeklyApplications)),
+                    maxBarThickness: 20, // Oval barlar için kalınlık artırıldı
+                    borderRadius: 10 // Oval görünüm için kenar yuvarlama
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        labels: {
+                            font: {
+                                weight: 'bold' // Kalın font
+                            },
+                            color: "#fff" // Beyaz yazı rengi
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            drawBorder: false,
+                            color: 'rgba(255, 255, 255, .2)',
+                            borderDash: [5, 5]
+                        },
+                        ticks: {
+                            color: "#fff" // Beyaz yazı rengi
+                        },
+                    },
+                    x: {
+                        grid: {
+                            drawBorder: false,
+                            display: false,
+                            borderDash: [5, 5]
+                        },
+                        ticks: {
+                            color: '#fff', // Beyaz yazı rengi
+                            font: {
+                                weight: 'bold' // Kalın font
+                            }
+                        }
+                    },
+                },
+            },
+        });
+    </script>
+    <script>
+        function toggleMenu() {
+        const menu = document.querySelector('.mobile-menu');
+        if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+        } else {
+        menu.style.display = 'flex';
+        }
+        }
+    </script>
+</body>
+
+</html>

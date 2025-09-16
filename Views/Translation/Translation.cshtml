@@ -1,0 +1,174 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDark.cshtml";
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Job Listing Bootstrap 5 Template" />
+    <meta name="keywords" content="Onepage, creative, modern, bootstrap 5, multipurpose, clean, Job Listing, Job Board, Job, Job Portal" />
+    <meta name="author" content="Shreethemes" />
+    <meta name="website" content="https://shreethemes.in" />
+    <meta name="email" content="support@shreethemes.in" />
+    <meta name="version" content="1.0.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="~/css/translation.css" rel="stylesheet" />
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <section class="section">
+        <div class="alert alert-warning alert-dismissible fade show alert-warning-custom mb-3" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
+                <use xlink:href="#exclamation-triangle-fill" />
+            </svg>
+            <div class="alert-content">
+                <strong class="alert-heading">Dikkat:</strong>
+                <span class="alert-text">Diğer sayfaya geçmeden önce kaydettiğinizden emin olun.</span>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+
+        <div class="info-container">
+            <div>
+                <strong>İş Başlığı:</strong> &nbsp; @ViewBag.JobTitle
+            </div>
+            <div class="language-container">
+                <strong>Kaynak Dil:</strong> @ViewBag.OriginalLanguage
+                <i class="fas fa-arrow-right"></i>
+                <strong>Hedef Dil:</strong> @ViewBag.TargetLanguage
+            </div>
+            <div class="progress-container">
+                <strong>İlerleme:</strong>
+
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                         style="width: @ViewBag.CompletionPercentage%;" aria-valuenow="@ViewBag.CompletionPercentage"
+                         aria-valuemin="0" aria-valuemax="100">
+                        @ViewBag.CompletionPercentage%
+                    </div>
+                </div>
+         
+            </div>
+        </div>
+
+        <div class="tablecontainer">
+            <table id="translationTable" class="display table">
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">No</th>
+                        <th style="width: 45%;">Kaynak Metin</th>
+                        <th style="width: 45%;">Hedef Metin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+            <!-- Save Button -->
+            <div class="save-button">
+                <button id="saveTranslations" class="btn btn-primary">Kaydet</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery and DataTables JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var jobId = @ViewBag.JobId;
+                   $('#translationTable').DataTable({
+            ajax: {
+                url: '@Url.Action("TranslationTable", "Translation")',
+                type: 'GET',
+                data: { id: jobId },
+                dataSrc: 'data'
+            },
+            columns: [
+                {
+                    "data": null,
+                    "render": function (data, type, row, meta) {
+                        return `<button class="toggle-row btn btn-link" data-row-id="${meta.row}">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button> ${meta.row + 1}`;
+                    },
+                    "className": "text-center",
+                    "width": "10%"
+                },
+                { data: 'originalSentence', width: "45%", className: "collapsible-content" },
+                {
+                    data: 'translatedSentence',
+                    render: function (data, type, row) {
+                        return `<input type="text" class="form-control translation-input"
+                                         data-segment-id="${row.id}"
+                                         data-job-id="${jobId}"
+                                         value="${data || ''}"
+                                         placeholder="Çeviriyi girin" />`;
+                    },
+                    className: "collapsible-content"
+                }
+            ],
+            paging: true,
+            searching: true,
+            ordering: true,
+            language: {
+                url: '//cdn.datatables.net/plug-ins/2.1.8/i18n/tr.json',
+            },
+            responsive: true
+        });
+
+        // Aç/Kapa buton işlevi
+        $('#translationTable').on('click', '.toggle-row', function () {
+            var rowId = $(this).data('row-id');
+            var $icon = $(this).find('i');
+
+            // Hedef satırdaki collapseable-content sınıfına sahip hücreleri gizle/göster
+            $('#translationTable tbody tr').eq(rowId).find('.collapsible-content').toggle();
+
+            // İkonu değiştir
+            if ($icon.hasClass('fa-chevron-down')) {
+                $icon.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+            } else {
+                $icon.removeClass('fa-chevron-up').addClass('fa-chevron-down');
+            }
+        });
+
+
+            // Save translations
+            $('#saveTranslations').click(function () {
+                var translations = [];
+                $('input[data-segment-id]').each(function () {
+                    var segmentId = $(this).data('segment-id');
+                    var translatedText = $(this).val() || "";
+                    
+                    translations.push({JobId: jobId, Id: segmentId, TranslatedSentence: translatedText });
+                });
+
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("UpdateSegment", "Translation")',
+                    data: JSON.stringify(translations),
+                    contentType: 'application/json',
+                    success: function (response) {
+                        alert('Çeviriler başarıyla kaydedildi!');
+                    },
+                    error: function (xhr) {
+                        alert('Çeviriler kaydedilirken bir hata oluştu: ' + xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
+</body>
+</html>

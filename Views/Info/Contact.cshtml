@@ -1,0 +1,176 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model babiltr.EntityLayer.Contact
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BabilTR Bize Ulaşın Sayfası</title>
+    <meta name="description" content="Job Listing Bootstrap 5 Template" />
+    <meta name="keywords" content="Onepage, creative, modern, bootstrap 5, multipurpose, clean, Job Listing, Job Board, Job, Job Portal" />
+    <meta name="author" content="Shreethemes" />
+    <meta name="website" content="https://shreethemes.in" />
+    <meta name="email" content="support@shreethemes.in" />
+    <meta name="version" content="1.0.0" />
+</head>
+
+<body>
+    <!-- Hero Start -->
+    <section class="bg-half-170 d-table w-100" style="background: url('/thema/jobnova_v1.0.1/html/images/hero/bg.jpg');">
+        <div class="bg-overlay bg-gradient-overlay"></div>
+        <div class="shooting-stars">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="container">
+            <div class="row mt-5 justify-content-center">
+                <div class="col-12">
+                    <div class="title-heading text-center">
+                        <p class="text-white-50 para-desc mx-auto mb-0">Bizimle İletişime Geçin!</p>
+                        <h5 class="heading fw-semibold mb-0 sub-heading text-white title-dark">Bize Ulaşın</h5>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+    </section><!--end section-->
+    <div class="position-relative">
+        <div class="shape overflow-hidden text-white">
+            <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <!-- Start -->
+    <section class="section pb-0">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="/thema/jobnova_v1.0.1/html/images/svg/contact.svg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4 rounded shadow ms-lg-5">
+                        <h4>Bizimle İletişime Geçin!</h4>
+                        @if (ViewBag.Message != null)
+                        {
+                            <p class="text-success">@ViewBag.Message</p>
+                        }
+                        <form class="mt-4" method="post" name="contactForm" action="/Info/Contact">
+                            <p class="mb-0" id="error-msg"></p>
+                            <div id="simple-msg"></div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">Adınız <span class="text-danger">*</span></label>
+                                        <input name="Name" id="name" type="text" class="form-control" placeholder="Adınız :">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">Email Adresiniz <span class="text-danger">*</span></label>
+                                        <input name="Email" id="email" type="email" class="form-control" placeholder="Email :">
+                                    </div>
+                                </div><!--end col-->
+
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">Konu</label>
+                                        <input name="Subject" id="subject" class="form-control" placeholder="Konu :">
+                                    </div>
+                                </div><!--end col-->
+
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">Mesajınız <span class="text-danger">*</span></label>
+                                        <textarea name="Comments" id="comments" rows="4" class="form-control" placeholder="Mesaj :"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-grid">
+                                        <button type="submit" id="submit" name="send" class="btn btn-primary">Mesaj Gönder</button>
+                                    </div>
+                                </div><!--end col-->
+                            </div><!--end row-->
+                        </form>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+
+        <div class="container mt-100 mt-60">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="position-relative features text-center mx-lg-4 px-md-1">
+                        <div class="feature-icon bg-soft-primary rounded shadow mx-auto position-relative overflow-hidden d-flex justify-content-center align-items-center">
+                            <i data-feather="phone" class="fea icon-ex-md"></i>
+                        </div>
+
+                        <div class="mt-4">
+                            <h5 class="mb-3">Telefon</h5>
+                            <p class="text-muted">Her türlü sorununuz için bizi arayarak destek alabilirsiniz</p>
+                            <a href="tel:+90 506 480 99 71" class="text-primary">+90 506 480 99 71</a>
+                        </div>
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-md-4">
+                    <div class="position-relative features text-center mx-lg-4 px-md-1">
+                        <div class="feature-icon bg-soft-primary rounded shadow mx-auto position-relative overflow-hidden d-flex justify-content-center align-items-center">
+                            <i data-feather="mail" class="fea icon-ex-md"></i>
+                        </div>
+
+                        <div class="mt-4">
+                            <h5 class="mb-3">Email</h5>
+                            <p class="text-muted">Bize email yoluyla ulaşabilir, sorularınızı iletebilirsiniz</p>
+                            <a href="mailto:bilgi@babiltr.com" class="text-primary">bilgi@babiltr.com</a>
+                        </div>
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-md-4">
+                    <div class="position-relative features text-center mx-lg-4 px-md-1">
+                        <div class="feature-icon bg-soft-primary rounded shadow mx-auto position-relative overflow-hidden d-flex justify-content-center align-items-center">
+                            <i data-feather="help-circle" class="fea icon-ex-md"></i>
+                        </div>
+
+                        <div class="mt-4">
+                            <h5 class="mb-3">Sıkça Sorulan Sorular</h5>
+                            <p class="text-muted">Size yardımcı olabilecek en çok sorulan sorulara göz atın</p>
+                            <a href="/Info/SSS" class="text-primary">SSS'yi Görüntüle</a>
+                        </div>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+        <br />
+    </section><!--end section-->
+    <!-- End -->
+    <!-- Back to top -->
+    <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top rounded fs-5"><i data-feather="arrow-up" class="fea icon-sm align-middle"></i></a>
+    <!-- Back to top -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const stars = document.querySelectorAll(".shooting-stars span");
+            stars.forEach(star => {
+                star.style.setProperty('--random-x', Math.random());
+                star.style.setProperty('--random-y', Math.random());
+            });
+        });
+    </script>
+</body>
+</html>
+

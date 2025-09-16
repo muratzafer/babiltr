@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Geçici olarak implicit static web assets'i kapatıp kopyalamayı biz yöneteceğiz -->
+    <DisableImplicitStaticWebAssets>true</DisableImplicitStaticWebAssets>
+    <GenerateStaticWebAssetsDevelopmentManifest>false</GenerateStaticWebAssetsDevelopmentManifest>
+    <StaticWebAssetsEnabled>false</StaticWebAssetsEnabled>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\themeforest-gwzfhjYU-jobnova-job-board-job-portal-and-job-listing-bootstrap-5-template\**" />
+    <Compile Remove="wwwroot\themeforest-OhqfVhDC-freeio-freelance-marketplace-nextjs-template\**" />
+    <Content Remove="wwwroot\themeforest-gwzfhjYU-jobnova-job-board-job-portal-and-job-listing-bootstrap-5-template\**" />
+    <Content Remove="wwwroot\themeforest-OhqfVhDC-freeio-freelance-marketplace-nextjs-template\**" />
+    <EmbeddedResource Remove="wwwroot\themeforest-gwzfhjYU-jobnova-job-board-job-portal-and-job-listing-bootstrap-5-template\**" />
+    <EmbeddedResource Remove="wwwroot\themeforest-OhqfVhDC-freeio-freelance-marketplace-nextjs-template\**" />
+    <None Remove="wwwroot\themeforest-gwzfhjYU-jobnova-job-board-job-portal-and-job-listing-bootstrap-5-template\**" />
+    <None Remove="wwwroot\themeforest-OhqfVhDC-freeio-freelance-marketplace-nextjs-template\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\Files\OriginalFiles\DbContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.1.1" />
+    <PackageReference Include="Hangfire" Version="1.8.17" />
+    <PackageReference Include="Hangfire.MySqlStorage" Version="2.0.3" />
+    <PackageReference Include="Hangfire.SqlServer" Version="1.8.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+    <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.8" />
+    <PackageReference Include="X.PagedList.Mvc.Core" Version="10.5.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\CV\" />
+    <Folder Include="wwwroot\Files\OriginalFiles\" />
+    <Folder Include="wwwroot\Files\TranslatedFiles\" />
+    <Folder Include="wwwroot\Images\BlogPictures\" />
+    <Folder Include="wwwroot\Images\PP\" />
+    <Folder Include="wwwroot\logs\" />
+  </ItemGroup>
+
+  <!-- <ItemGroup>
+    <None Include="wwwroot\adminthema\.github\workflows\main.yml" />
+  </ItemGroup> -->
+
+  <ItemGroup>
+    <Content Update="wwwroot\css\admin.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+
+</Project>

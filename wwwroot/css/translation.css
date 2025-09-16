@@ -1,0 +1,212 @@
+#tablecontainer {
+    max-width: 700px; /* Orta geniþlikte olacak */
+    margin: 20px auto; /* Ortalamak için auto margin kullan */
+}
+
+/* Wrapper Genel Stil */
+#translationTable_wrapper {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 2px solid #003366;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+    /* Table Header Styling - Lacivert Arka Plan ve Border Ekleme */
+    #translationTable_wrapper th {
+        background-color: #003366 !important; /* Lacivert arka plan */
+        color: #fff !important; /* Beyaz yazý rengi */
+        font-size: 16px;
+        text-align: center;
+        padding: 12px;
+        border: 2px solid #003366; /* Lacivert border */
+    }
+
+/* DataTables'ýn responsive özelliðini uyarlamak için eklenen stil */
+.dataTables_wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+table.dataTable {
+    width: 100% !important;
+    border-collapse: collapse;
+}
+
+/* Save Button */
+.save-button {
+    position: absolute;
+    bottom: 40px;
+    right: 300px;
+}
+
+/* Custom Warning Alert */
+.alert-warning-custom {
+    display: flex;
+    align-items: center;
+    background-color: #fff3cd;
+    color: #856404;
+    border-color: #ffeeba;
+    border-radius: 0.375rem;
+    padding: 15px;
+    margin-bottom: 20px;
+    max-width: 30%;
+    margin: 0 auto;
+}
+
+    .alert-warning-custom .bi {
+        flex-shrink: 0;
+        margin-right: 10px;
+    }
+
+    .alert-warning-custom .btn-close {
+        margin-left: auto;
+    }
+
+/* Info Container Styling */
+.info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 40px; /* Increase gap between items */
+}
+
+    .info-container div {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+        .info-container div:last-child {
+            margin-right: 0;
+        }
+
+    .info-container i {
+        margin-right: 8px;
+    }
+
+/* Progress Bar Container */
+.progress-container {
+    width: 100%;
+    max-width: 300px;
+}
+
+.language-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .language-container i {
+        margin-right: 10px;
+    }
+
+.progress {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+/* Progress Bar Styling */
+.progress-bar {
+    width: 100%; /* Geniþliði %100 yapýyoruz */
+    background-color: #003366;
+    color: #fff;
+    margin-top: 10px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    /* Tablo baþlýklarýný gizle */
+    #translationTable_wrapper thead {
+        display: block; /* Baþlýklarý görüntüle */
+        max-width: 20%; /* Baþlýklarýn geniþliðini ayarla */
+    }
+
+    /* Tablo baþlýklarýný alt alta sýralama */
+    #translationTable_wrapper th {
+        display: block;
+        text-align: left; /* Sol hizalama */
+        padding: 10px;
+        background-color: #003366; /* Baþlýk arka plan rengi */
+        color: #fff; /* Baþlýk yazý rengi */
+        border: 1px solid #003366; /* Baþlýk kenarlarý */
+        font-size: 14px;
+        max-width: 250px;
+    }
+
+    /* Satýrlarý blok düzenine dönüþtür */
+    #translationTable tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px; /* Satýrlar arasýnda boþluk */
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Hücreleri blok haline getir ve baþlýk etiketi ekle */
+    #translationTable tbody td {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-bottom: 10px; /* Hücreler arasýnda boþluk */
+        padding: 10px;
+    }
+
+        /* Hücre baþlýklarý */
+        #translationTable tbody td::before {
+            content: attr(data-label); /* "data-label" özelliðini baþlýk olarak kullan */
+            font-weight: bold;
+            margin-bottom: 5px; /* Baþlýk ile içerik arasýnda boþluk */
+            color: #003366;
+        }
+    .save-button {
+        position: relative;
+        margin-top: 50px;
+        margin-right: -220px; /* You can adjust this value for more spacing to the right */
+        float: right;
+    }
+
+    /* Alert Box stili */
+    .alert {
+        padding: 10px; /* Ýç padding */
+        margin-top: 60px; /* Üstten mesafeyi artýrdýk */
+        border-radius: 8px; /* Köþe yuvarlama */
+        color: #000; /* Yazý rengi */
+        display: flex;
+        flex-direction: column; /* Baþlýk ve içerik alt alta gelecek */
+        width: 100%; /* Geniþliði artýrdýk, ekranýn %100'üne kadar geniþleyecek */
+        max-width: 600px; /* Maksimum geniþlik belirledik */
+        margin: 0 auto; /* Ortada konumlandýrma */
+        box-sizing: border-box; /* Border'ý dahil et */
+    }
+
+        /* Baþlýk düzenlemesi */
+        .alert .alert-title {
+            font-weight: bold; /* Baþlýk kalýn yazý */
+            margin-bottom: 5px; /* Baþlýk ile içerik arasýna mesafe */
+        }
+
+        /* Ýçeriðin alt kýsýmda kalmasýný saðlamak */
+        .alert .alert-content {
+            word-wrap: break-word; /* Metin taþarsa alt satýra geçmesini saðlar */
+            overflow-wrap: break-word; /* Taþan metni alt alta yapar */
+            white-space: normal; /* Ýçerik taþarsa alt satýra geçer */
+        }
+
+        .alert .btn-close {
+            position: absolute;
+            margin-top: 20px;
+            right: 10px;
+        }
+}
+
+
+

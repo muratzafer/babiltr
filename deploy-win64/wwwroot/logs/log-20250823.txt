@@ -1,0 +1,1096 @@
+2025-08-23 17:47:33.493 +03:00 [WRN] No store type was specified for the decimal property 'BaseAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:33.510 +03:00 [WRN] No store type was specified for the decimal property 'ChargedAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:33.510 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:33.510 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:33.510 +03:00 [WRN] No store type was specified for the decimal property 'PlatformProfit' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:33.510 +03:00 [WRN] No store type was specified for the decimal property 'TranslatorPayout' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:33.510 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payout'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:33.510 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:33.510 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:33.610 +03:00 [WRN] No store type was specified for the decimal property 'BaseAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:33.610 +03:00 [WRN] No store type was specified for the decimal property 'ChargedAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:33.610 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:33.610 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:33.610 +03:00 [WRN] No store type was specified for the decimal property 'PlatformProfit' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:33.610 +03:00 [WRN] No store type was specified for the decimal property 'TranslatorPayout' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:33.610 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payout'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:33.610 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:33.610 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:38.883 +03:00 [WRN] No store type was specified for the decimal property 'BaseAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:38.900 +03:00 [WRN] No store type was specified for the decimal property 'ChargedAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:38.900 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:38.900 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:38.901 +03:00 [WRN] No store type was specified for the decimal property 'PlatformProfit' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:38.901 +03:00 [WRN] No store type was specified for the decimal property 'TranslatorPayout' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:38.901 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payout'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:38.901 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:38.901 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:47:39.502 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-23 17:47:39.531 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-23 17:47:39.544 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-23 17:47:39.566 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-23 17:47:39.600 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-23 17:47:39.608 +03:00 [INF] Applying migration '20240926221411_createtable'.
+2025-08-23 17:47:39.692 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+2025-08-23 17:47:39.713 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUsers] (
+    [Id] int NOT NULL IDENTITY,
+    [FirstName] nvarchar(max) NOT NULL,
+    [LastName] nvarchar(max) NOT NULL,
+    [Email] nvarchar(256) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [Occupation] nvarchar(max) NULL,
+    [Location] nvarchar(max) NULL,
+    [CvOrResumeUrl] nvarchar(max) NULL,
+    [Introduction] nvarchar(max) NULL,
+    [WebsiteUrl] nvarchar(max) NULL,
+    [KVKKStatus] bit NULL,
+    [OldPassword] nvarchar(max) NULL,
+    [NewPassword] nvarchar(max) NULL,
+    [ReTypeNewPassword] nvarchar(max) NULL,
+    [MentionNotification] bit NULL,
+    [FollowNotification] bit NULL,
+    [ActivityShareNotification] bit NULL,
+    [MessageNotification] bit NULL,
+    [SaleOrPromotionNotification] bit NULL,
+    [CompanyNewsNotification] bit NULL,
+    [WeeklyJobsNotification] bit NULL,
+    [UnsubscribeNews] bit NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_AspNetUsers] PRIMARY KEY ([Id])
+);
+2025-08-23 17:47:39.737 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] int NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE
+);
+2025-08-23 17:47:39.762 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Applications] (
+    [ApplicationID] int NOT NULL IDENTITY,
+    [JobID] int NOT NULL,
+    [UserID] int NOT NULL,
+    [ApplicationDate] datetime2 NOT NULL,
+    [Status] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Applications] PRIMARY KEY ([ApplicationID]),
+    CONSTRAINT [FK_Applications_AspNetUsers_UserID] FOREIGN KEY ([UserID]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2025-08-23 17:47:39.803 +03:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2025-08-23 17:47:39.857 +03:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2025-08-23 17:47:39.875 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserRoles] (
+    [UserId] int NOT NULL,
+    [RoleId] int NOT NULL,
+    CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2025-08-23 17:47:39.912 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserTokens] (
+    [UserId] int NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2025-08-23 17:47:39.932 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Jobs] (
+    [JobID] int NOT NULL IDENTITY,
+    [Title] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Requirements] nvarchar(max) NOT NULL,
+    [Salary] decimal(18,2) NOT NULL,
+    [Location] nvarchar(max) NOT NULL,
+    [PostedDate] datetime2 NOT NULL,
+    [ExpiryDate] datetime2 NULL,
+    [UserID] int NULL,
+    [Status] nvarchar(max) NULL,
+    CONSTRAINT [PK_Jobs] PRIMARY KEY ([JobID]),
+    CONSTRAINT [FK_Jobs_AspNetUsers_UserID] FOREIGN KEY ([UserID]) REFERENCES [AspNetUsers] ([Id])
+);
+2025-08-23 17:47:39.946 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Applications_UserID] ON [Applications] ([UserID]);
+2025-08-23 17:47:39.960 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]);
+2025-08-23 17:47:39.974 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL;
+2025-08-23 17:47:39.988 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]);
+2025-08-23 17:47:40.003 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]);
+2025-08-23 17:47:40.018 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]);
+2025-08-23 17:47:40.033 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]);
+2025-08-23 17:47:40.048 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL;
+2025-08-23 17:47:40.062 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Jobs_UserID] ON [Jobs] ([UserID]);
+2025-08-23 17:47:40.078 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240926221411_createtable', N'8.0.11');
+2025-08-23 17:47:40.096 +03:00 [INF] Applying migration '20240927122055_addrole'.
+2025-08-23 17:47:40.182 +03:00 [INF] Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'PasswordHash');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [AspNetUsers] ALTER COLUMN [PasswordHash] nvarchar(max) NULL;
+2025-08-23 17:47:40.195 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240927122055_addrole', N'8.0.11');
+2025-08-23 17:47:40.210 +03:00 [INF] Applying migration '20240927141850_test'.
+2025-08-23 17:47:40.287 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var1 sysname;
+SELECT @var1 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'Email');
+IF @var1 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var1 + '];');
+ALTER TABLE [AspNetUsers] ALTER COLUMN [Email] nvarchar(256) NULL;
+2025-08-23 17:47:40.300 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240927141850_test', N'8.0.11');
+2025-08-23 17:47:40.314 +03:00 [INF] Applying migration '20240930093906_updateuser'.
+2025-08-23 17:47:40.383 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var2 sysname;
+SELECT @var2 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'ActivityShareNotification');
+IF @var2 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var2 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [ActivityShareNotification];
+2025-08-23 17:47:40.419 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var3 sysname;
+SELECT @var3 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'CompanyNewsNotification');
+IF @var3 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var3 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [CompanyNewsNotification];
+2025-08-23 17:47:40.455 +03:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var4 sysname;
+SELECT @var4 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'FollowNotification');
+IF @var4 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var4 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [FollowNotification];
+2025-08-23 17:47:40.490 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var5 sysname;
+SELECT @var5 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'Location');
+IF @var5 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var5 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [Location];
+2025-08-23 17:47:40.524 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var6 sysname;
+SELECT @var6 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'MentionNotification');
+IF @var6 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var6 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [MentionNotification];
+2025-08-23 17:47:40.558 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var7 sysname;
+SELECT @var7 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'MessageNotification');
+IF @var7 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var7 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [MessageNotification];
+2025-08-23 17:47:40.595 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var8 sysname;
+SELECT @var8 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'SaleOrPromotionNotification');
+IF @var8 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var8 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [SaleOrPromotionNotification];
+2025-08-23 17:47:40.630 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var9 sysname;
+SELECT @var9 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'UnsubscribeNews');
+IF @var9 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var9 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [UnsubscribeNews];
+2025-08-23 17:47:40.663 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var10 sysname;
+SELECT @var10 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'WebsiteUrl');
+IF @var10 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var10 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [WebsiteUrl];
+2025-08-23 17:47:40.961 +03:00 [INF] Executed DbCommand (297ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[AspNetUsers].[WeeklyJobsNotification]', N'RememberMe', N'COLUMN';
+2025-08-23 17:47:40.980 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [City] nvarchar(max) NOT NULL DEFAULT N'';
+2025-08-23 17:47:40.993 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [CompanyName] nvarchar(max) NOT NULL DEFAULT N'';
+2025-08-23 17:47:41.011 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [Country] nvarchar(max) NOT NULL DEFAULT N'';
+2025-08-23 17:47:41.025 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [DOB] date NOT NULL DEFAULT '0001-01-01';
+2025-08-23 17:47:41.040 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [Description] nvarchar(max) NOT NULL DEFAULT N'';
+2025-08-23 17:47:41.054 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [JobTitle] nvarchar(max) NOT NULL DEFAULT N'';
+2025-08-23 17:47:41.068 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [Mobile] nvarchar(max) NOT NULL DEFAULT N'';
+2025-08-23 17:47:41.083 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [SkillName] nvarchar(max) NOT NULL DEFAULT N'';
+2025-08-23 17:47:41.098 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [SkillPercentage] int NOT NULL DEFAULT 0;
+2025-08-23 17:47:41.117 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [Years] int NOT NULL DEFAULT 0;
+2025-08-23 17:47:41.131 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240930093906_updateuser', N'8.0.11');
+2025-08-23 17:47:41.145 +03:00 [INF] Applying migration '20240930115236_updateuser1'.
+2025-08-23 17:47:41.230 +03:00 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var11 sysname;
+SELECT @var11 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'CompanyName');
+IF @var11 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var11 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [CompanyName];
+2025-08-23 17:47:41.271 +03:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var12 sysname;
+SELECT @var12 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'Description');
+IF @var12 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var12 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [Description];
+2025-08-23 17:47:41.313 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var13 sysname;
+SELECT @var13 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'JobTitle');
+IF @var13 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var13 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [JobTitle];
+2025-08-23 17:47:41.353 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var14 sysname;
+SELECT @var14 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'Mobile');
+IF @var14 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var14 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [Mobile];
+2025-08-23 17:47:41.398 +03:00 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var15 sysname;
+SELECT @var15 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'SkillName');
+IF @var15 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var15 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [SkillName];
+2025-08-23 17:47:41.438 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var16 sysname;
+SELECT @var16 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'SkillPercentage');
+IF @var16 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var16 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [SkillPercentage];
+2025-08-23 17:47:41.481 +03:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var17 sysname;
+SELECT @var17 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'Years');
+IF @var17 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var17 + '];');
+ALTER TABLE [AspNetUsers] ALTER COLUMN [Years] nvarchar(max) NULL;
+2025-08-23 17:47:41.522 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var18 sysname;
+SELECT @var18 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'Country');
+IF @var18 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var18 + '];');
+ALTER TABLE [AspNetUsers] ALTER COLUMN [Country] nvarchar(max) NULL;
+2025-08-23 17:47:41.563 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var19 sysname;
+SELECT @var19 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'City');
+IF @var19 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var19 + '];');
+ALTER TABLE [AspNetUsers] ALTER COLUMN [City] nvarchar(max) NULL;
+2025-08-23 17:47:41.577 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [Degree] nvarchar(max) NULL;
+2025-08-23 17:47:41.592 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [Experience] nvarchar(max) NULL;
+2025-08-23 17:47:41.606 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [Facebook] nvarchar(max) NULL;
+2025-08-23 17:47:41.622 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [FieldOfStudy] nvarchar(max) NULL;
+2025-08-23 17:47:41.636 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [Instagram] nvarchar(max) NULL;
+2025-08-23 17:47:41.650 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [Linkedin] nvarchar(max) NULL;
+2025-08-23 17:47:41.664 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [Salary] nvarchar(max) NULL;
+2025-08-23 17:47:41.680 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [SchoolName] nvarchar(max) NULL;
+2025-08-23 17:47:41.694 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [Translator] bit NULL;
+2025-08-23 17:47:41.709 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [Twitter] nvarchar(max) NULL;
+2025-08-23 17:47:41.726 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Skills] (
+    [SkillsID] int NOT NULL IDENTITY,
+    [UserID] int NOT NULL,
+    [SkillName] nvarchar(max) NULL,
+    [SkillPercentage] int NULL,
+    CONSTRAINT [PK_Skills] PRIMARY KEY ([SkillsID]),
+    CONSTRAINT [FK_Skills_AspNetUsers_UserID] FOREIGN KEY ([UserID]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2025-08-23 17:47:41.740 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Skills_UserID] ON [Skills] ([UserID]);
+2025-08-23 17:47:41.754 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240930115236_updateuser1', N'8.0.11');
+2025-08-23 17:47:41.770 +03:00 [INF] Applying migration '20240930115922_updateuser2'.
+2025-08-23 17:47:41.803 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240930115922_updateuser2', N'8.0.11');
+2025-08-23 17:47:41.817 +03:00 [INF] Applying migration '20240930130503_addeducation'.
+2025-08-23 17:47:41.854 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Education] (
+    [EducationID] int NOT NULL IDENTITY,
+    [UserID] int NOT NULL,
+    [Degree] nvarchar(max) NULL,
+    [SchoolName] nvarchar(max) NULL,
+    [Years] nvarchar(max) NULL,
+    CONSTRAINT [PK_Education] PRIMARY KEY ([EducationID]),
+    CONSTRAINT [FK_Education_AspNetUsers_UserID] FOREIGN KEY ([UserID]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2025-08-23 17:47:41.869 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Education_UserID] ON [Education] ([UserID]);
+2025-08-23 17:47:41.882 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240930130503_addeducation', N'8.0.11');
+2025-08-23 17:47:41.895 +03:00 [INF] Applying migration '20240930180703_updateuser3'.
+2025-08-23 17:47:41.954 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var20 sysname;
+SELECT @var20 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'LastName');
+IF @var20 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var20 + '];');
+ALTER TABLE [AspNetUsers] ALTER COLUMN [LastName] nvarchar(max) NULL;
+2025-08-23 17:47:41.989 +03:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var21 sysname;
+SELECT @var21 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'FirstName');
+IF @var21 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var21 + '];');
+ALTER TABLE [AspNetUsers] ALTER COLUMN [FirstName] nvarchar(max) NULL;
+2025-08-23 17:47:42.002 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240930180703_updateuser3', N'8.0.11');
+2025-08-23 17:47:42.016 +03:00 [INF] Applying migration '20241009102845_educaitonupdate'.
+2025-08-23 17:47:42.049 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Education] DROP CONSTRAINT [FK_Education_AspNetUsers_UserID];
+2025-08-23 17:47:42.070 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Education] DROP CONSTRAINT [PK_Education];
+2025-08-23 17:47:42.105 +03:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var22 sysname;
+SELECT @var22 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'Degree');
+IF @var22 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var22 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [Degree];
+2025-08-23 17:47:42.147 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var23 sysname;
+SELECT @var23 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'FieldOfStudy');
+IF @var23 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var23 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [FieldOfStudy];
+2025-08-23 17:47:42.186 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var24 sysname;
+SELECT @var24 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'SchoolName');
+IF @var24 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var24 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [SchoolName];
+2025-08-23 17:47:42.223 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var25 sysname;
+SELECT @var25 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'Years');
+IF @var25 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var25 + '];');
+ALTER TABLE [AspNetUsers] DROP COLUMN [Years];
+2025-08-23 17:47:42.277 +03:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Education]', N'Educations';
+2025-08-23 17:47:42.294 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Educations].[IX_Education_UserID]', N'IX_Educations_UserID', N'INDEX';
+2025-08-23 17:47:42.309 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Educations] ADD CONSTRAINT [PK_Educations] PRIMARY KEY ([EducationID]);
+2025-08-23 17:47:42.324 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Educations] ADD CONSTRAINT [FK_Educations_AspNetUsers_UserID] FOREIGN KEY ([UserID]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE;
+2025-08-23 17:47:42.338 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241009102845_educaitonupdate', N'8.0.11');
+2025-08-23 17:47:42.354 +03:00 [INF] Applying migration '20241009133721_userupdate4'.
+2025-08-23 17:47:42.415 +03:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var26 sysname;
+SELECT @var26 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'Translator');
+IF @var26 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var26 + '];');
+UPDATE [AspNetUsers] SET [Translator] = CAST(0 AS bit) WHERE [Translator] IS NULL;
+ALTER TABLE [AspNetUsers] ALTER COLUMN [Translator] bit NOT NULL;
+ALTER TABLE [AspNetUsers] ADD DEFAULT CAST(0 AS bit) FOR [Translator];
+2025-08-23 17:47:42.461 +03:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var27 sysname;
+SELECT @var27 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'LastName');
+IF @var27 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var27 + '];');
+UPDATE [AspNetUsers] SET [LastName] = N'' WHERE [LastName] IS NULL;
+ALTER TABLE [AspNetUsers] ALTER COLUMN [LastName] nvarchar(max) NOT NULL;
+ALTER TABLE [AspNetUsers] ADD DEFAULT N'' FOR [LastName];
+2025-08-23 17:47:42.501 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var28 sysname;
+SELECT @var28 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[AspNetUsers]') AND [c].[name] = N'FirstName');
+IF @var28 IS NOT NULL EXEC(N'ALTER TABLE [AspNetUsers] DROP CONSTRAINT [' + @var28 + '];');
+UPDATE [AspNetUsers] SET [FirstName] = N'' WHERE [FirstName] IS NULL;
+ALTER TABLE [AspNetUsers] ALTER COLUMN [FirstName] nvarchar(max) NOT NULL;
+ALTER TABLE [AspNetUsers] ADD DEFAULT N'' FOR [FirstName];
+2025-08-23 17:47:42.517 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [PhotoUrl] nvarchar(max) NULL;
+2025-08-23 17:47:42.534 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241009133721_userupdate4', N'8.0.11');
+2025-08-23 17:47:42.550 +03:00 [INF] Applying migration '20241010111408_updatejobs'.
+2025-08-23 17:47:42.598 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Jobs].[Requirements]', N'Skills', N'COLUMN';
+2025-08-23 17:47:42.623 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Jobs].[Location]', N'JobType', N'COLUMN';
+2025-08-23 17:47:42.638 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Jobs] ADD [City] nvarchar(max) NOT NULL DEFAULT N'';
+2025-08-23 17:47:42.655 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Jobs] ADD [Country] nvarchar(max) NOT NULL DEFAULT N'';
+2025-08-23 17:47:42.669 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Jobs] ADD [Experience] nvarchar(max) NOT NULL DEFAULT N'';
+2025-08-23 17:47:42.682 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Jobs] ADD [JobCategories] nvarchar(max) NOT NULL DEFAULT N'';
+2025-08-23 17:47:42.696 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241010111408_updatejobs', N'8.0.11');
+2025-08-23 17:47:42.710 +03:00 [INF] Applying migration '20241010113831_updatejobs1'.
+2025-08-23 17:47:42.769 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var29 sysname;
+SELECT @var29 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Jobs]') AND [c].[name] = N'Salary');
+IF @var29 IS NOT NULL EXEC(N'ALTER TABLE [Jobs] DROP CONSTRAINT [' + @var29 + '];');
+ALTER TABLE [Jobs] ALTER COLUMN [Salary] nvarchar(max) NOT NULL;
+2025-08-23 17:47:42.784 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241010113831_updatejobs1', N'8.0.11');
+2025-08-23 17:47:42.798 +03:00 [INF] Applying migration '20241011151423_tablesupdate'.
+2025-08-23 17:47:42.834 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Applications] DROP CONSTRAINT [FK_Applications_AspNetUsers_UserID];
+2025-08-23 17:47:42.883 +03:00 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var30 sysname;
+SELECT @var30 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Jobs]') AND [c].[name] = N'Status');
+IF @var30 IS NOT NULL EXEC(N'ALTER TABLE [Jobs] DROP CONSTRAINT [' + @var30 + '];');
+UPDATE [Jobs] SET [Status] = N'' WHERE [Status] IS NULL;
+ALTER TABLE [Jobs] ALTER COLUMN [Status] nvarchar(max) NOT NULL;
+ALTER TABLE [Jobs] ADD DEFAULT N'' FOR [Status];
+2025-08-23 17:47:42.898 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Applications] ADD [HiredUserID] int NULL;
+2025-08-23 17:47:42.913 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Applications_HiredUserID] ON [Applications] ([HiredUserID]);
+2025-08-23 17:47:42.927 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Applications] ADD CONSTRAINT [FK_Applications_AspNetUsers_HiredUserID] FOREIGN KEY ([HiredUserID]) REFERENCES [AspNetUsers] ([Id]) ON DELETE NO ACTION;
+2025-08-23 17:47:42.942 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Applications] ADD CONSTRAINT [FK_Applications_AspNetUsers_UserID] FOREIGN KEY ([UserID]) REFERENCES [AspNetUsers] ([Id]) ON DELETE NO ACTION;
+2025-08-23 17:47:42.954 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241011151423_tablesupdate', N'8.0.11');
+2025-08-23 17:47:42.973 +03:00 [INF] Applying migration '20241012090537_updatetables'.
+2025-08-23 17:47:43.010 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Applications].[Status]', N'ApplicationStatus', N'COLUMN';
+2025-08-23 17:47:43.024 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241012090537_updatetables', N'8.0.11');
+2025-08-23 17:47:43.038 +03:00 [INF] Applying migration '20241015185621_userupdate5'.
+2025-08-23 17:47:43.078 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [RegisterDate] datetime2 NOT NULL DEFAULT '0001-01-01T00:00:00.0000000';
+2025-08-23 17:47:43.091 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241015185621_userupdate5', N'8.0.11');
+2025-08-23 17:47:43.106 +03:00 [INF] Applying migration '20241018192843_addmessagetable'.
+2025-08-23 17:47:43.153 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Messages] (
+    [Id] int NOT NULL IDENTITY,
+    [SenderId] int NULL,
+    [ReceiverId] int NULL,
+    [Content] nvarchar(max) NULL,
+    [SentAt] datetime2 NULL,
+    CONSTRAINT [PK_Messages] PRIMARY KEY ([Id])
+);
+2025-08-23 17:47:43.166 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241018192843_addmessagetable', N'8.0.11');
+2025-08-23 17:47:43.180 +03:00 [INF] Applying migration '20241019162909_updatemessagetable'.
+2025-08-23 17:47:43.222 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Messages] ADD [DeletedId] int NULL;
+2025-08-23 17:47:43.238 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241019162909_updatemessagetable', N'8.0.11');
+2025-08-23 17:47:43.251 +03:00 [INF] Applying migration '20241019180508_chattable'.
+2025-08-23 17:47:43.294 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Messages] ADD [ChatId] int NULL;
+2025-08-23 17:47:43.312 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Chats] (
+    [Id] int NOT NULL IDENTITY,
+    [User1Id] int NOT NULL,
+    [User2Id] int NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_Chats] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Chats_AspNetUsers_User1Id] FOREIGN KEY ([User1Id]) REFERENCES [AspNetUsers] ([Id]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Chats_AspNetUsers_User2Id] FOREIGN KEY ([User2Id]) REFERENCES [AspNetUsers] ([Id]) ON DELETE NO ACTION
+);
+2025-08-23 17:47:43.326 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Messages_ChatId] ON [Messages] ([ChatId]);
+2025-08-23 17:47:43.340 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Chats_User1Id] ON [Chats] ([User1Id]);
+2025-08-23 17:47:43.355 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Chats_User2Id] ON [Chats] ([User2Id]);
+2025-08-23 17:47:43.370 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Messages] ADD CONSTRAINT [FK_Messages_Chats_ChatId] FOREIGN KEY ([ChatId]) REFERENCES [Chats] ([Id]);
+2025-08-23 17:47:43.383 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241019180508_chattable', N'8.0.11');
+2025-08-23 17:47:43.397 +03:00 [INF] Applying migration '20241019183209_chattableupdate'.
+2025-08-23 17:47:43.466 +03:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var31 sysname;
+SELECT @var31 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Messages]') AND [c].[name] = N'ReceiverId');
+IF @var31 IS NOT NULL EXEC(N'ALTER TABLE [Messages] DROP CONSTRAINT [' + @var31 + '];');
+ALTER TABLE [Messages] DROP COLUMN [ReceiverId];
+2025-08-23 17:47:43.500 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var32 sysname;
+SELECT @var32 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Messages]') AND [c].[name] = N'SenderId');
+IF @var32 IS NOT NULL EXEC(N'ALTER TABLE [Messages] DROP CONSTRAINT [' + @var32 + '];');
+ALTER TABLE [Messages] DROP COLUMN [SenderId];
+2025-08-23 17:47:43.514 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241019183209_chattableupdate', N'8.0.11');
+2025-08-23 17:47:43.528 +03:00 [INF] Applying migration '20241019190551_massagetableupt'.
+2025-08-23 17:47:43.576 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Messages] ADD [ReceiverId] int NOT NULL DEFAULT 0;
+2025-08-23 17:47:43.600 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Messages] ADD [SenderId] int NOT NULL DEFAULT 0;
+2025-08-23 17:47:43.614 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241019190551_massagetableupt', N'8.0.11');
+2025-08-23 17:47:43.631 +03:00 [INF] Applying migration '20241027124825_contacttable'.
+2025-08-23 17:47:43.686 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Contacts] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Subject] nvarchar(max) NULL,
+    [Comments] nvarchar(max) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_Contacts] PRIMARY KEY ([Id])
+);
+2025-08-23 17:47:43.702 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241027124825_contacttable', N'8.0.11');
+2025-08-23 17:47:43.719 +03:00 [INF] Applying migration '20241028122056_updatechatstable'.
+2025-08-23 17:47:43.806 +03:00 [INF] Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var33 sysname;
+SELECT @var33 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Messages]') AND [c].[name] = N'DeletedId');
+IF @var33 IS NOT NULL EXEC(N'ALTER TABLE [Messages] DROP CONSTRAINT [' + @var33 + '];');
+ALTER TABLE [Messages] DROP COLUMN [DeletedId];
+2025-08-23 17:47:43.827 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Chats] ADD [DeleteId] int NOT NULL DEFAULT 0;
+2025-08-23 17:47:43.865 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241028122056_updatechatstable', N'8.0.11');
+2025-08-23 17:47:43.879 +03:00 [INF] Applying migration '20241028130311_updatechatstable1'.
+2025-08-23 17:47:43.922 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Chats] ADD [IsBlocked] bit NOT NULL DEFAULT CAST(0 AS bit);
+2025-08-23 17:47:43.936 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241028130311_updatechatstable1', N'8.0.11');
+2025-08-23 17:47:43.949 +03:00 [INF] Applying migration '20241104125421_AddTranslationAndJobsRelationship'.
+2025-08-23 17:47:43.993 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Jobs] ADD [CompletionPercentage] int NOT NULL DEFAULT 0;
+2025-08-23 17:47:44.008 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Translations] (
+    [Id] int NOT NULL IDENTITY,
+    [JobId] int NOT NULL,
+    [OriginalSentence] nvarchar(max) NOT NULL,
+    [TranslatedSentence] nvarchar(max) NULL,
+    CONSTRAINT [PK_Translations] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Translations_Jobs_JobId] FOREIGN KEY ([JobId]) REFERENCES [Jobs] ([JobID]) ON DELETE CASCADE
+);
+2025-08-23 17:47:44.024 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Translations_JobId] ON [Translations] ([JobId]);
+2025-08-23 17:47:44.037 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241104125421_AddTranslationAndJobsRelationship', N'8.0.11');
+2025-08-23 17:47:44.051 +03:00 [INF] Applying migration '20241104125907_jobstablaupdate'.
+2025-08-23 17:47:44.098 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Jobs] ADD [PdfFilePath] nvarchar(max) NOT NULL DEFAULT N'';
+2025-08-23 17:47:44.112 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Jobs] ADD [TranslatedFilePath] nvarchar(max) NULL;
+2025-08-23 17:47:44.126 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241104125907_jobstablaupdate', N'8.0.11');
+2025-08-23 17:47:44.139 +03:00 [INF] Applying migration '20241104140622_jobstablaupdate1'.
+2025-08-23 17:47:44.193 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Jobs].[PdfFilePath]', N'PdfFileName', N'COLUMN';
+2025-08-23 17:47:44.207 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241104140622_jobstablaupdate1', N'8.0.11');
+2025-08-23 17:47:44.220 +03:00 [INF] Applying migration '20241105110434_jobstableupt'.
+2025-08-23 17:47:44.328 +03:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var34 sysname;
+SELECT @var34 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Jobs]') AND [c].[name] = N'Status');
+IF @var34 IS NOT NULL EXEC(N'ALTER TABLE [Jobs] DROP CONSTRAINT [' + @var34 + '];');
+ALTER TABLE [Jobs] ALTER COLUMN [Status] nvarchar(max) NULL;
+2025-08-23 17:47:44.368 +03:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var35 sysname;
+SELECT @var35 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Jobs]') AND [c].[name] = N'PdfFileName');
+IF @var35 IS NOT NULL EXEC(N'ALTER TABLE [Jobs] DROP CONSTRAINT [' + @var35 + '];');
+ALTER TABLE [Jobs] ALTER COLUMN [PdfFileName] nvarchar(max) NULL;
+2025-08-23 17:47:44.381 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241105110434_jobstableupt', N'8.0.11');
+2025-08-23 17:47:44.395 +03:00 [INF] Applying migration '20241106142018_generaltablesupdate'.
+2025-08-23 17:47:44.440 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Applications] DROP CONSTRAINT [FK_Applications_AspNetUsers_HiredUserID];
+2025-08-23 17:47:44.456 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP INDEX [IX_Applications_HiredUserID] ON [Applications];
+2025-08-23 17:47:44.499 +03:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var36 sysname;
+SELECT @var36 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Jobs]') AND [c].[name] = N'JobCategories');
+IF @var36 IS NOT NULL EXEC(N'ALTER TABLE [Jobs] DROP CONSTRAINT [' + @var36 + '];');
+ALTER TABLE [Jobs] DROP COLUMN [JobCategories];
+2025-08-23 17:47:44.537 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var37 sysname;
+SELECT @var37 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Applications]') AND [c].[name] = N'HiredUserID');
+IF @var37 IS NOT NULL EXEC(N'ALTER TABLE [Applications] DROP CONSTRAINT [' + @var37 + '];');
+ALTER TABLE [Applications] DROP COLUMN [HiredUserID];
+2025-08-23 17:47:44.551 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Applications_JobID] ON [Applications] ([JobID]);
+2025-08-23 17:47:44.565 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Applications] ADD CONSTRAINT [FK_Applications_Jobs_JobID] FOREIGN KEY ([JobID]) REFERENCES [Jobs] ([JobID]) ON DELETE CASCADE;
+2025-08-23 17:47:44.580 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241106142018_generaltablesupdate', N'8.0.11');
+2025-08-23 17:47:44.594 +03:00 [INF] Applying migration '20241107133429_jobtableupt'.
+2025-08-23 17:47:44.644 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Jobs] ADD [JobCompleted] bit NOT NULL DEFAULT CAST(0 AS bit);
+2025-08-23 17:47:44.658 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241107133429_jobtableupt', N'8.0.11');
+2025-08-23 17:47:44.672 +03:00 [INF] Applying migration '20241109141954_notificationtable'.
+2025-08-23 17:47:44.718 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Notifications] (
+    [Id] int NOT NULL IDENTITY,
+    [CreatedAt] datetime2 NOT NULL,
+    [IsRead] bit NOT NULL,
+    [UserId] int NOT NULL,
+    [Type] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Notifications] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Notifications_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2025-08-23 17:47:44.732 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Notifications_UserId] ON [Notifications] ([UserId]);
+2025-08-23 17:47:44.745 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241109141954_notificationtable', N'8.0.11');
+2025-08-23 17:47:44.759 +03:00 [INF] Applying migration '20241109160136_notitableupt'.
+2025-08-23 17:47:44.806 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Notifications] ADD [ChatId] int NOT NULL DEFAULT 0;
+2025-08-23 17:47:44.819 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241109160136_notitableupt', N'8.0.11');
+2025-08-23 17:47:44.833 +03:00 [INF] Applying migration '20241112132425_jobstableup1'.
+2025-08-23 17:47:44.874 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Jobs] ADD [PaymentCompleted] bit NOT NULL DEFAULT CAST(0 AS bit);
+2025-08-23 17:47:44.888 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241112132425_jobstableup1', N'8.0.11');
+2025-08-23 17:47:44.902 +03:00 [INF] Applying migration '20241112133740_jobstableup2'.
+2025-08-23 17:47:44.940 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Jobs] ADD [EndDate] datetime2 NOT NULL DEFAULT '0001-01-01T00:00:00.0000000';
+2025-08-23 17:47:44.954 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Jobs] ADD [RevisionCount] int NOT NULL DEFAULT 0;
+2025-08-23 17:47:44.968 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241112133740_jobstableup2', N'8.0.11');
+2025-08-23 17:47:44.982 +03:00 [INF] Applying migration '20241112141427_jobstableup3'.
+2025-08-23 17:47:45.028 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Jobs].[EndDate]', N'DeliveryDate', N'COLUMN';
+2025-08-23 17:47:45.041 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241112141427_jobstableup3', N'8.0.11');
+2025-08-23 17:47:45.054 +03:00 [INF] Applying migration '20241113134739_addCommissiontable'.
+2025-08-23 17:47:45.116 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var38 sysname;
+SELECT @var38 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Jobs]') AND [c].[name] = N'DeliveryDate');
+IF @var38 IS NOT NULL EXEC(N'ALTER TABLE [Jobs] DROP CONSTRAINT [' + @var38 + '];');
+ALTER TABLE [Jobs] ALTER COLUMN [DeliveryDate] datetime2 NULL;
+2025-08-23 17:47:45.130 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Jobs] ADD [TimeRemaining] datetime2 NULL;
+2025-08-23 17:47:45.144 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Commissions] (
+    [Id] int NOT NULL IDENTITY,
+    [Percentage] decimal(18,2) NOT NULL,
+    [LastUpdated] datetime2 NOT NULL,
+    CONSTRAINT [PK_Commissions] PRIMARY KEY ([Id])
+);
+2025-08-23 17:47:45.159 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241113134739_addCommissiontable', N'8.0.11');
+2025-08-23 17:47:45.173 +03:00 [INF] Applying migration '20241115112229_uptJobs'.
+2025-08-23 17:47:45.221 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Jobs].[TranslatedFilePath]', N'TranslatedFileName', N'COLUMN';
+2025-08-23 17:47:45.235 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241115112229_uptJobs', N'8.0.11');
+2025-08-23 17:47:45.250 +03:00 [INF] Applying migration '20241116160710_AddIbanToUser'.
+2025-08-23 17:47:45.294 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [AspNetUsers] ADD [Iban] nvarchar(max) NULL;
+2025-08-23 17:47:45.308 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241116160710_AddIbanToUser', N'8.0.11');
+2025-08-23 17:47:45.328 +03:00 [INF] Applying migration '20241122100312_AddIsHeadingToTranslation'.
+2025-08-23 17:47:45.477 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Translations] ADD [IsHeading] bit NOT NULL DEFAULT CAST(0 AS bit);
+2025-08-23 17:47:45.497 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241122100312_AddIsHeadingToTranslation', N'8.0.11');
+2025-08-23 17:47:45.516 +03:00 [INF] Applying migration '20241126140608_blogtable'.
+2025-08-23 17:47:45.621 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Blogs] (
+    [Id] int NOT NULL IDENTITY,
+    [Title] nvarchar(max) NOT NULL,
+    [Content] nvarchar(max) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [ReadTime] int NOT NULL,
+    [ImagePath] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Blogs] PRIMARY KEY ([Id])
+);
+2025-08-23 17:47:45.635 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241126140608_blogtable', N'8.0.11');
+2025-08-23 17:47:45.649 +03:00 [INF] Applying migration '20241128135355_blogcontent'.
+2025-08-23 17:47:45.692 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [BlogContents] (
+    [Id] int NOT NULL IDENTITY,
+    [BlogId] int NOT NULL,
+    [Subheading] nvarchar(max) NOT NULL,
+    [Paragraph] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_BlogContents] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_BlogContents_Blogs_BlogId] FOREIGN KEY ([BlogId]) REFERENCES [Blogs] ([Id]) ON DELETE CASCADE
+);
+2025-08-23 17:47:45.706 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_BlogContents_BlogId] ON [BlogContents] ([BlogId]);
+2025-08-23 17:47:45.724 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241128135355_blogcontent', N'8.0.11');
+2025-08-23 17:47:45.739 +03:00 [INF] Applying migration '20241128143641_blogcontentupt1'.
+2025-08-23 17:47:45.806 +03:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var39 sysname;
+SELECT @var39 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Blogs]') AND [c].[name] = N'ImagePath');
+IF @var39 IS NOT NULL EXEC(N'ALTER TABLE [Blogs] DROP CONSTRAINT [' + @var39 + '];');
+ALTER TABLE [Blogs] DROP COLUMN [ImagePath];
+2025-08-23 17:47:45.831 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Blogs] ADD [ImageName] nvarchar(max) NULL;
+2025-08-23 17:47:45.848 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241128143641_blogcontentupt1', N'8.0.11');
+2025-08-23 17:47:45.862 +03:00 [INF] Applying migration '20241128184942_blogcontentupt2'.
+2025-08-23 17:47:45.929 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var40 sysname;
+SELECT @var40 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Blogs]') AND [c].[name] = N'Title');
+IF @var40 IS NOT NULL EXEC(N'ALTER TABLE [Blogs] DROP CONSTRAINT [' + @var40 + '];');
+ALTER TABLE [Blogs] ALTER COLUMN [Title] nvarchar(200) NOT NULL;
+2025-08-23 17:47:45.944 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Blogs] ADD [Tags] nvarchar(max) NOT NULL DEFAULT N'';
+2025-08-23 17:47:45.958 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241128184942_blogcontentupt2', N'8.0.11');
+2025-08-23 17:47:45.972 +03:00 [INF] Applying migration '20241128233342_blogtableupt2'.
+2025-08-23 17:47:46.017 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Blogs] ADD [Author] nvarchar(max) NULL;
+2025-08-23 17:47:46.030 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241128233342_blogtableupt2', N'8.0.11');
+2025-08-23 17:47:46.044 +03:00 [INF] Applying migration '20241201173908_uptejobtable'.
+2025-08-23 17:47:46.116 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var41 sysname;
+SELECT @var41 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Jobs]') AND [c].[name] = N'Salary');
+IF @var41 IS NOT NULL EXEC(N'ALTER TABLE [Jobs] DROP CONSTRAINT [' + @var41 + '];');
+ALTER TABLE [Jobs] DROP COLUMN [Salary];
+2025-08-23 17:47:46.131 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Jobs] ADD [Price] int NOT NULL DEFAULT 0;
+2025-08-23 17:47:46.145 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241201173908_uptejobtable', N'8.0.11');
+2025-08-23 17:47:46.159 +03:00 [INF] Applying migration '20241202003401_uptejobtable1'.
+2025-08-23 17:47:46.194 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Jobs] ADD [MmerchantOid] nvarchar(max) NULL;
+2025-08-23 17:47:46.207 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241202003401_uptejobtable1', N'8.0.11');
+2025-08-23 17:47:46.220 +03:00 [INF] Applying migration '20241202231336_uptjobcategory'.
+2025-08-23 17:47:46.260 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Jobs] ADD [JobCategory] nvarchar(max) NOT NULL DEFAULT N'';
+2025-08-23 17:47:46.275 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241202231336_uptjobcategory', N'8.0.11');
+2025-08-23 17:47:46.297 +03:00 [INF] Applying migration '20241204122710_addlanguages'.
+2025-08-23 17:47:46.340 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Jobs] ADD [OriginalLanguage] nvarchar(max) NOT NULL DEFAULT N'';
+2025-08-23 17:47:46.355 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Jobs] ADD [TargetLanguage] nvarchar(max) NOT NULL DEFAULT N'';
+2025-08-23 17:47:46.368 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241204122710_addlanguages', N'8.0.11');
+2025-08-23 17:47:46.382 +03:00 [INF] Applying migration '20241206135854_uptjobstime'.
+2025-08-23 17:47:46.534 +03:00 [INF] Executed DbCommand (126ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Jobs].[TimeRemaining]', N'TimerStartTime', N'COLUMN';
+2025-08-23 17:47:46.548 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241206135854_uptjobstime', N'8.0.11');
+2025-08-23 17:51:17.393 +03:00 [WRN] No store type was specified for the decimal property 'BaseAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:17.415 +03:00 [WRN] No store type was specified for the decimal property 'ChargedAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:17.415 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:17.415 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:17.415 +03:00 [WRN] No store type was specified for the decimal property 'PlatformProfit' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:17.415 +03:00 [WRN] No store type was specified for the decimal property 'TranslatorPayout' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:17.415 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payout'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:17.415 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:17.415 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:17.528 +03:00 [WRN] No store type was specified for the decimal property 'BaseAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:17.528 +03:00 [WRN] No store type was specified for the decimal property 'ChargedAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:17.528 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:17.528 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:17.528 +03:00 [WRN] No store type was specified for the decimal property 'PlatformProfit' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:17.528 +03:00 [WRN] No store type was specified for the decimal property 'TranslatorPayout' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:17.528 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payout'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:17.528 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:17.528 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:24.807 +03:00 [WRN] No store type was specified for the decimal property 'BaseAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:24.825 +03:00 [WRN] No store type was specified for the decimal property 'ChargedAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:24.825 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:24.825 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:24.825 +03:00 [WRN] No store type was specified for the decimal property 'PlatformProfit' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:24.825 +03:00 [WRN] No store type was specified for the decimal property 'TranslatorPayout' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:24.825 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payout'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:24.825 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:24.825 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:51:25.205 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-23 17:51:25.233 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-23 17:51:25.247 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-23 17:51:25.262 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-23 17:51:25.286 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-23 17:51:25.295 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-08-23 17:53:06.435 +03:00 [WRN] No store type was specified for the decimal property 'BaseAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:06.454 +03:00 [WRN] No store type was specified for the decimal property 'ChargedAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:06.454 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:06.454 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:06.454 +03:00 [WRN] No store type was specified for the decimal property 'PlatformProfit' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:06.454 +03:00 [WRN] No store type was specified for the decimal property 'TranslatorPayout' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:06.454 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payout'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:06.454 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:06.454 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:06.559 +03:00 [WRN] No store type was specified for the decimal property 'BaseAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:06.560 +03:00 [WRN] No store type was specified for the decimal property 'ChargedAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:06.560 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:06.560 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:06.560 +03:00 [WRN] No store type was specified for the decimal property 'PlatformProfit' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:06.560 +03:00 [WRN] No store type was specified for the decimal property 'TranslatorPayout' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:06.560 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payout'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:06.560 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:06.560 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:22.222 +03:00 [WRN] No store type was specified for the decimal property 'BaseAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:22.242 +03:00 [WRN] No store type was specified for the decimal property 'ChargedAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:22.242 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:22.242 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:22.242 +03:00 [WRN] No store type was specified for the decimal property 'PlatformProfit' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:22.242 +03:00 [WRN] No store type was specified for the decimal property 'TranslatorPayout' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:22.242 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payout'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:22.242 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:22.242 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 17:53:22.660 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-23 17:53:22.686 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-23 17:53:22.703 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-23 17:53:22.721 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-23 17:53:22.744 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-23 17:53:22.752 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-08-23 18:25:54.916 +03:00 [WRN] No store type was specified for the decimal property 'BaseAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:25:54.934 +03:00 [WRN] No store type was specified for the decimal property 'ChargedAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:25:54.934 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:25:54.934 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:25:54.934 +03:00 [WRN] No store type was specified for the decimal property 'PlatformProfit' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:25:54.934 +03:00 [WRN] No store type was specified for the decimal property 'TranslatorPayout' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:25:54.934 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payout'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:25:54.934 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:25:54.934 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:25:55.045 +03:00 [WRN] No store type was specified for the decimal property 'BaseAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:25:55.045 +03:00 [WRN] No store type was specified for the decimal property 'ChargedAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:25:55.045 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:25:55.045 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:25:55.045 +03:00 [WRN] No store type was specified for the decimal property 'PlatformProfit' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:25:55.045 +03:00 [WRN] No store type was specified for the decimal property 'TranslatorPayout' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:25:55.045 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payout'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:25:55.045 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:25:55.045 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:26:06.073 +03:00 [WRN] No store type was specified for the decimal property 'BaseAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:26:06.091 +03:00 [WRN] No store type was specified for the decimal property 'ChargedAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:26:06.091 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:26:06.091 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:26:06.091 +03:00 [WRN] No store type was specified for the decimal property 'PlatformProfit' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:26:06.091 +03:00 [WRN] No store type was specified for the decimal property 'TranslatorPayout' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:26:06.091 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payout'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:26:06.091 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:26:06.091 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 18:26:06.719 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-23 18:26:06.746 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-23 18:26:06.761 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-23 18:26:06.774 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-23 18:26:06.800 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-23 18:26:06.808 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-08-23 23:07:42.014 +03:00 [WRN] No store type was specified for the decimal property 'BaseAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 23:07:42.063 +03:00 [WRN] No store type was specified for the decimal property 'ChargedAmount' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 23:07:42.063 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 23:07:42.063 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 23:07:42.064 +03:00 [WRN] No store type was specified for the decimal property 'PlatformProfit' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 23:07:42.064 +03:00 [WRN] No store type was specified for the decimal property 'TranslatorPayout' on entity type 'Payment'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 23:07:42.064 +03:00 [WRN] No store type was specified for the decimal property 'Amount' on entity type 'Payout'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 23:07:42.064 +03:00 [WRN] No store type was specified for the decimal property 'CustomerSurchargePct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-08-23 23:07:42.064 +03:00 [WRN] No store type was specified for the decimal property 'PlatformCommissionPct' on entity type 'Jobs'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.

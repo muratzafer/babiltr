@@ -1,0 +1,106 @@
+.shooting-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1; /* Animasyonu diðer içeriklerin üstüne koyar */
+}
+
+    .shooting-stars span {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
+        animation: animate 3s linear infinite;
+        top: calc(100% * var(--random-y)); /* Yýldýz rastgele bir yükseklikten baþlar */
+        left: calc(100% * var(--random-x)); /* Yýldýz rastgele bir yatay konumdan baþlar */
+        opacity: 0; /* Yýldýzlar baþlangýçta görünmez olacak */
+    }
+
+        /* Yýldýzýn hareket yönünü ve uzun ýþýðýný ayarlayan çizgi */
+        .shooting-stars span::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 300px;
+            height: 1px;
+            background: linear-gradient(90deg, #fff, transparent);
+        }
+
+/* Yýldýzýn kayma animasyonu */
+@keyframes animate {
+    0% {
+        transform: rotate(315deg) translateX(0);
+        opacity: 0; /* Animasyon baþladýðýnda yýldýzlar görünmez olacak */
+    }
+
+    10% {
+        opacity: 1; /* Yýldýz animasyonun ilk kýsmýnda görünmeye baþlar */
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(315deg) translateX(-1500px);
+        opacity: 0; /* Animasyon sonunda yýldýz tekrar görünmez olur */
+    }
+}
+
+/* Her bir yýldýzýn farklý hýz ve gecikme ayarlarý */
+.shooting-stars span:nth-child(1) {
+    animation-delay: 0s;
+    animation-duration: 1.5s;
+}
+
+.shooting-stars span:nth-child(2) {
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+}
+
+.shooting-stars span:nth-child(3) {
+    animation-delay: 1s;
+    animation-duration: 2.5s;
+}
+
+.shooting-stars span:nth-child(4) {
+    animation-delay: 1.5s;
+    animation-duration: 3s;
+}
+
+.shooting-stars span:nth-child(5) {
+    animation-delay: 2s;
+    animation-duration: 1.75s;
+}
+
+.shooting-stars span:nth-child(6) {
+    animation-delay: 2.5s;
+    animation-duration: 2.25s;
+}
+
+.shooting-stars span:nth-child(7) {
+    animation-delay: 3s;
+    animation-duration: 2.75s;
+}
+
+.shooting-stars span:nth-child(8) {
+    animation-delay: 3.5s;
+    animation-duration: 1.25s;
+}
+
+.shooting-stars span:nth-child(9) {
+    animation-delay: 4s;
+    animation-duration: 2.5s;
+}
+
+.shooting-stars span:nth-child(10) {
+    animation-delay: 4.5s;
+    animation-duration: 3s;
+}

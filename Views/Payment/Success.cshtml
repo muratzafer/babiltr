@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Success";
+    Layout = "~/Views/Shared/_LayoutDark.cshtml";
+}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<style>
+    .centered-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Yazıları ortada tutar */
+        height: 100vh;
+        text-align: center; /* Yazıları ortada hizalar */
+        background-image: url('/images/siteelements/paymentinfobackground.jpg'); /* Arka plan resmi */
+        background-size: cover; /* Resmi kaplama */
+        background-position: center; /* Ortala */
+        background-repeat: no-repeat; /* Tekrar etmeyi önle */
+        color: white; /* Yazı rengini açık yap */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Yazıya gölge ekle */
+    }
+
+    .success-icon {
+        font-size: 6rem; /* İkonun boyutunu arttırdık */
+        color: #28a745; /* Yeşil renk */
+        margin-bottom: 1rem;
+        margin-left: 1050px;
+    }
+
+    .content {
+        margin-left: 1050px; /* Yazıyı sağa kaydırmak için margin ekle */
+        font-weight: bold; /* Yazıyı kalın yapmak için */
+    }
+
+    .thank-you-message {
+        font-size: 1.5rem; /* Teşekkür mesajı için biraz daha büyük font */
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .info-text {
+        list-style-type: none; /* Liste işaretçilerini kaldır */
+        padding: 0; /* Listeyi hizalayabilmek için padding kaldır */
+    }
+</style>
+
+<div class="centered-container">
+    <!-- Büyük Yeşil Tik -->
+    <i class="fas fa-check-circle success-icon"></i> <!-- İkon burada yer alacak -->
+
+    <div class="content">
+        <h1>Ödeme Başarılı</h1>
+        <p>Ödemeniz başarıyla tamamlanmıştır.</p>
+        <p class="thank-you-message">Ödemeniz için teşekkür ederiz! İşlem başarıyla tamamlanmıştır.</p>
+        <p>İşlem Detayları:</p>
+        <ul class="info-text">
+            <li>Ödeme Tutarı: @ViewBag.Amount TL</li>
+            <li>Ödeme Takip Numarası: @ViewBag.OrderId</li>
+        </ul>
+        <a href="/Home/MainPage" class="btn btn-success">Anasayfa</a>
+    </div>
+</div>

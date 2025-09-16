@@ -1,0 +1,396 @@
+﻿
+@{
+    ViewData["Title"] = "SSS";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BabilTR Sıkça Sorulan Sorular Sayfası</title>
+    <meta name="description" content="Job Listing Bootstrap 5 Template" />
+    <meta name="keywords" content="Onepage, creative, modern, bootstrap 5, multipurpose, clean, Job Listing, Job Board, Job, Job Portal" />
+    <meta name="author" content="Shreethemes" />
+    <meta name="website" content="https://shreethemes.in" />
+    <meta name="email" content="support@shreethemes.in" />
+    <meta name="version" content="1.0.0" />
+</head>
+
+<body>
+    <!-- Hero Start -->
+    <section class="bg-half-170 d-table w-100" style="background: url('/thema/jobnova_v1.0.1/html/images/hero/bg.jpg');">
+        <div class="bg-overlay bg-gradient-overlay"></div>
+        <div class="container">
+            <div class="shooting-stars">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="row mt-5 justify-content-center">
+                <div class="col-12">
+                    <div class="title-heading text-center">
+                        <h5 class="heading fw-semibold mb-0 sub-heading text-white title-dark">Sıkça Sorulan Sorular</h5>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+    </section><!--end section-->
+    <div class="position-relative">
+        <div class="shape overflow-hidden text-white">
+            <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <!-- Start Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-5 col-12 d-none d-md-block">
+                    <div class="rounded shadow p-4 sticky-bar">
+                        <ul class="list-unstyled sidebar-nav mb-0 py-0" id="navmenu-nav">
+                            <li class="navbar-item p-0"><a href="#job-posting" class="h6 text-dark navbar-link">İlan Yayınlama</a></li>
+                            <li class="navbar-item mt-3 p-0"><a href="#job-applications" class="h6 text-dark navbar-link">İlan Başvuruları</a></li>
+                            <li class="navbar-item mt-3 p-0"><a href="#babilcat" class="h6 text-dark navbar-link">BabilCAT Nedir</a></li>
+                            <li class="navbar-item mt-3 p-0"><a href="#messaging" class="h6 text-dark navbar-link">Mesajlaşma</a></li>
+                            <li class="navbar-item mt-3 p-0"><a href="#payment" class="h6 text-dark navbar-link">Ödeme İşlemleri</a></li>
+                            <li class="navbar-item mt-3 p-0"><a href="#account-support" class="h6 text-dark navbar-link">Hesap ve Destek</a></li>
+                        </ul>
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-lg-8 col-md-7 col-12">
+                    <div class="section-title" id="job-posting">
+                        <h4>İlan Yayınlama</h4>
+                    </div>
+
+                    <div class="accordion mt-4 pt-2" id="job-posting-accordion">
+                        <div class="accordion-item rounded">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                        aria-expanded="false" aria-controls="collapseOne">
+                                    İlan Nasıl Yayınlanır?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse border-0 collapse" aria-labelledby="headingOne"
+                                 data-bs-parent="#job-posting-accordion">
+                                <div class="accordion-body text-muted">
+                                    <ul>
+                                        <li>Öncelikle sitemize kayıt olmalısınız.</li>
+                                        <li>Daha sonra <a href="/Jobs/JobCreate" class="text-decoration-none">"İlan Yayınla"</a> sekmesine tıklayarak gerekli bilgileri doldurun.</li>
+                                        <li>En dikkatli olmanız gereken kısım "Çevirilecek Dosya Yükle" bölümüdür.</li>
+                                        <li>Detaylı bilgiyi bir alt sekmede bulabilirsiniz.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item rounded mt-2">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                        aria-expanded="false" aria-controls="collapseTwo">
+                                    İlan İçeriği Nasıl Belirlenir?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse border-0 collapse" aria-labelledby="headingTwo"
+                                 data-bs-parent="#job-posting-accordion">
+                                <div class="accordion-body text-muted">
+                                    <ul>
+                                        İş ilanı için gerekli bilgiler;
+                                        <li>İlan başlığı</li>
+                                        <li>İlan açıklaması</li>
+                                        <li>İş türü (Yazılı, Akademik vb.)</li>
+                                        <li>İş için net ücret (komisyon tutarı bu para üzerinden kesilir)</li>
+                                        <li>Beceriler (Bu kısımda iş için gerekli becerileri "," ile giriniz)</li>
+                                        <li>İş için istediğiniz deneyim süresi</li>
+                                        <li>Ülke ve şehir bilgisi (gerek duyulursa)</li>
+                                        <li>Çevrilecek dosya (Word, PDF sadece)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="accordion-item rounded mt-2">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                        aria-expanded="false" aria-controls="collapseThree">
+                                    Çevrilecek dosyada nelere dikkat edilmeli?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse border-0 collapse" aria-labelledby="headingThree" data-bs-parent="#job-posting-accordion">
+                                <div class="accordion-body text-muted">
+                                    <ul>
+                                        <li>Yüklenecek dosya Word formatında olmalıdır.</li>
+                                        <li>Birden fazla sayfa varsa, tüm sayfalar birleştirilip tek dosya halinde yüklenmelidir.</li>
+                                        <li>Noktalama işaretlerine dikkat edilmelidir (segmentlere ayırma işleminde önemlidir).</li>
+                                        <li>Başlıklar word still kısmındaki başlık seçenekleri ile ayarlanmalıdır (segmentlere ayırma işleminde önemlidir).</li>
+                                        <li>Metin içerikleri net olmalı, okunabilirlik açısından herhangi bir karmaşıklık olmamalıdır.</li>
+                                        <li>Yazı tipi, boyutu ve biçimlendirme tutarlı olmalıdır.</li>
+                                        <li>Resim veya grafik varsa, bunlar çıkarılarak sadece metin formatında yüklenmelidir.</li>
+                                    </ul>
+                                    <p><strong>Örnek dosya içeriği:</strong></p>
+                                    <p>Çevrilecek dosya örneği için <a href="/images/siteelements/örnekdosya.docx" download>buraya tıklayarak</a> erişebilirsiniz.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-title mt-5" id="job-applications">
+                        <h4>İlan Başvuruları</h4>
+                    </div>
+
+                    <div class="accordion mt-4 pt-2" id="job-applications-accordion">
+                        <!-- Collapse 4 -->
+                        <div class="accordion-item rounded">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                        aria-expanded="false" aria-controls="collapseFour">
+                                    İlan Başvuruları Nasıl Yapılır?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse border-0 collapse" aria-labelledby="headingFour"
+                                 data-bs-parent="#job-applications-accordion">
+                                <div class="accordion-body text-muted">
+                                    <ul>
+                                        <li>Öncelikle ilanlara başvurmak için sitemize üye olmalısınız.</li>
+                                        <li>Daha sonra profilinize girerek gerekli bilgileri doldurmalı ve özellikle çevirmen seçeneğini onaylamalısınız.</li>
+                                        <li>Bilgilerinizi doldurduktan sonra başvuru formunu doldurarak ilan(iş) başvurunuzu tamamlayınız.</li>
+                                        <li>Başvurunuz başarılı bir şekilde oluşturulduktan sonra <a href="/Applications/UserApplications" class="text-decoration-none">"Başvurularım"</a> sekmesinden başvuru durumunu görüntüleyebilirsiniz.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Collapse 5 -->
+                        <div class="accordion-item rounded pt-2">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                        aria-expanded="false" aria-controls="collapseFive">
+                                    Başvuru Sonrası Değerlendirme ve Görüşme Süreci
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse border-0 collapse" aria-labelledby="headingFive"
+                                 data-bs-parent="#job-applications-accordion">
+                                <div class="accordion-body text-muted">
+                                    <ul>
+                                        <li>Başvurular, ilan sahipleri tarafından belirli kriterlere göre değerlendirilecektir.</li>
+                                        <li>Seçilen adaylar ile ister site içindeki mesajlaşma siteminden ister mail veya telefon ile iletişime geçilebilmektedir.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Collapse 6 -->
+                        <div class="accordion-item rounded pt-2">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                                        aria-expanded="false" aria-controls="collapseSix">
+                                    Değerlendirilme ve Sonrasındaki Adımlar
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse border-0 collapse" aria-labelledby="headingSix"
+                                 data-bs-parent="#job-applications-accordion">
+                                <div class="accordion-body text-muted">
+                                    <ul>
+                                        <li>İlgili görüşmeler ve değerlendirilmeler yapıldıktan sonra başvuru onaylanırsa ilgili çevirmenin <a href="/Applications/UserApplications" class="text-decoration-none">"Başvurularım"</a> sekmesine iş tanımlanır.</li>
+                                        <li>Çevirmen BabilCAT sistemine girerek dosyanın segmentlere ayrılmış hallerine ulaşır ve çevirme işlemine başlar.</li>
+                                        <li>İlan sahipleri de iş durumunu ve takibini <a href="/Jobs/MyProjects" class="text-decoration-none">"Projelerim"</a> sayfasından takip edebilir ve aynı zamanda iş durumu ile ilgili çevirmen ile doğrudan iletişime geçebilmektedir.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="section-title mt-5" id="babilcat">
+                        <h4>BabilCAT Nedir</h4>
+                    </div>
+
+                    <div class="accordion mt-4 pt-2" id="babilcat-accordion">
+                        <div class="accordion-item rounded">
+                            <h2 class="accordion-header" id="headingSeven">
+                                <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                                        aria-expanded="false" aria-controls="collapseSeven">
+                                    BabilCAT Özellikleri Nelerdir?
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse border-0 collapse" aria-labelledby="headingSeven"
+                                 data-bs-parent="#babilcat-accordion">
+                                <div class="accordion-body text-muted">
+                                    <ul>
+                                        <li>BabilCAT, ilanların dosyalarını alarak bunları segmentlere ayırır ve böylece adım adım çeviri hizmeti sunar.</li>
+                                        <li>Sistem, çevirmenlerin çevirdiği içeriği ödeme yapılana kadar güvenli bir şekilde saklar; böylece içerik üçüncü kişilerden korunur.</li>
+                                        <li>Çevirmenlerin çevirdiği metinler, çevirmenin kendi bilgisayarında saklanmasına gerek kalmadan güvenli bir ortamda depolanır.</li>
+                                        <li>İlan sahipleri, projelerinin ilerlemesini takip edebilir ve işin ne kadarının tamamlandığını görebilir.</li>
+                                        <li>Çevirmenler ve ilan sahipleri, proje süreci boyunca etkileşimde bulunabilir ve iletişime geçebilirler.</li>
+                                        <li>BabilCAT, kullanıcı dostu bir arayüze sahip olup, kolayca kullanılabilir ve yönetilebilir.</li>
+                                        <li>Veri güvenliği, yüksek düzeyde şifreleme ile sağlanır, böylece kişisel bilgiler ve çeviriler güvenli bir şekilde korunur.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-title mt-5" id="messaging">
+                        <h4>Mesajlaşma</h4>
+                    </div>
+
+                    <div class="accordion mt-4 pt-2" id="messaging-accordion">
+                        <div class="accordion-item rounded">
+                            <h2 class="accordion-header" id="headingEight">
+                                <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                                        aria-expanded="false" aria-controls="collapseEight">
+                                    Mesajlaşma Sisteminde Dikkat Edilmesi Gerek Kurallar Nelerdir?
+                                </button>
+                            </h2>
+                            <div id="collapseEight" class="accordion-collapse border-0 collapse" aria-labelledby="headingEight" data-bs-parent="#messaging-accordion">
+                                <div class="accordion-body text-muted">
+                                    <ul>
+                                        <li><strong>Saygılı İletişim Kurun:</strong> Kaba, hakaret içeren veya rahatsız edici mesajlardan kaçının.</li>
+                                        <li><strong>Spam Göndermeyin:</strong> Alıcıların rahatsız olmasına neden olacak şekilde sürekli mesaj atmayın.</li>
+                                        <li><strong>Özel Bilgilerinizi Paylaşmayın:</strong> Kişisel bilgilerinizi, şifrelerinizi veya finansal verilerinizi mesajlaşma yoluyla paylaşmayın.</li>
+                                        <li><strong>Açık ve Anlaşılır Olun:</strong> Mesajlarınızı açık, net ve doğru bir şekilde yazın.</li>
+                                        <li><strong>Mesajları Zamanında Yanıtlayın:</strong> Diğer kullanıcılarla olan iletişimi zamanında yanıtlayarak etkili bir iletişim kurun.</li>
+                                        <li><strong>Yardımcı Olun:</strong> Diğer kullanıcıların sorularına yardımcı olun, ancak spam yapmamaya dikkat edin.</li>
+                                        <li><strong>Yasadışı İçerik Paylaşmayın:</strong> Mesajlarınızda yasadışı veya etik olmayan içerikler paylaşmaktan kaçının.</li>
+                                        <li><strong>Mesajları Takip Edin:</strong> Mesajlaşma geçmişini kontrol edin ve önemli mesajları kaydedin.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion mt-3 pt-1" id="messaging-accordion">
+                        <div class="accordion-item rounded">
+                            <h2 class="accordion-header" id="headingNine">
+                                <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine"
+                                        aria-expanded="false" aria-controls="collapseNine">
+                                    Yasal Bilgilendirme ve Kullanıcı Sorumlulukları
+                                </button>
+                            </h2>
+                            <div id="collapseNine" class="accordion-collapse border-0 collapse" aria-labelledby="headingNine" data-bs-parent="#messaging-accordion">
+                                <div class="accordion-body text-muted">
+                                    <ul>
+                                        <li><strong>Yasadışı İçerikler:</strong> Siteye yüklenen içeriklerin yasadışı olması durumunda, kullanıcıların bilgileri yasal mercilere iletilebilir.</li>
+                                        <li><strong>Küfür ve Hakaret:</strong> Küfürlü, hakaret içeren veya rahatsız edici mesajlar gönderen kullanıcılar hakkında işlem yapılabilir ve bilgiler yetkili mercilere verilebilir.</li>
+                                        <li><strong>Veri Saklama ve Paylaşma:</strong> Kullanıcı bilgileri, yasal gereklilikler ve site kuralları çerçevesinde saklanabilir ve paylaşılabilir.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-title mt-5" id="payment">
+                        <h4>Ödeme İşlemleri</h4>
+                    </div>
+
+                    <div class="accordion mt-4 pt-2" id="payment-accordion">
+                        <div class="accordion-item rounded">
+                            <h2 class="accordion-header" id="headingTen">
+                                <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen"
+                                        aria-expanded="false" aria-controls="collapseTen">
+                                    Ödeme İşlemleri Nasıl İşler?
+                                </button>
+                            </h2>
+                            <div id="collapseTen" class="accordion-collapse border-0 collapse" aria-labelledby="headingTen" data-bs-parent="#payment-accordion">
+                                <div class="accordion-body text-muted">
+                                    <ul>
+                                        <li><strong>İş Tamamlandığında:</strong> İş tamamlandığında <a href="/Jobs/MyProjects" class="text-decoration-none">"Projelerim"</a> sayfasında ödeme aktif olur ve ilan sahibi ödemeyi gerçekleştirebilir.</li>
+                                        <li><strong>Komisyon Ücreti:</strong> Ödeme yapıldıktan sonra, toplam ödeme üzerinden %10 komisyon kesilir. Geriye kalan ödeme, çevirmen hesabına aktarılır.</li>
+                                        <li><strong>IBAN Bilgileri:</strong> Çevirmenlerin ödeme alabilmesi için, site içindeki IBAN bilgilerini doğru ve eksiksiz şekilde doldurmuş olmaları gerekmektedir.</li>
+                                        <li><strong>Revizyon Talebi:</strong> Çevirmen tarafından tamamlanan iş için revizyon talebi yapılabilir. Her iş için bir revizyon hakkı vardır ve ücretsizdir.</li>
+                                        <li><strong>İş İptali ve Geri ödeme:</strong> Ödeme işlemi tamamlanmış ve dosya ilan sahibine teslim edilmişse, iş iptali ve geri ödeme kesinlikle yapılamaz..</li>
+                                        <li><strong>Ödeme Sonrası Teslimat:</strong> Ödeme işlemi tamamlandıktan sonra, ilan sahibi tarafından çevirilen dosya indirilebilir hale gelir ve teslimat yapılır.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-title mt-5" id="account-support">
+                        <h4>Hesap ve Destek</h4>
+                    </div>
+
+                    <div class="accordion mt-4 pt-2" id="account-support-accordion">
+                        <div class="accordion-item rounded">
+                            <h2 class="accordion-header" id="headingEleven">
+                                <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven"
+                                        aria-expanded="false" aria-controls="collapseEleven">
+                                    Hesap Nasıl Oluşturulur?
+                                </button>
+                            </h2>
+                            <div id="collapseEleven" class="accordion-collapse border-0 collapse" aria-labelledby="headingEleven" data-bs-parent="#account-support-accordion">
+                                <div class="accordion-body text-muted">
+                                    <ul>
+                                        <li><strong>Adım 1:</strong> Siteye giriş yaptıktan sonra, sağ üst köşede bulunan"Oturum Aç" sekmesinin altındaki <a href="/Account/Register" class="text-decoration-none">"Kayıt Ol"</a> butonuna tıklayın.</li>
+                                        <li><strong>Adım 2:</strong> Kayıt formunda gerekli bilgileri (isim, e-posta, şifre vb.) eksiksiz olarak doldurun.</li>
+                                        <li><strong>Adım 3:</strong> Kullanıcı sözleşmesini okuyun ve onaylayın.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item rounded pt-2">
+                            <h2 class="accordion-header" id="headingTwelve">
+                                <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve"
+                                        aria-expanded="false" aria-controls="collapseTwelve">
+                                    Hesap Nasıl Silinir?
+                                </button>
+                            </h2>
+                            <div id="collapseTwelve" class="accordion-collapse border-0 collapse" aria-labelledby="headingTwelve" data-bs-parent="#account-support-accordion">
+                                <div class="accordion-body text-muted">
+                                    <ul>
+                                        <li><strong>Adım 1:</strong> Hesabınızı silmek için, hesabınızda oturum açtıktan sonra kullanıcı profilinizin bulunduğu alana gidin.</li>
+                                        <li><strong>Adım 2:</strong> "Ayarlar" sekmesine tıklayın ve en altta bulunan "Hesap Kapat/Sil" seçeneğini seçin.</li>
+                                        <li><strong>Adım 3:</strong> Hesap silme işlemi sonrasında, kalıcı olarak silinen veriler geri alınamayacaktır. Onaylayarak işlemi tamamlayın.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item rounded pt-2">
+                            <h2 class="accordion-header" id="headingThirteen">
+                                <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen"
+                                        aria-expanded="false" aria-controls="collapseThirteen">
+                                    Destek Ekibi ile Nasıl İletişime Geçilir?
+                                </button>
+                            </h2>
+                            <div id="collapseThirteen" class="accordion-collapse border-0 collapse" aria-labelledby="headingThirteen" data-bs-parent="#account-support-accordion">
+                                <div class="accordion-body text-muted">
+                                    <ul>
+                                        <li><strong>Adım 1:</strong> Sağ üst köşede yer alan "Yardım" butonuna tıklayın.</li>
+                                        <li><strong>Adım 2:</strong> Açılan pencerede, sıkça sorulan soruları kontrol edebilir ya da "Destek Talebi Oluştur" seçeneği ile sorunuzu bize iletebilirsiniz.</li>
+                                        <li><strong>Adım 3:</strong> Sorununuzu en açık şekilde belirtin, böylece daha hızlı bir çözüm alabilirsiniz.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+    </section><!--end section-->
+    <!-- End Section -->
+    <!-- Back to top -->
+    <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top rounded fs-5"><i data-feather="arrow-up" class="fea icon-sm align-middle"></i></a>
+    <!-- Back to top -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const stars = document.querySelectorAll(".shooting-stars span");
+            stars.forEach(star => {
+                star.style.setProperty('--random-x', Math.random());
+                star.style.setProperty('--random-y', Math.random());
+            });
+        });
+    </script>
+</body>
+</html>
+

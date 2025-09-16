@@ -1,0 +1,254 @@
+﻿@model List<babiltr.Models.Applications.UserApplicationsViewModel>
+@using X.PagedList.Mvc.Core;
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Job Listing Bootstrap 5 Template" />
+    <meta name="keywords" content="Onepage, creative, modern, bootstrap 5, multipurpose, clean, Job Listing, Job Board, Job, Job Portal" />
+    <meta name="author" content="Shreethemes" />
+    <meta name="website" content="https://shreethemes.in" />
+    <meta name="email" content="support@shreethemes.in" />
+    <meta name="version" content="1.0.0" />
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        feather.replace();
+    </script>
+
+    <style>
+            .progress .progress-bar {
+                border: none;
+                box-shadow: none;
+                -webkit-animation: 2s linear 0s normal none infinite running progress-bar-stripes,animate-positive 1s;
+                animation: 2s linear 0s normal none infinite running progress-bar-stripes,animate-positive 1s;
+            }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Start -->
+    <section class="bg-half-170 d-table w-100" style="background: url('/thema/jobnova_v1.0.1/html/images/hero/bg.jpg')">
+        <div class="bg-overlay bg-gradient-overlay"></div>
+        <div class="shooting-stars">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="container">
+            <div class="row mt-5 justify-content-center">
+                <div class="col-12">
+                    <div class="title-heading text-center">
+                        <h5 class="heading fw-semibold mb-0 sub-heading text-white title-dark">İş Başvurularım</h5>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+    </section><!--end section-->
+    <div class="position-relative">
+        <div class="shape overflow-hidden text-white">
+            <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <!-- Start -->
+    <section class="section">
+        <div class="container mt-60">
+            <div class="row g-4">
+                @if (!Model.Any())
+                {
+                    <div class="col-12 text-center">
+                        <p class="text-muted">Henüz bir başvurunuz bulunmamaktadır.</p>
+                    </div>
+                }
+                else
+                {
+                    <!-- Onaylanan İş Başvuruları -->
+                    <div class="col-12 text-center">
+                        <h5 class="fw-semibold mb-3">Onaylanan İşler</h5>
+                    </div>
+
+                    @foreach (var job in Model.Where(j => j.ApplicationStatus == "Approved"))
+                    {
+                        <div class="col-lg-5 col-md-6 col-12">
+                            <div class="job-post job-type-three rounded shadow p-4 @(job.JobStatus == "Completed" ? "bg-light-green" : "bg-white")">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="/Jobs/JobDetails/@job.JobId" class="text-dark title h5">@job.Title</a>
+
+                                    @if (!job.JobCompleted)
+                                    {
+                                        <div class="d-flex align-items-center">
+                                            @if (job.CompletionPercentage == 100)
+                                            {
+                                                <a href="/Jobs/FinishJob/@job.JobId"
+                                                   class="btn btn-icon btn-sm btn-soft-success me-2"
+                                                   onclick="return confirm('İşi bitirdiğinize ve göndermek istediğinize emin misiniz?');">
+                                                    <i data-feather="check" class="icons"></i>
+                                                </a>
+                                            }
+
+                                            <a href="/Translation/Translation/@job.JobId" class="btn btn-icon btn-sm btn-soft-primary me-2">
+                                                <i data-feather="eye" class="icons"></i>
+                                            </a>
+                                            @if (job.JobStatus == "Active" && !job.JobCompleted)
+                                            {
+                                                <a href="/Jobs/CancelJob/@job.JobId"
+                                                   class="btn btn-icon btn-sm btn-soft-danger me-2"
+                                                   onclick="return confirm('İşi iptal etmek istediğinize emin misiniz?');">
+                                                    <i data-feather="x" class="icons"></i>
+                                                </a>
+                                            }
+                                        </div>
+                                    }
+                                </div>
+
+                                <div class="mt-2">
+                                    <span class="text-muted d-flex align-items-center small mt-2">
+                                        <i data-feather="clock" class="fea icon-sm me-1"></i> @job.DeliveryDate?.ToString("dd/MM/yyyy")
+                                    </span>
+
+                                    <p class="text-muted mt-2">@job.Description</p>
+                                    @if (job.ApplicationStatus == "Approved")
+                                    {
+                                        <div class="flex-grow-1 ">
+                                            <div class="progress" style="height: 20px; width: 180px; ">
+                                                <div class="progress-bar position-relative" style="width: @job.CompletionPercentage%; background-color: #003366;">
+                                                    <span class="position-absolute w-100 text-center text-white h6" style="top: 50%; transform: translateY(-50%);">
+                                                        @job.CompletionPercentage%
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    }
+
+                                    <p class="mt-2">
+                                        @if (job.JobStatus == "Payment" || job.JobStatus == "PaymentApproved")
+                                        {
+                                            <span class="badge bg-warning" style="font-size: 1em; padding: 5px 10px; border-radius: 3px;">Ödeme Sürecinde</span>
+                                        }
+                                        else if (job.JobStatus == "Revision")
+                                        {
+                                            <span class="badge bg-info" style="font-size: 1em; padding: 5px 10px; border-radius: 3px;">Revizyon Talebi</span>
+                                        }
+                                    </p>
+
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="d-inline-block me-1">
+                                            <a href="" class="badge bg-primary">@job.JobType</a>
+                                        </li>
+                                        <li class="d-inline-block me-1">
+                                            <a href="" class="badge bg-primary">₺@job.Price</a>
+                                        </li>
+                                        <li class="d-inline-block me-1">
+                                            <a href="" class="badge bg-primary">
+                                                <i class="mdi mdi-map-marker me-1"></i>@job.Country
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    <!-- Çizgi ile ayrım -->
+                    <div class="col-12 text-center my-4">
+                        <hr class="my-4" style="border-top: 2px dashed #1c2647;" />
+                        <h5 class="fw-semibold mb-3">Başvuru Aşamasında Olan İşler</h5>
+                    </div>
+
+                    @if (!Model.Any())
+                    {
+                        <div class="col-12 text-center">
+                            <p class="text-muted">Henüz bir başvurunuz bulunmamaktadır.</p>
+                        </div>
+                    }
+                    else
+                    {
+                        @foreach (var job in Model.Where(j => j.ApplicationStatus != "Approved"))
+                        {
+                            <div class="col-lg-5 col-md-6 col-12">
+                                <div class="job-post job-type-three rounded shadow bg-white p-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="/Jobs/JobDetails/@job.JobId" class="text-dark title h5">@job.Title</a>
+
+                                        @if (!job.JobCompleted)
+                                        {
+                                            <div class="d-flex align-items-center">
+                                                    <a href="/Applications/JobApplicationDelete/@job.AppId"
+                                                       class="btn btn-icon btn-sm btn-soft-danger"
+                                                       onclick="return confirm('Başvurunuzu geri çekmek/silmek istediğinize emin misiniz?');">
+                                                        <i data-feather="x" class="icons"></i>
+                                                    </a>
+                                            </div>
+                                        }
+                                    </div>
+
+                                    <div class="mt-2">
+                                        <span class="text-muted d-flex align-items-center small mt-2">
+                                            <i data-feather="clock" class="fea icon-sm me-1"></i> @((DateTime.Now - job.ApplicationDate).Days) Gün Önce
+                                        </span>
+
+                                        <p class="text-muted mt-2">@job.Description</p>
+
+                                        <p class="mt-2">
+                                            @if (job.ApplicationStatus == "Pending")
+                                            {
+                                                <span class="badge" style="background-color: orange; font-size: 1em; padding: 5px 10px; border-radius: 3px;">Beklemede</span>
+                                            }
+                                            else if (job.ApplicationStatus == "Rejected" && !job.JobCompleted)
+                                            {
+                                                <span class="badge bg-danger" style="font-size: 1em; padding: 5px 10px; border-radius: 3px;">Reddedildi</span>
+                                            }
+
+                                        </p>
+
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="d-inline-block me-1">
+                                                <a href="" class="badge bg-primary">@job.JobType</a>
+                                            </li>
+                                            <li class="d-inline-block me-1">
+                                                <a href="" class="badge bg-primary">₺@job.Price</a>
+                                            </li>
+                                            <li class="d-inline-block me-1">
+                                                <a href="" class="badge bg-primary">
+                                                    <i class="mdi mdi-map-marker me-1"></i>@job.Country
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }          
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- End -->
+    <!-- Back to top -->
+    <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top rounded fs-5"><i data-feather="arrow-up" class="fea icon-sm align-middle"></i></a>
+    <!-- Back to top -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const stars = document.querySelectorAll(".shooting-stars span");
+            stars.forEach(star => {
+                star.style.setProperty('--random-x', Math.random());
+                star.style.setProperty('--random-y', Math.random());
+            });
+        });
+
+    </script>
+</body>
+</html>

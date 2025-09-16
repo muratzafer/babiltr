@@ -1,0 +1,259 @@
+﻿@{
+    ViewData["Title"] = "MyProjects";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model X.PagedList.IPagedList<babiltr.Models.Jobs.GetJobViewModel>
+@using X.PagedList.Mvc.Core;
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BabilTR İşverenin Aktif Projeleri Sayfası</title>
+    <meta name="description" content="Job Listing Bootstrap 5 Template" />
+    <meta name="keywords" content="Onepage, creative, modern, bootstrap 5, multipurpose, clean, Job Listing, Job Board, Job, Job Portal" />
+    <meta name="author" content="Shreethemes" />
+    <meta name="website" content="https://shreethemes.in" />
+    <meta name="email" content="support@shreethemes.in" />
+    <meta name="version" content="1.0.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .progress .progress-bar {
+            border: none;
+            box-shadow: none;
+            -webkit-animation: 2s linear 0s normal none infinite running progress-bar-stripes,animate-positive 1s;
+            animation: 2s linear 0s normal none infinite running progress-bar-stripes,animate-positive 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Start -->
+    <section class="bg-half-170 d-table w-100" style="background: url('/thema/jobnova_v1.0.1/html/images/hero/bg.jpg');">
+        <div class="bg-overlay bg-gradient-overlay"></div>
+        <div class="shooting-stars">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="container">
+            <div class="row mt-5 justify-content-center">
+                <div class="col-12">
+                    <div class="title-heading text-center">
+                        <h5 class="heading fw-semibold mb-0 sub-heading text-white title-dark">Aktif Projeler</h5>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+    </section><!--end section-->
+    <div class="position-relative">
+        <div class="shape overflow-hidden text-white">
+            <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <!-- Start -->
+    <section class="section">
+        <div class="container mt-60">
+            @if (Model.Any(job => job.Status == "Payment"))
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Dikkat!</strong> Ödeme adımına geçmeden önce ayarlar bölümünden kişisel bilgilerinizi doldurmayı unutmayınız.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+            <div class="row g-4">
+                @if (!Model.Any())
+                {
+                    <div class="col-12 text-center">
+                        <p class="text-muted">Henüz bir proje bulunmamaktadır.</p>
+                    </div>
+                }
+                else
+                {
+                    @foreach (var job in Model)
+                    {
+                        <div class="col-12">
+                                <div class="job-post job-post-list rounded shadow p-3 d-md-flex align-items-center justify-content-between position-relative @(job.Status == "Completed" ? "bg-light-green" : "")">
+                                    <div class="d-flex align-items-center w-250px">
+                                
+                                    <div class="ms-3">
+                                        <a href="/Jobs/JobDetails/@job.JobId" class="h5 title text-dark">@job.Title</a>
+                                    </div>
+                                </div>
+
+                                <div class="w-25">
+                                    <div class="flex-grow-1 ">
+
+                                        <div class="progress" style="height: 20px;">
+                                            <div class="progress-bar position-relative" style="width: @job.CompletionPercentage%; background-color: #003366;">
+                                                <span class="position-absolute w-100 text-center text-white h6" style="top: 50%; transform: translateY(-50%);">
+                                                    @job.CompletionPercentage%
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                @{
+                                    var deliveryDate = job.DeliveryDate;
+                                    string formattedDeliveryDate = deliveryDate?.ToString("dd MMMM yyyy");
+                                }
+
+                                <div class="d-flex align-items-center justify-content-between d-md-block mt-3 mt-md-0">
+                                    <span class="badge bg-info text-white rounded-pill ms-2 fs-6">
+                                        <i data-feather="clock" class="fea icon-sm align-middle"></i>
+                                        Teslim Tarihi: @formattedDeliveryDate
+                                    </span>
+                                    <span class="badge bg-success text-white rounded-pill ms-2 fs-6">
+                                        <i class="fa fa-try me-1" aria-hidden="true"></i>
+                                        Ücret : @job.Price
+                                    </span>
+                                </div>
+
+                                <div class="row-sm">
+
+                                    @if (job.Status == "Completed")
+                                    {
+                                        <div class="mt-3 mt-md-0 mb-1">
+                                            <a href="~/files/translatedfiles/@job.TranslatedFileName" class="btn btn-sm btn-info d-block" download="@job.TranslatedFileName">İndir</a>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        @if (job.PaymentCompleted == true && job.JobCompleted == true)
+                                        {
+                                            <div class="mt-3 mt-md-0 mb-1">
+                                                <a href="/Jobs/JobCompleted/@job.JobId" class="btn btn-sm btn-success d-block">Tamamlandı</a>
+                                            </div>
+
+                                            <div class="mt-3 mt-md-0 mb-1">
+                                                <a href="~/files/translatedfiles/@job.TranslatedFileName" class="btn btn-sm btn-info d-block" download="@job.TranslatedFileName">İndir</a>
+                                            </div>
+
+                                            @if (job.RevisionCount == 1)
+                                            {
+                                                <div class="mt-3 mt-md-0 mb-1">
+                                                    <a href="/Jobs/Revision/@job.JobId" class="btn btn-sm btn-primary d-block text-center">Revizyon Talebi</a>
+                                                </div>
+                                            }
+                                        }
+                                        else if (job.JobCompleted == true)
+                                        {
+                                            <div class="mt-3 mt-md-0 mb-1">
+                                                <a href="/payment/pay?jobId=@job.JobId" class="btn btn-sm btn-warning w-100 d-block">Ödeme</a>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="mt-3 mt-md-0 mb-1">
+                                                <a href="/Translation/ShowSegments/@job.JobId" class="btn btn-sm btn-info w-100 d-block">Detay</a>
+                                            </div>
+                                        }
+
+                                        @if (job.ChatId > 0)
+                                        {
+                                            <div class="mt-3 mt-md-0">
+                                                <a href="/Message/Chat?userid=@job.HiredUserID&chatid=@job.ChatId" class="btn btn-sm btn-dark w-100 d-block">Sohbet</a>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="mt-3 mt-md-0">
+                                                <a href="/Message/Chat?userid=@job.HiredUserID" class="btn btn-sm btn-dark w-100 d-block">Sohbet</a>
+                                            </div>
+                                        }
+                                    }
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--end col-->
+                    }
+                }
+
+            </div><!--end row-->
+        </div>
+        <div class="row">
+            <div class="col-12 mt-4 pt-2">
+                <ul class="pagination justify-content-center mb-0">
+                    @if (Model != null)
+                    {
+                        @if (Model.HasPreviousPage)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" href="@Url.Action("MyProject", new { page = Model.PageNumber - 1 })" aria-label="Previous">
+                                    <span aria-hidden="true"><i class="mdi mdi-chevron-left fs-6"></i></span>
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="page-item disabled">
+                                <a class="page-link" aria-label="Previous">
+                                    <span aria-hidden="true"><i class="mdi mdi-chevron-left fs-6"></i></span>
+                                </a>
+                            </li>
+                        }
+
+                        @for (int i = 1; i <= Model.PageCount; i++)
+                        {
+                            if (i == Model.PageNumber)
+                            {
+                                <li class="page-item active"><a class="page-link" href="#">@i</a></li>
+                            }
+                            else
+                            {
+                                <li class="page-item"><a class="page-link" href="@Url.Action("MyProject", new { page = i })">@i</a></li>
+                            }
+                        }
+
+                        @if (Model.HasNextPage)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" href="@Url.Action("MyProject", new { page = Model.PageNumber + 1 })" aria-label="Next">
+                                    <span aria-hidden="true"><i class="mdi mdi-chevron-right fs-6"></i></span>
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="page-item disabled">
+                                <a class="page-link" aria-label="Next">
+                                    <span aria-hidden="true"><i class="mdi mdi-chevron-right fs-6"></i></span>
+                                </a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div><!--end col-->
+        </div><!--end row-->
+        </div><!--end container-->
+
+    </section><!--end section-->
+    <!-- End -->
+    <!-- Back to top -->
+    <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top rounded fs-5"><i data-feather="arrow-up" class="fea icon-sm align-middle"></i></a>
+    <!-- Back to top -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const stars = document.querySelectorAll(".shooting-stars span");
+            stars.forEach(star => {
+                star.style.setProperty('--random-x', Math.random());
+                star.style.setProperty('--random-y', Math.random());
+            });
+        });
+    </script>
+
+</body>
+</html>
+

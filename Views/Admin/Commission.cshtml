@@ -1,0 +1,285 @@
+﻿@model babiltr.EntityLayer.Commission
+@{
+    ViewData["Title"] = "Commission";
+    Layout = "~/Views/Shared/adminLayout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/adminthema/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="~/adminthema/assets/img/favicon.png">
+    <title>
+        BabilTR Admin Ücretlendirme Yönetimi Sayfası
+    </title>
+    <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .range-cust::-webkit-slider-thumb {
+            background: orange;
+        }
+
+        .range-cust::-moz-range-thumb {
+            background: orange;
+        }
+
+        .range-cust::-ms-thumb {
+            background: orange;
+        }
+    </style>
+</head>
+
+<body class="g-sidenav-show  bg-gray-200">
+    <div class="menu-extras d-lg-none">
+        <div class="menu-item">
+            <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                <div class="lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="/Admin/Index">Pano</a></li>
+            <li><a href="/Admin/AllUsers">Kullanıcılar</a></li>
+            <li><a href="/Admin/AllJobs">İş İlanları</a></li>
+            <li><a href="/Admin/AllApplications">Başvurular</a></li>
+            <li><a href="/Admin/AllMessages">Destek Talepleri</a></li>
+            <li><a href="/Admin/Commission">Ücretlendirme</a></li>
+            <li><a href="/Blog/BlogAdd">Blog Ekle</a></li>
+            <li><a href="/Account/RegisterAdmin">Admin Kayıt</a></li>
+            <li><a href="/Home/MainPage">Ana Menüye Dön</a></li>
+            <li><a href="/Account/Logout">Çıkış Yap</a></li>
+        </ul>
+    </div>
+
+    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+        <div class="sidenav-header">
+            <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+            <a class="navbar-brand m-0" href="/Admin/Index">
+                <img src="~/images/logos/babillogoligth.png" class="navbar-brand-img h-100" alt="main_logo">
+                <span class="ms-1 font-weight-bold text-white">Admin Pano</span>
+            </a>
+        </div>
+        <hr class="horizontal light mt-0 mb-2">
+        <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Admin/Index">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">dashboard</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Pano</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Admin/AllUsers">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">person</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Kullanıcılar</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Admin/AllJobs">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">work</i>
+                        </div>
+                        <span class="nav-link-text ms-1">İş İlanları</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Admin/AllApplications">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">description</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Başvurular</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Admin/AllMessages">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">message</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Destek Talepleri</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white active bg-gradient-white" href="/Admin/Commission">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">attach_money</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Ücretlendirme</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Blog/BlogAdd">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">post_add</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Blog Ekle</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Account/RegisterAdmin">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">person_add</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Admin Kayıt</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Home/MainPage">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">home</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Ana Menüye Dön</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Account/Logout">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">login</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Çıkış Yap</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <!-- Navbar -->
+        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
+            <div class="container-fluid py-1 px-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                        <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Sayfalar</a></li>
+                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Ücretlendirme</li>
+                    </ol>
+                    <h6 class="font-weight-bolder mb-0">Ücretlendirme</h6>
+                </nav>
+            </div>
+        </nav>
+      <!-- End Navbar -->
+        <div class="container-fluid py-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card my-4">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <div class="bg-gradient-warning shadow-secondary border-radius-lg pt-4 pb-3">
+                                <h6 class="text-white text-capitalize ps-3">İşveren Komisyon Oranı</h6>
+                            </div>
+                        </div>
+                        <div class="card-body px-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <div class="container-fluid py-4">
+                                    <div class="row">
+                                        <h3>Geçerli Komisyon Oranı: @Model.EmployerPercentage%</h3>
+                                        <div class="container">
+                                            <form method="post" action="/Admin/EmployerCommission">
+                                                <input id="empRange"
+                                                       name="EmployerPercentage"
+                                                       step="1"
+                                                       min="0"
+                                                       max="100"
+                                                       type="range"
+                                                       class="form-range range-cust"
+                                                       style="width: 50%; margin: 0 auto;"
+                                                       value="@Model.EmployerPercentage" />
+                                                <h4>
+                                                    Yeni Komisyon Oranı:
+                                                    <span id="empcurr"></span>%
+                                                </h4>
+                                                <button type="submit" class="btn btn-warning mt-3">Komisyonu Güncelle</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid py-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card my-4">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <div class="bg-gradient-warning shadow-secondary border-radius-lg pt-4 pb-3">
+                                <h6 class="text-white text-capitalize ps-3">Çevirmen Komisyon Oranı</h6>
+                            </div>
+                        </div>
+                        <div class="card-body px-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <div class="container-fluid py-4">
+                                    <div class="row">
+                                        <h3>Geçerli Komisyon Oranı: @Model.TranslatorPercentage%</h3>
+                                        <div class="container">
+                                            <form method="post" action="/Admin/TranslatorCommission">
+                                                <input id="transRange"
+                                                       name="TranslatorPercentage"
+                                                       step="1"
+                                                       min="0"
+                                                       max="100"
+                                                       type="range"
+                                                       class="form-range range-cust"
+                                                       style="width: 50%; margin: 0 auto;"
+                                                       value="@Model.TranslatorPercentage" />
+                                                <h4>
+                                                    Yeni Komisyon Oranı:
+                                                    <span id="transcurr"></span>%
+                                                </h4>
+                                                <button type="submit" class="btn btn-warning mt-3">Komisyonu Güncelle</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const empRange = document.getElementById("empRange");
+                const empCurr = document.getElementById("empcurr");
+                const transRange = document.getElementById("transRange");
+                const transCurr = document.getElementById("transcurr");
+
+                // Başlangıç değerlerini ayarla
+                empCurr.textContent = empRange.value;
+                transCurr.textContent = transRange.value;
+
+                // Slider hareket ettikçe güncelle
+                empRange.addEventListener("input", function () {
+                    empCurr.textContent = this.value;
+                });
+
+                transRange.addEventListener("input", function () {
+                    transCurr.textContent = this.value;
+                });
+            });
+        </script>
+
+        <script>
+            function toggleMenu() {
+            const menu = document.querySelector('.mobile-menu');
+            if (menu.style.display === 'flex') {
+            menu.style.display = 'none';
+            } else {
+            menu.style.display = 'flex';
+            }
+            }
+        </script>
+    </main>
+</body>
+</html>
+

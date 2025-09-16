@@ -1,0 +1,199 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDark.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>bs4 Message Chat Box</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/chat.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <section class="gradient-custom pt-5">
+        <div class="container py-5">
+            <div class="row" style="display: flex; justify-content: center;">
+                @if (Model.Messages == null || Model.Messages.Count == 0)
+                {
+                    <div id="infoMessage" style="display: block;">
+                        <ul class="list-unstyled text-white">
+                            <li class="text-light mb-4">
+                                <div class="alert alert-info text-dark">
+                                    <h5 class="fw-bold">Yeni Mesajlaşma Başlatıldı</h5>
+                                    <p>Merhaba! Babil Freelance mesajlaşma platformuna hoş geldiniz. Lütfen aşağıdaki kurallara dikkat edin:</p>
+                                    <h6 class="fw-bold">Mesajlaşma Kuralları</h6>
+                                    <ul>
+                                        <li><strong>Verilerinizi Saklıyoruz:</strong> Gizliliğinizi korumak için gerekli önlemleri alıyoruz.</li>
+                                        <li><strong>Saygılı Olun:</strong> Kaba veya hakaret içeren ifadeler kullanmayın.</li>
+                                        <li><strong>Site Dışında Ödeme Talep Edenlere İtibar Etmeyin:</strong> Güvenliğinizi riske atmayın.</li>
+                                        <li><strong>Yardımcı Olun:</strong> Diğer kullanıcılara destek verin ve saygılı bir iletişim kurun.</li>
+                                    </ul>
+                                    <p>Hepinizin bu kurallara uyarak hoş bir deneyim yaşamasını diliyoruz!</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                }
+                <div class="col-md-12 col-lg-12 col-xl-12 chat-container">
+               
+                    <div class="chat-header">
+                        <div class="d-flex align-items-center">
+
+                            <img src="@Model.OtherUser.PhotoUrl" alt="User Photo">
+                            <h5 class="fw-bold mb-0">@Model.OtherUser.FirstName @Model.OtherUser.LastName</h5>
+                        </div>
+                    </div>
+
+                    <!-- Messages List -->
+                    <ul class="chat-messages" id="messageContainer">
+                        @if (Model.Messages != null)
+                        {
+                            @foreach (var message in Model.Messages)
+                            {
+                                var isCurrentUser = message.SenderId == message.UserId;
+                                <li class="message @(isCurrentUser ? "sent" : "received")">
+                                    @if (!isCurrentUser)
+                                    {
+                                        <img src="@message.PhotoUrl" alt="avatar" class="message-avatar">
+                                    }
+                                    <div class="message-body">
+                                        <span>@message.Content</span>
+                                        <small class="message-time">@message.SentAt.ToString("dd.MM.yyyy HH:mm")</small>
+                                    </div>
+                                    @if (isCurrentUser)
+                                    {
+                                        <img src="@message.PhotoUrl" alt="avatar" class="message-avatar ">
+                                    }
+                                </li>
+                            }
+                        }
+                    </ul>
+
+                    <!-- Message Input Area -->
+                    @if (Model.IsBlocked)
+                    {
+                        <div class="alert alert-warning text-dark" role="alert">
+                            Engellendi, mesaj gönderemezsiniz.
+                        </div>
+                    }
+                    else
+                    {
+                        <form id="messageForm" method="post" action="/Message/SendMessage">
+                            <div class="chat-input">
+                                <textarea id="messageInput" name="content" rows="2" placeholder="Mesaj yazın..." required></textarea>
+                                <button type="submit">Gönder</button>
+                            </div>
+                            <input type="hidden" name="SenderId" value="@Model.UserId" />
+                            <input type="hidden" name="chatId" value="@Model.ChatId" />
+                            <input type="hidden" name="PhotoUrl" value="@Model.PhotoUrl" />
+                            <input type="hidden" name="UserName" value="@Model.UserName" />
+                        </form>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.7/signalr.min.js"></script>
+    <script>
+        // SignalR bağlantısı kur
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/chathub?chatId=" + document.querySelector("input[name='chatId']").value)
+            .build();
+
+        connection.start().then(function () {
+            console.log("SignalR bağlantısı kuruldu.");
+
+            // Sayfa yüklendiğinde mesaj kutusunu en alta kaydır
+            const messageContainer = document.getElementById("messageContainer");
+            messageContainer.scrollTop = messageContainer.scrollHeight;
+
+            // Eğer başlangıçta mesaj varsa kurallar bölümünü gizle
+            if (messageContainer.children.length > 0) {
+                document.getElementById("infoMessage").style.display = "none";
+            } else {
+                document.getElementById("infoMessage").style.display = "block";
+            }
+        }).catch(function (err) {
+            console.error(err.toString());
+        });
+
+        // Mesaj gönderimi (AJAX ile)
+        document.getElementById("messageForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const content = document.getElementById("messageInput").value;
+            const senderId = document.querySelector("input[name='SenderId']").value;
+            const chatId = document.querySelector("input[name='chatId']").value;
+            const photoUrl = document.querySelector("input[name='PhotoUrl']").value;
+            const userName = document.querySelector("input[name='UserName']").value;
+
+            // Veritabanına AJAX POST isteği gönder
+            $.ajax({
+                url: "/Message/SendMessage",
+                type: "POST",
+                data: {
+                    content: content,
+                    chatId: chatId
+                },
+                success: function () {
+                    console.log("Mesaj veritabanına kaydedildi.");
+
+                    // SignalR ile mesajı canlı olarak göster
+                    connection.invoke("SendMessage", senderId, chatId, content, photoUrl, userName)
+                        .then(function () {
+                            console.log("Mesaj SignalR ile gönderildi.");
+                            document.getElementById("messageInput").value = "";
+
+                            // Mesaj gönderildikten sonra scroll'u en aşağı yap
+                            const messageContainer = document.getElementById("messageContainer");
+                            messageContainer.scrollTop = messageContainer.scrollHeight;
+
+                            // Eğer bilgi mesajı varsa gizle
+                            document.getElementById("infoMessage").style.display = "none";
+                        })
+                        .catch(function (err) {
+                            console.error(err.toString());
+                        });
+                },
+                error: function (xhr, status, error) {
+                    console.error("Mesaj gönderim hatası: ", error);
+                }
+            });
+        });
+
+        // SignalR - Yeni mesaj alındığında
+        connection.on("ReceiveMessage", function (senderId, userName, photoUrl, content, SentAt) {
+            const messageContainer = document.getElementById("messageContainer");
+
+            const currentUserId = document.querySelector("input[name='SenderId']").value;
+            const isCurrentUser = senderId === currentUserId;
+
+            // Construct the new message HTML with time included
+            const newMessageHtml = `
+                <li class="message ${isCurrentUser ? "sent" : "received"}">
+                    ${!isCurrentUser ? `<img src="${photoUrl}" alt="avatar" class="message-avatar">` : ""}
+                    <div class="message-body">
+                        <span>${content}</span>
+                        <small class="message-time">${SentAt}</small>
+                    </div>
+                    ${isCurrentUser ? `<img src="${photoUrl}" alt="avatar" class="message-avatar">` : ""}
+                </li>
+            `;
+            messageContainer.insertAdjacentHTML('beforeend', newMessageHtml);
+
+            // Scroll the message container to the bottom
+            messageContainer.scrollTop = messageContainer.scrollHeight;
+
+            // Hide the information message if there are messages now
+            document.getElementById("infoMessage").style.display = "none";
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+﻿@model babiltr.Models.Applications.JobApplyUserViewModel
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BabilTR İlan Başvuru Sayfası</title>
+    <meta name="description" content="Job Listing Bootstrap 5 Template" />
+    <meta name="keywords" content="Onepage, creative, modern, bootstrap 5, multipurpose, clean, Job Listing, Job Board, Job, Job Portal" />
+    <meta name="author" content="Shreethemes" />
+    <meta name="website" content="https://shreethemes.in" />
+    <meta name="email" content="support@shreethemes.in" />
+    <meta name="version" content="1.0.0" />
+</head>
+
+<body>
+    <!-- Hero Start -->
+    <section class="bg-half-170 d-table w-100" style="background: url('/thema/jobnova_v1.0.1/html/images/hero/bg.jpg');">
+        <div class="bg-overlay bg-gradient-overlay"></div>
+        <div class="container">
+            <div class="row mt-5 justify-content-center">
+                <div class="col-12">
+                    <div class="title-heading text-center">
+                        <h5 class="heading fw-semibold mb-0 sub-heading text-white title-dark mt-3">@Model.JobTitle</h5>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+
+        </div><!--end container-->
+    </section><!--end section-->
+    <div class="position-relative">
+        <div class="shape overflow-hidden text-white">
+            <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <!-- Job apply form Start -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-7">
+                    <div class="card border-0">
+                        <form class="rounded shadow p-4" method="post" action="/Applications/JobApply" enctype="multipart/form-data">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="row">
+                                <input name="JobID" id="name2" type="hidden" class="form-control" value="@Model.JobID">
+
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">Ad Soyad :<span class="text-danger">*</span></label>
+                                        <input asp-for="FirstName" asp-for="LastName" name="name" id="name2" type="text" class="form-control" value="@Model.FirstName @Model.LastName">
+                                    </div>
+                                    <input name="FirstName" id="name2" type="hidden" class="form-control" value="@Model.FirstName">
+                                    <input name="LastName" id="name2" type="hidden" class="form-control" value="@Model.LastName">
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">E-posta Adresi :<span class="text-danger">*</span></label>
+                                        <input asp-for="Email" name="Email" id="email2" type="email" class="form-control" value="@Model.Email">
+                                    </div>
+                                </div>
+
+                                @if (Model.PhoneNumber != null)
+                                {
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <label class="form-label fw-semibold">Telefon Numarası :<span class="text-danger">*</span></label>
+                                            <input name="PhoneNumber" asp-for="PhoneNumber" type="number" class="form-control" placeholder="+90 5*********" value="@Model.PhoneNumber">
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <label class="form-label fw-semibold">Telefon Numarası :<span class="text-danger">*</span></label>
+                                            <input asp-for="PhoneNumber" name="PhoneNumber" type="number" class="form-control" placeholder="+90 5*********">
+                                        </div>
+                                    </div>
+                                }
+                                @if (Model.Occupation != null)
+                                {
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <label class="form-label fw-semibold">İş Unvanı :<span class="text-danger">*</span></label>
+                                            <input name="Occupation" asp-for="Occupation" class="form-control" value="@Model.Occupation" placeholder="Almanca Çevirmeni vb.">
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <label class="form-label fw-semibold">İş Unvanı :<span class="text-danger">*</span></label>
+                                            <input asp-for="Occupation" name="Occupation" class="form-control" placeholder="Almanca Çevirmeni vb.">
+                                        </div>
+                                    </div>
+                                }
+                                @if (Model.Introduction != null)
+                                {
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <label class="form-label fw-semibold">Açıklama :</label>
+                                            <textarea name="Introduction" asp-for="Introduction" rows="4" class="form-control" placeholder="Kendinizi Açıklayın">@Model.Introduction</textarea>
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <label class="form-label fw-semibold">Açıklama :</label>
+                                            <textarea asp-for="Introduction" name="Introduction" rows="4" class="form-control" placeholder="Kendinizi Açıklayın"></textarea>
+                                        </div>
+                                    </div>
+                                }
+                                @if (Model.CvOrResumeUrl != null)
+                                {
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <p>Mevcut CV'niz: <a href="~/cv/@Model.CvOrResumeUrl" target="_blank">@Model.CvOrResumeUrl</a></p>
+                                            <input name="CvOrResumeUrl" id="existingCv" type="hidden" class="form-control" value="@Model.CvOrResumeUrl">
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <label for="formFile" class="form-label fw-semibold">CV / Özgeçmiş Yükle :<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="file" id="CvOrResumeFile" name="CvOrResumeFile" required>
+                                        </div>
+                                    </div>
+                                }
+
+                            </div><!--end row-->
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="submit" id="submit2" name="send" class="submitBnt btn btn-primary" value="Şimdi Başvur">
+                                </div><!--end col-->
+                            </div><!--end row-->
+                        </form><!--end form-->
+                    </div><!--end custom-form-->
+                </div>
+            </div>
+        </div><!--end container-->
+    </section><!--end section-->
+    <!-- Job apply form End -->
+    <!-- Back to top -->
+    <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top rounded fs-5"><i data-feather="arrow-up" class="fea icon-sm align-middle"></i></a>
+    <!-- Back to top -->
+</body>
+</html>

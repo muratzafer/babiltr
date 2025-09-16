@@ -1,0 +1,19 @@
+.logo {
+    display: inline-block;
+    max-width: 100%; /* Logo kutusunun geniþliðini sýnýrlamaz */
+    height: auto; /* Boyut orantýsýný korur */
+}
+
+    .logo img {
+        width: 100%; /* Resmi kutunun geniþliðine göre uyumlu hale getirir */
+        max-width: 162.5px; /* Maksimum geniþlik belirlenir */
+        height: auto; /* Yükseklik otomatik olarak hesaplanýr, orantýyý bozmadan */
+        object-fit: contain; /* Resmin kutuya sýðmasýný saðlar, oraný korur */
+    }
+
+/* Mobil cihazlarda logo boyutunu küçültmek için */
+@media (max-width: 768px) {
+    .logo img {
+        max-width: 120px; /* Daha küçük ekranlarda logonun boyutunu 120px'e indirir */
+    }
+}

@@ -1,0 +1,286 @@
+﻿
+@{
+    ViewData["Title"] = "AllMessages";
+    Layout = "~/Views/Shared/adminLayout.cshtml";
+}
+@model X.PagedList.IPagedList<babiltr.EntityLayer.Contact>
+@using X.PagedList.Mvc.Core;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/adminthema/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="~/adminthema/assets/img/favicon.png">
+    <title>
+        BabilTR Admin Tüm Mesaj İstekleri Sayfası
+    </title>
+    <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
+</head>
+
+<body class="g-sidenav-show  bg-gray-200">
+    <div class="menu-extras d-lg-none">
+        <div class="menu-item">
+            <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                <div class="lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="/Admin/Index">Pano</a></li>
+            <li><a href="/Admin/AllUsers">Kullanıcılar</a></li>
+            <li><a href="/Admin/AllJobs">İş İlanları</a></li>
+            <li><a href="/Admin/AllApplications">Başvurular</a></li>
+            <li><a href="/Admin/AllMessages">Destek Talepleri</a></li>
+            <li><a href="/Admin/Commission">Ücretlendirme</a></li>
+            <li><a href="/Blog/BlogAdd">Blog Ekle</a></li>
+            <li><a href="/Account/RegisterAdmin">Admin Kayıt</a></li>
+            <li><a href="/Home/MainPage">Ana Menüye Dön</a></li>
+            <li><a href="/Account/Logout">Çıkış Yap</a></li>
+        </ul>
+    </div>
+
+    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+        <div class="sidenav-header">
+            <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+            <a class="navbar-brand m-0" href="/Admin/Index">
+                <img src="~/images/logos/babillogoligth.png" class="navbar-brand-img h-100" alt="main_logo">
+                <span class="ms-1 font-weight-bold text-white">Admin Pano</span>
+            </a>
+        </div>
+        <hr class="horizontal light mt-0 mb-2">
+        <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Admin/Index">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">dashboard</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Pano</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="/Admin/AllUsers">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">person</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Kullanıcılar</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Admin/AllJobs">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">work</i>
+                        </div>
+                        <span class="nav-link-text ms-1">İş İlanları</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Admin/AllApplications">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">description</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Başvurular</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white active bg-gradient-white" href="/Admin/AllMessages">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">message</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Destek Talepleri</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="/Admin/Commission">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">attach_money</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Ücretlendirme</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Blog/BlogAdd">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">post_add</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Blog Ekle</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Account/RegisterAdmin">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">person_add</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Admin Kayıt</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/Home/MainPage">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">home</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Ana Menüye Dön</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white " href="/Account/Logout">
+                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="material-icons opacity-10">login</i>
+                        </div>
+                        <span class="nav-link-text ms-1">Çıkış Yap</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <!-- Navbar -->
+        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
+            <div class="container-fluid py-1 px-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                        <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Sayfalar</a></li>
+                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Destek Talepleri</li>
+                    </ol>
+                    <h6 class="font-weight-bolder mb-0">Destek Talepleri</h6>
+                </nav>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+        <div class="container-fluid py-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card my-4">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <div class="bg-gradient-secondary shadow-secondary border-radius-lg pt-4 pb-3">
+                                <h6 class="text-white text-capitalize ps-3">Destek Talebi Tablosu</h6>
+                            </div>
+                        </div>
+                        <div class="card-body px-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <table class="table align-items-center mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Kullanıcı</th>
+                                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Konu</th>
+                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Mesaj İçeriği</th>
+                                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Gönderim Tarihi</th>
+                                            <th class="text-secondary opacity-7"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var message in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex px-2 py-1">
+                                                        <div class="d-flex flex-column justify-content-center">
+                                                            <h6 class="mb-0 text-sm">@message.Name</h6>
+                                                            <p class="text-xs text-secondary mb-0">@message.Email</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <p class="text-xs font-weight-bold mb-0">@message.Subject</p>
+                                                </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    <p class="text-xs font-weight-bold mb-0">@message.Comments</p>
+                                                </td>
+                                                <td class="align-middle text-center">
+                                                    <span class="text-secondary text-xs font-weight-bold">@message.CreatedAt.ToString("dd/MM/yy HH:mm")</span>
+                                                </td>
+                                                <td class="align-middle text-center">
+                                                    <button type="button"
+                                                            class="btn btn-outline-success mt-3"
+                                                            onclick="if (confirm('Destek talebi tamamlandı mı?')) { location.href='@Url.Action("DeleteMessage", "Admin", new { id = message.Id })'; }"
+                                                            data-toggle="tooltip"
+                                                            title="Sil">
+                                                        <i class="fas fa-check text-success"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                                <div class="row">
+                                    <div class="col-12 mt-4 pt-2">
+                                        <ul class="pagination justify-content-center mb-0">
+                                            @if (Model.HasPreviousPage)
+                                            {
+                                                <li class="page-item">
+                                                    <a class="page-link" href="@Url.Action("AllMessages", new { page = Model.PageNumber - 1 })" aria-label="Previous" style="color: #565F6E;">
+                                                        <span aria-hidden="true"><i class="mdi mdi-chevron-left fs-6" style="color: #565F6E;"></i></span>
+                                                    </a>
+                                                </li>
+                                            }
+                                            else
+                                            {
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" aria-label="Previous" style="color: #565F6E;">
+                                                        <span aria-hidden="true"><i class="mdi mdi-chevron-left fs-6" style="color: #565F6E;"></i></span>
+                                                    </a>
+                                                </li>
+                                            }
+
+                                            @for (int i = 1; i <= Model.PageCount; i++)
+                                            {
+                                                if (i == Model.PageNumber)
+                                                {
+                                                    <li class="page-item active">
+                                                        <a class="page-link" href="#" style="background-color: #565F6E; border-color: #565F6E; color: white;">@i</a>
+                                                    </li>
+                                                }
+                                                else
+                                                {
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="@Url.Action("AllMessages", new { page = i })" style="color: #565F6E;">@i</a>
+                                                    </li>
+                                                }
+                                            }
+
+                                            @if (Model.HasNextPage)
+                                            {
+                                                <li class="page-item">
+                                                    <a class="page-link" href="@Url.Action("AllMessages", new { page = Model.PageNumber + 1 })" aria-label="Next" style="color: #565F6E;">
+                                                        <span aria-hidden="true"><i class="mdi mdi-chevron-right fs-6" style="color: #565F6E;"></i></span>
+                                                    </a>
+                                                </li>
+                                            }
+                                            else
+                                            {
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" aria-label="Next" style="color: #565F6E;">
+                                                        <span aria-hidden="true"><i class="mdi mdi-chevron-right fs-6" style="color: #565F6E;"></i></span>
+                                                    </a>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function toggleMenu() {
+        const menu = document.querySelector('.mobile-menu');
+        if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+        } else {
+        menu.style.display = 'flex';
+        }
+        }
+    </script>
+</body>
+
+</html>
+

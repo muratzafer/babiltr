@@ -1,0 +1,444 @@
+﻿@using babiltr.Models.USER
+@model GetUserViewModel
+@{
+    ViewData["Title"] = "Ödeme";
+    Layout = "~/Views/Shared/_LayoutDark.cshtml";
+}
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BabilTR Kullanıcı Düzenleme Sayfası</title>
+    <meta name="description" content="Job Listing Bootstrap 5 Template" />
+    <meta name="keywords" content="Onepage, creative, modern, bootstrap 5, multipurpose, clean, Job Listing, Job Board, Job, Job Portal" />
+    <meta name="author" content="Shreethemes" />
+    <meta name="website" content="https://shreethemes.in" />
+    <meta name="email" content="support@shreethemes.in" />
+    <meta name="version" content="1.0.0" />
+</head>
+
+<body>
+    <!-- Start -->
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="position-relative">
+                    <div class="candidate-cover">
+                        <div class="profile-banner relative text-transparent">
+                            <div class="relative shrink-0">
+                                    <img src="/thema/jobnova_v1.0.1/html/images/hero/bg.jpg" class="rounded shadow" id="profile-banner" alt="">
+                                <label class="profile-image-label" for="pro-banner"></label>
+                                    <div class="shooting-stars">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="candidate-profile d-flex align-items-end mx-2">
+                        <div class="profile-pic">
+                             <input type="hidden" id="id" value="@Model.Id" /> 
+                            <input id="pro-img" name="profile-image" type="file" class="d-none" onchange="uploadProfileImage(this)" />
+                            <div class="position-relative d-inline-block">
+                                @if (Model.PhotoUrl != null)
+                                    {
+                                        <img src="@Model.PhotoUrl" class="avatar avatar-medium img-thumbnail rounded-pill shadow-sm" id="profile-image" alt="Profil Resmi"> 
+                                    }
+                                else
+                                    {
+                                        <img src="/images/SiteElements/DefaultPhoto.jpeg" class="avatar avatar-medium img-thumbnail rounded-pill shadow-sm" id="profile-image" alt="Profil Resmi">
+                                    }
+                               
+                                <label class="icons position-absolute bottom-0 end-0" for="pro-img">
+                                    <span class="btn btn-icon btn-sm btn-pills btn-primary">
+                                        <i data-feather="camera" class="icons"></i>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="ms-2">
+                            <h5 class="mb-0">@Model.FirstName @Model.LastName</h5>
+                            <p class="text-muted mb-0">@Model.Occupation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="alert alert-warning alert-dismissible fade show rounded-3" role="alert" style="word-wrap: break-word; max-width: 600px; margin: 0 auto; background-color: #f5e17a; border-color: #f5c400; color: black; margin-bottom: 20px;">
+            <strong>Dikkat!</strong> Eğitim ve beceri alanına geçmeden önce değişiklikleri kaydettiğinizden emin olunuz. <br>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                 <form action="/User/EditUser" method="post" enctype="multipart/form-data">
+                    <div class="rounded shadow p-4">
+                        <h5>Kişisel Bilgiler :</h5>
+                        <div class="row mt-4">
+                           
+                            <input type="hidden" id="translator" name="Id" value="@Model.Id">
+                            <input type="hidden" name="PhotoUrl" value="@Model.PhotoUrl">
+                            <input type="hidden" name="UserName" value="@Model.UserName">
+
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Adınız:<span class="text-danger">*</span></label>
+                                    <input asp-for="FirstName" name="FirstName" id="firstname" type="text" class="form-control" placeholder="First Name :" value="@Model.FirstName">
+                                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Soyadınız:<span class="text-danger">*</span></label>
+                                    <input asp-for="LastName" name="LastName" id="lastname" type="text" class="form-control" placeholder="Last Name :" value="@Model.LastName">
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            
+                            <div class="row">
+                              <div class="col-lg-6">
+                                 <div class="mb-3">
+                                     <label class="form-label fw-semibold">Telefon No. :<span class="text-danger">*</span></label>
+                                     <input asp-for="PhoneNumber" name="PhoneNumber" id="number" type="text" class="form-control" placeholder="05*********" value="@Model.PhoneNumber">
+                                     <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                 </div>
+                              </div>
+
+                               <div class="col-md-6">
+                                  <div class="mb-3">
+                                       <label class="form-label fw-semibold">Email Adresiniz:<span class="text-danger">*</span></label>
+                                       <input asp-for="Email" name="Email" id="email2" type="email" class="form-control" placeholder="Mail Adresiniz" value="@Model.Email">
+                                       <span asp-validation-for="Email" class="text-danger"></span>
+                                  </div>
+                               </div>
+
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">Doğum Tarihiniz:</label>
+                                        <input name="DOB" id="date" type="date" class="form-control" placeholder="GG.AA.YYYY"
+                                               value="@Model.DOB.ToString("yyyy-MM-dd")"> 
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                            <label class="form-label fw-semibold">Yaşadığınız Ülke :</label>
+                                            <input asp-for="Country" name="Country" type="text" class="form-control" placeholder="Örn:Türkiye" value="@Model.Country">
+                                            <span asp-validation-for="Country" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">Yaşadığınız Şehir :</label>
+                                        <input asp-for="City" name="City" type="text" class="form-control" placeholder="Örn:İstanbul" value="@Model.City">
+                                        <span asp-validation-for="City" class="text-danger"></span>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                </div>
+
+                    <div class="rounded shadow p-4 mt-4">
+                        <div class="col-md-4">
+                            <h5 class="d-inline-block me-3">İş Bilgileri :</h5>
+                            <div class="form-check form-switch d-inline-block">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <label class="form-label fw-semibold form-check-label" for="Translator">Çevirmen Misiniz?</label>
+                                    <input class="form-check-input ms-2 mb-2" type="checkbox" id="Translator" name="Translator" value="true"
+                                    @(Model.Translator ? "checked" : "") onchange="toggleFields();">
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <div class="row mt-4">
+
+                            <!-- İş Bilgileri (Meslek, Ücret, Tecrübe) - Başlangıçta gizli olacak -->
+                            <div class="col-md-4 job-info-field" style="display: none;">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Mesleğiniz:<span class="text-danger">*</span></label>
+                                    <input asp-for="Occupation" name="Occupation" id="Occupation" type="text" class="form-control" placeholder="Örn: Almanca Çevirmeni" value="@Model.Occupation">
+                                    <span asp-validation-for="Occupation" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 job-info-field" style="display: none;">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Saatlik Ücret Beklentiniz (TL) :<span class="text-danger">*</span></label>
+                                    <input asp-for="Salary" name="Salary" type="number" class="form-control" placeholder="Örn: 5-6" value="@Model.Salary">
+                                    <span asp-validation-for="Salary" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 job-info-field" style="display: none;">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">İş Tecrübeniz :<span class="text-danger">*</span></label>
+                                    <input asp-for="Experience" name="Experience" type="text" class="form-control" placeholder="Örn: 3 Yıl" value="@Model.Experience">
+                                    <span asp-validation-for="Experience" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <!-- IBAN Numarası Alanı - Diğer iş bilgileriyle birlikte gizlensin -->
+                            <div class="col-md-4 iban-field" style="display:none;">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">IBAN Numarası :</label>
+                                    <input asp-for="Iban" type="text" class="form-control" name="Iban" value="@Model.Iban" placeholder="TRXXXXXXXXXXXXXXXXXXXXXXXX">
+                                    <span asp-validation-for="Iban" class="text-danger"></span>
+                                    <small class="form-text text-muted">Lütfen IBAN bilginizi boşluksuz giriniz.</small>
+                                </div>
+                            </div>
+
+                            <!-- CV Yükleme alanı - Çevirmen Misiniz? işaretlenirse görünsün -->
+                            <div class="col-md-4 cv-field" style="display:none;">
+                                <div class="mb-3">
+                                    <label for="CvOrResumeFile" class="form-label">Lütfen CV Yükleyin:</label>
+                                    <input class="form-control" type="file" id="CvOrResumeFile" value="@Model.CvOrResumeUrl" name="CvOrResumeFile" accept="application/pdf">
+                                    <small class="form-text text-muted">Yalnızca PDF dosyası kabul edilmektedir.</small>
+                                </div>
+                            </div>
+
+                            <!-- Tanıtım Metni - Çevirmen Misiniz? işaretlenirse görünsün -->
+                            <div class="col-md-12 introduction-field" style="display:none;">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Tanıtım Metni :</label>
+                                    <textarea name="Introduction" id="comments2" rows="4" class="form-control" placeholder="Buraya Yazınız">@Model.Introduction</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded shadow p-4 mt-4">
+                    <div class="row">
+                 
+                            <h5>Sosyal Medya Bağlantıları :</h5>
+
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">
+                                        <i data-feather="facebook" class="fea icon-sm align-middle" title="Facebook"></i> Facebook Adresiniz :
+                                    </label>
+                                    <input asp-for="Facebook" name="Facebook" type="text" class="form-control" value="@Model.Facebook">
+                                    <span asp-validation-for="Facebook" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">
+                                        <i data-feather="linkedin" class="fea icon-sm align-middle" title="Linkedin"></i> Linkedin Adresiniz :
+                                    </label>
+                                    <input asp-for="Linkedin" name="Linkedin" type="text" class="form-control" value="@Model.Linkedin">
+                                    <span asp-validation-for="Linkedin" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">
+                                        <i data-feather="instagram" class="fea icon-sm align-middle" title="Instagram"></i> Instagram Adresiniz :
+                                    </label>
+                                    <input asp-for="Instagram" name="Instagram" type="text" class="form-control" value="@Model.Instagram">
+                                    <span asp-validation-for="Instagram" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">
+                                        <i data-feather="twitter" class="fea icon-sm align-middle" title="Twitter"></i> Twitter/X Adresiniz :
+                                    </label>
+                                    <input asp-for="Twitter" name="Twitter" type="text" class="form-control" value="@Model.Twitter">
+                                    <span asp-validation-for="Twitter" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="col-12 mt-4 text-end pe-4">
+                            <input type="submit" class="submitBnt btn btn-primary" value="DEĞİŞİKLİKLERİ Kaydet">
+                        </div>
+
+                    </form>
+                    <div class="rounded shadow p-4 mt-4">
+                        <div class="row">
+                            <div class="col-md-6 mt-4 pt-2">
+                                <h5>EĞİTİM BİLGİSİ :</h5>
+                                <form action="/User/AddEducation" method="post">
+
+                                    <input type="hidden" name="UserId" value="@Model.Id">
+
+                                    <div class="row mt-4">
+                                        <div class="col-lg-12">
+                                            <div class="mb-3">
+                                                <label class="form-label fw-semibold">Okul Adı :</label>
+                                                <input type="text" class="form-control" placeholder="Örn: Atatürk Üniversitesi" name="SchoolName">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            <div class="mb-3">
+                                                <label class="form-label fw-semibold">Akademik Derece :</label>
+                                                <input type="text" class="form-control" placeholder="Örn: Lisans,Önlisans" name="Degree">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            <div class="mb-3">
+                                                <label class="form-label fw-semibold">Okuduğunuz Yıl Aralığı :</label>
+                                                <input type="text" class="form-control" placeholder="Örn: 2011-2015" name="Years">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12 mt-2 mb-0">
+                                            <button type="submit" class="btn btn-primary">EĞİTİM Ekle</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="col-md-6 mt-4 pt-2">
+                                <h5>BECERİ BİLGİSİ :</h5>
+                                <form action="/User/AddSkills" method="post">
+
+                                    <input type="hidden" name="UserId" value="@Model.Id">
+
+                                    <div class="row mt-4">
+                                        <div class="col-lg-12">
+                                            <div class="mb-3">
+                                                <label class="form-label fw-semibold">Beceri Adı :</label>
+                                                <input type="text" class="form-control" placeholder="Örn: Almanca Sertifikası" name="SkillName">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label fw-semibold">Beceri Derecesi :</label>
+                                                <input type="text" class="form-control" placeholder="1 ila 100 arasında bir değer girin" name="SkillPercentage">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12 mt-2 mb-0">
+                                            <button type="submit" class="btn btn-primary">BECERİ Ekle</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded shadow p-4 mt-4" style="max-width: 400px;">
+                        <div class="col-md-12  pt-2">
+                            <h5>Şifre Değiştirme Bağlantısı İçin Tıklayınız :</h5>
+                            <form action="/Account/ForgotPassword" method="post">
+                                <input type="hidden" name="email" value="@Model.Email">
+                                <button type="submit" class="btn btn-primary">Gönder</button>
+                            </form>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- End -->
+    <!-- Back to top -->
+    <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top rounded fs-5"><i data-feather="arrow-up" class="fea icon-sm align-middle"></i></a>
+    <!-- Back to top -->
+</body>
+</html>
+<script>
+    function updateValue(checkbox) {
+        checkbox.value = checkbox.checked ? 'true' : 'false';
+    }
+</script>
+
+<script>
+function uploadProfileImage(input) {
+    const file = input.files[0];
+    const Id = document.getElementById('id').value; 
+
+    if (file) {
+        const formData = new FormData();
+        formData.append("profileImage", file);
+        formData.append("id", Id); 
+
+        fetch('/User/UploadProfileImage', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Resmi güncelle
+                document.getElementById('profile-image').src = data.imageUrl;
+            } else {
+                alert("Hata: " + data.message);
+            }
+        })
+        .catch(error => {
+            console.error("Hata:", error);
+        });
+    }
+}
+</script>
+<script>
+    // Sayfa yüklendiğinde, Çevirmen misiniz checkbox'ının durumuna göre alanları göster veya gizle
+    window.onload = function () {
+        toggleFields();
+    };
+
+    function toggleFields() {
+        var translatorCheckbox = document.getElementById("Translator");
+        var jobInfoFields = document.querySelectorAll(".job-info-field");
+        var ibanField = document.querySelector(".iban-field");
+        var cvField = document.querySelector(".cv-field");
+        var introductionField = document.querySelector(".introduction-field");
+
+        // Eğer checkbox işaretlendiyse, ilgili alanları göster
+        if (translatorCheckbox.checked) {
+            jobInfoFields.forEach(function(field) {
+                field.style.display = "block";
+            });
+            ibanField.style.display = "block";
+            cvField.style.display = "block";
+            introductionField.style.display = "block";
+        } else {
+            jobInfoFields.forEach(function(field) {
+                field.style.display = "none";
+            });
+            ibanField.style.display = "none";
+            cvField.style.display = "none";
+            introductionField.style.display = "none";
+        }
+    }
+</script>
+
+<script>
+    function confirmDelete() {
+        return confirm("Hesabınızı silmek istediğinize emin misiniz?");
+    }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const stars = document.querySelectorAll(".shooting-stars span");
+        stars.forEach(star => {
+            star.style.setProperty('--random-x', Math.random());
+            star.style.setProperty('--random-y', Math.random());
+        });
+    });
+</script>

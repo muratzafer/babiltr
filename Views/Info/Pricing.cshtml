@@ -1,0 +1,122 @@
+﻿
+@{
+    ViewData["Title"] = "Pricing";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BabilTR Ücretlendirme Sayfası</title>
+    <meta name="description" content="Job Listing Bootstrap 5 Template" />
+    <meta name="keywords" content="Onepage, creative, modern, bootstrap 5, multipurpose, clean, Job Listing, Job Board, Job, Job Portal" />
+    <meta name="author" content="Shreethemes" />
+    <meta name="website" content="https://shreethemes.in" />
+    <meta name="email" content="support@shreethemes.in" />
+    <meta name="version" content="1.0.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+</head>
+
+<body>
+    <!-- Hero Start -->
+    <section class="bg-half-170 d-table w-100" style="background: url('/thema/jobnova_v1.0.1/html/images/hero/bg.jpg');">
+        <div class="bg-overlay bg-gradient-overlay"></div>
+        <div class="shooting-stars">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="container">
+            <div class="row mt-5 justify-content-center">
+                <div class="col-12">
+                    <div class="title-heading text-center">
+                        <h5 class="heading fw-semibold mb-0 sub-heading text-white title-dark">Ücretlendirme</h5>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+    </section><!--end section-->
+    <div class="position-relative">
+        <div class="shape overflow-hidden text-white">
+            <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <!-- Start -->
+    <section class="section">
+        <div class="container">
+            <div class="row g-4 align-items-lg-center justify-content-center">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Pricing box fade-in -->
+                    <div class="pricing text-center rounded position-relative shadow" style="height: 100%;" data-aos="fade-up">
+                        <div class="price-header rounded-top bg-dark pt-5 pb-5">
+                            <h5 class="price-title text-white title-dark">Ücretlendirme</h5>
+                            <p class="mb-0 text-white-50">Babil Freelance'e Katılın</p>
+                        </div>
+                        <div class="d-flex justify-content-center bg-light border-bottom py-5">
+                            <span class="price h4 mb-0">Fırsatlar</span>
+                        </div>
+                        <div class="pricing-features text-start">
+                            <ul class="feature list-unstyled py-4 p-3 mb-0">
+                                <li class="feature-list text-muted mt-2" data-aos="fade-right">
+                                    <i data-feather="arrow-right-circle" class="fea icon-sm text-dark me-2"></i>
+                                    İş ilanı yayınlamak ücretsizdir.
+                                </li>
+                                <li class="feature-list text-muted mt-2" data-aos="fade-left">
+                                    <i data-feather="arrow-right-circle" class="fea icon-sm text-dark me-2"></i>
+                                    Çevirmen olarak kayıt yaptırmak ücretsizdir.
+                                </li>
+                                <li class="feature-list text-muted mt-2" data-aos="fade-right">
+                                    <i data-feather="arrow-right-circle" class="fea icon-sm text-dark me-2"></i>
+                                    İlanlara başvurmak ücretsizdir.
+                                </li>
+                                <li class="feature-list text-muted mt-2" data-aos="fade-left">
+                                    <i data-feather="arrow-right-circle" class="fea icon-sm text-dark me-2"></i>
+                                    İş başına çevirmenlerimizden sadece %5 hizmet bedeli alınır.
+                                </li>
+                                <li class="feature-list text-muted mt-2" data-aos="fade-right">
+                                    <i data-feather="arrow-right-circle" class="fea icon-sm text-dark me-2"></i>
+                                    İş başına ilan sahiplerimizden sadece %5 hizmet bedeli alınır.
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--end pricing-->
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+    </section><!
+    <!-- End -->
+    <!-- Back to top -->
+    <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top rounded fs-5"><i data-feather="arrow-up" class="fea icon-sm align-middle"></i></a>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration
+            once: true      // Animation happens only once - while scrolling down
+        });
+    </script>
+    <!-- Back to top -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const stars = document.querySelectorAll(".shooting-stars span");
+            stars.forEach(star => {
+                star.style.setProperty('--random-x', Math.random());
+                star.style.setProperty('--random-y', Math.random());
+            });
+        });
+    </script>
+</body>
+</html>
+

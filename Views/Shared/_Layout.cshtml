@@ -1,0 +1,265 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+<!doctype html>
+@{
+    var id = HttpContextAccessor.HttpContext.Request.Cookies["UserId"];
+    var profilePictureUrl = HttpContextAccessor.HttpContext.Request.Cookies["PhotoUrl"];
+
+    var defaultProfilePictureUrl = "/Images/SiteElements/DefaultPhoto.jpeg";
+    var displayPictureUrl = !string.IsNullOrEmpty(profilePictureUrl) ? profilePictureUrl : defaultProfilePictureUrl;
+}
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4CYH0C4RNR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-4CYH0C4RNR');
+    </script>
+    <title>Babil Freelance - Size en uygun çeviri işini şimdi bulun.</title>
+    <meta name="description" content="BabilTR Freelance platformu, çevirmenler ve işverenler için güvenli, hızlı ve verimli bir iş bulma ve tamamlama deneyimi sunar." />
+
+    <!-- favicon -->
+    <link href="~/images/siteelements/babilicon.png" rel="shortcut icon">
+    <!-- Bootstrap core CSS -->
+    <link href="~/thema/jobnova_v1.0.1/html/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="~/thema/jobnova_v1.0.1/html/css/tiny-slider.css" rel="stylesheet" type="text/css" />
+    <link href="~/thema/jobnova_v1.0.1/html/css/tobii.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/thema/jobnova_v1.0.1/html/css/choices.min.css" rel="stylesheet" />
+    <link href="~/thema/jobnova_v1.0.1/html/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+    <!-- Custom  Css -->
+    <link href="~/thema/jobnova_v1.0.1/html/css/style.min.css" rel="stylesheet" />
+    <link href="~/thema/jobnova_v1.0.1/html/css/style.css" rel="stylesheet" />
+    <link href="~/css/stars.css" rel="stylesheet" />
+    <link href="~/css/logo.css" rel="stylesheet" />
+    <link href="~/css/topnav.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header id="topnav" class="defaultscroll sticky">
+        <div class="container">
+            <a class="logo" href="/Home/MainPage">
+                <span class="logo-light-mode">
+                    <img src="/images/logos/babillogodark.png" class="l-dark" alt="" width="162.5" height="81.25">
+                    <img src="/images/logos/babillogoligth.png" class="l-light" alt="" width="162.5" height="81.25">
+                </span>
+                <img src="~/images/logos/babillogoligth.png" class="logo-dark-mode" alt="" width="162.5" height="81.25">
+            </a>
+
+            <div class="menu-extras">
+                <div class="menu-item">
+                    <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                        <div class="lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="buy-button list-inline mb-0 ms-3">
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="list-inline-item ps-1 mb-0">
+                        <div class="dropdown dropdown-primary">
+                            <button type="button" class="dropdown-toggle btn btn-sm btn-icon btn-pills btn-primary" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="@displayPictureUrl" class="img-fluid rounded-pill" alt="">
+                            </button>
+                            <div class="dropdown-menu dd-menu dropdown-menu-end bg-white rounded shadow border-0 mt-3">
+                                <a href="/User/GetUser/@id" class="dropdown-item fw-medium fs-6">
+                                    <i data-feather="user" class="fea icon-sm me-2 align-middle"></i>@User.Identity.Name
+                                </a>
+
+                                @if (User.IsInRole("admin"))
+                                {
+                                    <a href="/Admin/Index" class="dropdown-item fw-medium fs-6">
+                                        <i data-feather="shield" class="fea icon-sm me-2 align-middle"></i>Admin Giriş
+                                    </a>
+                                }
+                                else
+                                { 
+                                  <a href="/Applications/UserApplications" class="dropdown-item fw-medium fs-6">
+                                        <i data-feather="clipboard" class="fea icon-sm me-2 align-middle"></i>Başvurularım
+                                        <span id="applicationNotification" class="badge bg-danger ms-1"></span>
+                                  </a>
+                                }
+
+                                <a href="/Message/ChatUsers" class="dropdown-item fw-medium fs-6">
+                                    <i data-feather="message-circle" class="fea icon-sm me-2 align-middle"></i>Mesajlarım
+                                    <span id="messageNotification" class="badge bg-danger ms-1"></span>
+                                </a>
+
+                                @if (User.IsInRole("admin"))
+                                {
+                                    <a href="/Admin/Index" class="dropdown-item fw-medium fs-6">
+                                        <i data-feather="shield" class="fea icon-sm me-2 align-middle"></i>Admin Giriş
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a href="/Jobs/MyCreatedJobs" class="dropdown-item fw-medium fs-6">
+                                        <i data-feather="folder" class="fea icon-sm me-2 align-middle"></i>İlanlarım
+                                    </a>
+                                    <a href="/Jobs/MyProjects" class="dropdown-item fw-medium fs-6">
+                                        <i data-feather="briefcase" class="fea icon-sm me-2 align-middle"></i>Projelerim
+                                        <span id="projectNotification" class="badge bg-danger ms-1"></span>
+                                    </a>
+                                
+                                }
+                          
+                                <a href="/User/EditUser/@id" class="dropdown-item fw-medium fs-6">
+                                    <i data-feather="settings" class="fea icon-sm me-2 align-middle"></i>Ayarlar
+                                </a>
+
+                                <div class="dropdown-divider border-top"></div>
+
+                                <a href="/Account/Logout" class="dropdown-item fw-medium fs-6">
+                                    <i data-feather="log-out" class="fea icon-sm me-2 align-middle"></i>Çıkış Yap
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ul>
+
+            <div id="navigation">
+                <!-- Navigation Menu-->
+                <ul class="navigation-menu nav-right nav-light">
+                    <li><a href="/Home/MainPage" class="sub-menu-item">Ana Sayfa</a></li>
+
+                    <li><a href="/Jobs/GetJobs" class="sub-menu-item">İlanlar</a></li>
+                    @if (User.Identity.IsAuthenticated && !User.IsInRole("admin"))
+                    {
+                        <li class="has-submenu parent-menu-item">
+                            <a href="javascript:void(0)"> Yayınla </a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="/Jobs/JobCreate" class="sub-menu-item">İlan Yayınla</a></li>
+                                <li><a href="/Jobs/CreateInternshipJob" class="sub-menu-item">Staj İlanı Yayınla</a></li>
+                            </ul>
+                        </li>  
+                    }
+
+                    <li><a href="/User/GetAllTranslatorUser" class="sub-menu-item">ÇEVİRMENLER</a></li>
+
+                    <li class="has-submenu parent-menu-item">
+                        <a href="javascript:void(0)"> Hİzmetlerİmİz </a><span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li><a href="/Info/AboutUs" class="sub-menu-item">Hakkımızda </a></li>
+                            <li><a href="/Info/Pricing" class="sub-menu-item">ÜCRETLENDİRME </a></li>
+                            <li><a href="/Info/SSS" class="sub-menu-item">Sıkça Sorulan Sorular</a></li>
+                            <li><a href="/Info/TermsOfService" class="sub-menu-item">KULLANIM KOŞULLARI</a></li>
+                            <li><a href="/Info/PrivacyPolicy" class="sub-menu-item">GİZLİLİK POLİTİKASI</a></li>
+                            <li><a href="/Info/Contact" class="sub-menu-item">BİZE ULAŞIN</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/Blog/AllBlogs" class="sub-menu-item">BLOG</a></li>
+                   
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <li class="has-submenu parent-menu-item">
+                            <a href="javascript:void(0)"> Oturum Açma </a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="/Account/Login" class="sub-menu-item"> GİRİŞ Yap</a></li>
+                                <li><a href="/Account/Register" class="sub-menu-item"> Kayıt Ol</a></li>
+                            </ul>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    @RenderBody()
+
+
+    <footer class="bg-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5">
+                        <div class="row align-items-center">
+                            <div class="col-sm-3">
+                                <div class="text-center text-sm-start">
+                                    <a class="logo" href="/Home/MainPage">
+                                        <img src="~/images/logos/babillogoligth.png" class="logo-dark-mode" alt="" width="162.5" height="81.25">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-9 mt-4 mt-sm-0">
+                                <ul class="list-unstyled footer-list terms-service text-center text-sm-end mb-0">
+                                    <li class="list-inline-item my-2"><a href="/Home/MainPage" class="text-foot fs-6 fw-medium me-2"><i class="mdi mdi-circle-small"></i> Ana Sayfa</a></li>
+                                    <li class="list-inline-item my-2"><a href="/Info/Pricing" class="text-foot fs-6 fw-medium me-2"><i class="mdi mdi-circle-small"></i> Ücretlendirme </a></li>
+                                    <li class="list-inline-item my-2"><a href="/Jobs/JobCreate" class="text-foot fs-6 fw-medium me-2"><i class="mdi mdi-circle-small"></i> İlan Yayınla </a></li>
+                                    <li class="list-inline-item my-2"><a href="/Info/AboutUs" class="text-foot fs-6 fw-medium me-2"><i class="mdi mdi-circle-small"></i> Hakkımızda </a></li>
+                                    <li class="list-inline-item my-2"><a href="/Info/Contact" class="text-foot fs-6 fw-medium"><i class="mdi mdi-circle-small"></i> Bize Ulaşın </a></li>
+                                </ul>
+                            </div><!--end col-->
+                        </div><!--end row-->
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+
+        <div class="py-4 footer-bar">
+            <div class="container text-center">
+                <div class="row align-items-center">
+                    <div class="col-sm-8">
+                        <div class="text-sm-start">
+                            <p class="mb-0">
+                                2024 - Babil Freelance © bir
+                                <a href="https://babiltr.com">Babil Çeviri & Dijital Pazarlama</a> markasıdır. Tüm hakları saklıdır.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                        <ul class="list-unstyled social-icon foot-social-icon text-sm-end mb-0">
+                            <li class="list-inline-item"><a href="https://linkedin.com/company/babiltrcom" target="_blank" class="rounded"><i data-feather="linkedin" class="fea icon-sm align-middle" title="Linkedin"></i></a></li>
+                            <li class="list-inline-item"><a href="https://facebook.com/babiltrcom" target="_blank" class="rounded"><i data-feather="facebook" class="fea icon-sm align-middle" title="facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="https://instagram.com/babiltrcom" target="_blank" class="rounded"><i data-feather="instagram" class="fea icon-sm align-middle" title="instagram"></i></a></li>
+                        </ul><!--end icon-->
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </div>
+    </footer><!--end footer-->
+    <!-- JAVASCRIPTS -->
+    <script src="~/thema/jobnova_v1.0.1/html/js/bootstrap.bundle.min.js"></script>
+    <script src="~/thema/jobnova_v1.0.1/html/js/tiny-slider.js"></script>
+    <script src="~/thema/jobnova_v1.0.1/html/js/tobii.min.js"></script>
+    <script src="~/thema/jobnova_v1.0.1/html/js/choices.min.js"></script>
+    <script src="~/thema/jobnova_v1.0.1/html/js/feather.min.js"></script>
+    <!-- Custom -->
+    <script src="~/thema/jobnova_v1.0.1/html/js/plugins.init.js"></script>
+    <script src="~/thema/jobnova_v1.0.1/html/js/app.js"></script>
+    <script>
+        function updateNotificationCounts() {
+            const userId = document.cookie
+                .split('; ')
+                .find(row => row.startsWith('UserId='))
+                ?.split('=')[1];
+
+            if (userId) {
+                fetch(`/Notification/GetUnreadCounts?userID=${userId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('applicationNotification').textContent = data.applicationCount || '';
+                        document.getElementById('messageNotification').textContent = data.messageCount || '';
+                    })
+                    .catch(error => console.error('Error fetching notification counts:', error));
+            } else {
+                console.error('User ID not found in cookies');
+            }
+        }
+
+        updateNotificationCounts();
+    </script>
+
+</body>
+</html>

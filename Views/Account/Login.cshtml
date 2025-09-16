@@ -1,0 +1,115 @@
+﻿@using babiltr.Models.Account
+@model LoginViewModel
+<!doctype html>
+@{
+    Layout = null;
+}
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Babil Freelance - En uygun işi şimdi bulun</title>
+    <meta name="description" content="Job Listing Bootstrap 5 Template" />
+    <meta name="keywords" content="Onepage, creative, modern, bootstrap 5, multipurpose, clean, Job Listing, Job Board, Job, Job Portal" />
+    <meta name="author" content="Shreethemes" />
+    <meta name="website" content="https://shreethemes.in" />
+    <meta name="email" content="support@shreethemes.in" />
+    <meta name="version" content="1.0.0" />
+    <!-- favicon -->
+    <link href="~/images/siteelements/babilicon.png" rel="shortcut icon">
+    <!-- Bootstrap core CSS -->
+    <link href="~/thema/jobnova_v1.0.1/html/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/thema/jobnova_v1.0.1/html/css/materialdesignicons.min.css" rel="stylesheet" />
+    <!-- Custom Css -->
+    <link href="~/thema/jobnova_v1.0.1/html/css/style.css" rel="stylesheet" />
+    <link href="~/css/logo.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Start Hero -->
+    <section class="bg-home d-flex align-items-center" style="background: url('/thema/jobnova_v1.0.1/html/images/hero/bg3.jpg') center;">
+        <div class="bg-overlay bg-linear-gradient-2"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-5 col-12">
+                    <div class="p-4 bg-white rounded shadow-md mx-auto w-100" style="max-width: 400px;">
+                        <form action="/Account/Login" method="post">
+                                <input type="hidden" name="returnUrl" value="@ViewData["ReturnUrl"]" />
+
+                            <a class="logo" href="/Home/MainPage">
+                                <img src="~/images/logos/babillogodark.png" class="logo-ligth-mode" alt="" width="162.5" height="81.25">
+                            </a>
+                            <h6 class="mt-2 mb-3 text-uppercase fw-semibold">Lütfen Giriş Yapın</h6>
+                            <div asp-validation-summary="All" class="text-danger"></div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Email Adresiniz</label>
+                                <input asp-for="Email" name="Email" id="email" type="email" class="form-control" placeholder="örnek@gmail.com">
+                               
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold" for="loginpass">Şifreniz</label>
+                                <input asp-for="Password" name="Password" type="Password" class="form-control" id="loginpass" placeholder="******">
+                                
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-label form-check-label text-muted" for="flexCheckDefault">Beni Hatırla</label>
+                                    </div>
+                                </div>
+                                <span class="forgot-pass text-muted small mb-0"><a href="~/Account/ForgotPassword" class="text-muted">Şifremi Unuttum?</a></span>
+                            </div>
+
+                            <button class="btn btn-primary w-100" type="submit">Giriş Yap</button>
+
+                            <div class="col-12 text-center mt-3">
+                                <span><span class="text-muted me-2 small">Hesabınız Yok Mu? </span> <a href="~/Account/Register" class="text-dark fw-semibold small">Kayıt Ol</a></span>
+                            </div><!--end col-->
+                        </form>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+    </section><!--end section-->
+    <!-- ENd Hero -->
+    <!-- javascript -->
+    <script src="~/thema/jobnova_v1.0.1/html/js/bootstrap.bundle.min.js"></script>
+    <script src="~/thema/jobnova_v1.0.1/html/js/feather.min.js"></script>
+    <!-- Custom -->
+    <script src="~/thema/jobnova_v1.0.1/html/js/plugins.init.js"></script>
+    <script src="~/thema/jobnova_v1.0.1/html/js/app.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+
+    <script>
+        // Sayfa yüklendiğinde e-posta adresini localStorage'dan al
+        document.addEventListener('DOMContentLoaded', function () {
+            const rememberedEmail = localStorage.getItem('rememberedEmail');
+            if (rememberedEmail) {
+                document.getElementById('email').value = rememberedEmail;
+                document.getElementById('flexCheckDefault').checked = true; // Checkbox'ı işaretle
+            }
+        });
+
+        // Form gönderildiğinde "Beni Hatırla" seçeneğinin durumunu kontrol et
+        document.querySelector('form').addEventListener('submit', function (e) {
+            const rememberMe = document.getElementById('flexCheckDefault').checked;
+
+            if (rememberMe) {
+                // Kullanıcı hatırlanacaksa, bilgileri tarayıcıda sakla
+                const email = document.getElementById('email').value;
+                localStorage.setItem('rememberedEmail', email);
+            } else {
+                // Kullanıcı hatırlanmayacaksa, saklanan bilgileri temizle
+                localStorage.removeItem('rememberedEmail');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+﻿@using babiltr.Models.USER
+@model GetUserViewModel
+@{
+    Layout = "~/Views/Shared/_LayoutDark.cshtml";
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BabilTR Kullanıcı Görüntüleme Sayfası</title>
+    <meta name="description" content="Job Listing Bootstrap 5 Template" />
+    <meta name="keywords" content="Onepage, creative, modern, bootstrap 5, multipurpose, clean, Job Listing, Job Board, Job, Job Portal" />
+    <meta name="author" content="Shreethemes" />
+    <meta name="website" content="https://shreethemes.in" />
+    <meta name="email" content="support@shreethemes.in" />
+    <meta name="version" content="1.0.0" />
+</head>
+
+<body>
+    <!-- Start -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="position-relative">
+                        <div class="candidate-cover">
+                            <img src="~/thema/jobnova_v1.0.1/html/images/hero/bg.jpg" class="img-fluid rounded shadow" alt="">
+                            <div class="shooting-stars">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="candidate-profile d-flex align-items-end justify-content-between mx-2">
+                            <div class="d-flex align-items-end">
+                                @if (Model.PhotoUrl != null)
+                                {
+                                    <img src="@Model.PhotoUrl" class="avatar avatar-medium img-thumbnail rounded-pill shadow-sm" id="profile-image" alt="Profil Resmi">
+                                }
+                                else
+                                {
+                                    <img src="~/images/SiteElements/DefaultPhoto.jpeg" class="avatar avatar-medium img-thumbnail rounded-pill shadow-sm" id="profile-image" alt="Profil Resmi">
+                                }
+                                <div class="ms-2">
+                                    <h5 class="mb-0">@Model.FirstName @Model.LastName</h5>
+                                    <p class="text-muted mb-0">@Model.Occupation</p>
+                                </div>
+                            </div>
+
+                            @if (User.Identity.IsAuthenticated && User.Identity.Name == Model.UserName)
+                            {
+                                <a href="/User/EditUser/@Model.Id" class="btn btn-sm btn-icon btn-pills btn-soft-primary"><i data-feather="settings" class="icons"></i></a>
+                            }
+                        </div>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+
+        <div class="container mt-4">
+            <div class="row g-4">
+                <div class="col-lg-8 col-md-7 col-12">
+                    <h5 class="mb-4">Tanıtım:</h5>
+                    @if (Model.Introduction != null)
+                    {
+                        <p class="text-muted">@Model.Introduction</p>
+                    }
+                    else
+                    {
+                        <p class="text-muted">Henüz tanıtım bilgisi bulunmamaktadır.</p>
+                    }
+
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <h5 class="mt-4">Beceriler :</h5>
+                            @if (Model.Skills != null && Model.Skills.Any())
+                            {
+                                @foreach (var skill in Model.Skills)
+                                {
+                                    <div class="progress-box mt-4 d-flex justify-content-between align-items-center">
+                                        @if (User.Identity.IsAuthenticated && User.Identity.Name == Model.UserName)
+                                        {
+                                            <a href="@Url.Action("DeleteSkill", "User", new { id = skill.SkillsID })" onclick="return confirm('Silmek istediğinize emin misiniz?');">
+                                                <i data-feather="trash-2" class="text-danger"></i> <!-- Kırmızı renk ekledik -->
+                                            </a>
+
+                                        }
+                                       
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="font-weight-normal mb-2">@skill.SkillName</h6>
+                                            <div class="progress" style="height: 17px;">
+                                                <!-- Yüksekliği arttırdık -->
+                                                <div class="progress-bar position-relative" style="width:@skill.SkillPercentage%; background-color: #003366;">
+                                                    <!-- Lacivert renk -->
+                                                    <span class="position-absolute w-100 text-center text-white h6" style="top: 50%; transform: translateY(-50%);">
+                                                        @skill.SkillPercentage%
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <p class="text-muted">Henüz beceri bilgisi bulunmamaktadır.</p>
+                            }
+                        </div><!--end col-->
+                    </div><!--end row-->
+
+                    <div class="row">
+                        <div class="col-12 mt-4">
+                            <h5 class="mt-4">Eğitim:</h5>
+                            @if (Model.Educations != null && Model.Educations.Any())
+                            {
+                                @foreach (var education in Model.Educations)
+                                {
+                                    <div class="d-flex">
+                                        @if (User.Identity.IsAuthenticated && User.Identity.Name == Model.UserName)
+                                        {
+                                            <a href="@Url.Action("DeleteEducation", "User", new { id = education.EducationID })" class="text-danger" onclick="return confirm('Silmek istediğinize emin misiniz?');">
+                                                <i data-feather="trash-2"></i>
+                                            </a>
+                                        }
+                                      
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="mb-0">@education.Degree @education.Years</h6>
+                                            <p class="text-muted">@education.SchoolName</p>
+                                        </div>
+                                    </div>
+
+                                }
+                            }
+                            else
+                            {
+                                <p class="text-muted">Henüz eğitim bilgisi bulunmamaktadır.</p>
+                            }
+                        </div><!--end col-->
+                    </div><!--end row-->
+                </div><!--end col-->
+
+                <div class="col-lg-4 col-md-5 col-12">
+                    <div class="card bg-light p-4 rounded shadow sticky-bar">
+                        <h5 class="mb-0">Kişisel Bilgiler:</h5>
+                        <div class="mt-3">
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <span class="d-inline-flex align-items-center text-muted fw-medium"><i data-feather="mail" class="fea icon-sm me-2"></i> E-Mail:</span>
+                                <span class="fw-medium">@Model.Email</span>
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <span class="d-inline-flex align-items-center text-muted fw-medium"><i data-feather="gift" class="fea icon-sm me-2"></i> Doğum Tarihi:</span>
+                                <span class="fw-medium">@Model.DOB</span>
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <span class="d-inline-flex align-items-center text-muted fw-medium"><i data-feather="map-pin" class="fea icon-sm me-2"></i> Şehir:</span>
+                                <span class="fw-medium">@Model.City</span>
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <span class="d-inline-flex align-items-center text-muted fw-medium"><i data-feather="globe" class="fea icon-sm me-2"></i> Ülke:</span>
+                                <span class="fw-medium">@Model.Country</span>
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <span class="d-inline-flex align-items-center text-muted fw-medium"><i data-feather="phone" class="fea icon-sm me-2"></i> Telefon:</span>
+                                <span class="fw-medium">@Model.PhoneNumber</span>
+                            </div>
+                            @if (Model.Salary != null)
+                            {
+                                <div class="d-flex align-items-center justify-content-between mt-3">
+                                    <span class="d-inline-flex align-items-center text-muted fw-medium">
+                                        <span class="me-2">₺</span>
+                                        Ücret:
+                                    </span>
+                                    <span class="fw-medium">@Model.Salary</span>
+                                </div>
+                            }
+
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <span class="text-muted fw-medium">Sosyal:</span>
+                                <ul class="list-unstyled social-icon text-sm-end mb-0">
+                                    <li class="list-inline-item"><a href="@Model.Linkedin" target="_blank" class="rounded"><i data-feather="linkedin" class="fea icon-sm align-middle" title="Linkedin"></i></a></li>
+                                    <li class="list-inline-item"><a href="@Model.Facebook" target="_blank" class="rounded"><i data-feather="facebook" class="fea icon-sm align-middle" title="Facebook"></i></a></li>
+                                    <li class="list-inline-item"><a href="@Model.Instagram" target="_blank" class="rounded"><i data-feather="instagram" class="fea icon-sm align-middle" title="Instagram"></i></a></li>
+                                    <li class="list-inline-item"><a href="@Model.Twitter" target="_blank" class="rounded"><i data-feather="twitter" class="fea icon-sm align-middle" title="Twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+    </section><!--end section-->
+    <!-- End -->
+</body>
+</html>

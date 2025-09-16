@@ -1,0 +1,7 @@
+@media (max-width: 768px) {
+    #topnav {
+        width: 100%;
+        max-width: 430px; /* Geniþlik sýnýrlamasý */
+        max-height: 74px; /* Yükseklik sýnýrlamasý */
+    }
+}

@@ -1,0 +1,354 @@
+﻿@model babiltr.Models.Jobs.CreateJobViewModel
+<!doctype html>
+@{
+    var id = User.Claims.FirstOrDefault(c => c.Type == "UserId")?.Value;
+}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BabilTR İlan Oluşturma Sayfası</title>
+    <meta name="description" content="Job Listing Bootstrap 5 Template" />
+    <meta name="keywords" content="Onepage, creative, modern, bootstrap 5, multipurpose, clean, Job Listing, Job Board, Job, Job Portal" />
+    <meta name="author" content="Shreethemes" />
+    <meta name="website" content="https://shreethemes.in" />
+    <meta name="email" content="support@shreethemes.in" />
+    <meta name="version" content="1.0.0" />
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <!-- Hero Start -->
+    <section class="bg-half-170 d-table w-100" style="background: url('/thema/jobnova_v1.0.1/html/images/hero/bg.jpg');">
+        <div class="bg-overlay bg-gradient-overlay"></div>
+        <!-- Yıldız Kayma Animasyonu -->
+        <div class="shooting-stars">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="container">
+            <div class="row mt-5 justify-content-center">
+                <div class="col-12">
+                    <div class="title-heading text-center">
+                        <h5 class="heading fw-semibold mb-0 sub-heading text-white title-dark">İş İlanı Oluştur</h5>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+    </section><!--end section-->
+    <div class="position-relative">
+        <div class="shape overflow-hidden text-white">
+            <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <!-- Job apply form Start -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-8">
+                    <div class="card border-0">
+                        <form id="JobForm" class="rounded shadow p-4" action="/Jobs/JobCreate" method="post" enctype="multipart/form-data">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+
+                            <div class="row">
+                                <h5 class="mb-3">İş Detayları :</h5>
+                                <input type="hidden" value="@id">
+
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">İş Başlığı :</label>
+                                        <input asp-for="Title" name="Title" class="form-control" placeholder="Başlık :">
+                                    </div>
+                                </div>
+
+                                <div class="row align-items-center">
+                                    <!-- Original Dil -->
+                                    <div class="col-md-5">
+                                        <div class="mb-3">
+                                            <label class="form-label fw-semibold">Orijinal Dil:</label>
+                                            <input asp-for="OriginalLanguage" name="OriginalLanguage" type="text" class="form-control" placeholder="Örn: İngilizce">
+                                        </div>
+                                    </div>
+
+                                    <!-- Ok İkonu -->
+                                    <div class="col-md-1 text-center">
+                                        <i class="bi bi-arrow-repeat" style="font-size: 25px;"></i>
+                                    </div>
+
+                                    <!-- Çevrilecek Dil -->
+                                    <div class="col-md-5">
+                                        <div class="mb-3">
+                                            <label class="form-label fw-semibold">Çevrilecek Dil:</label>
+                                            <input asp-for="TargetLanguage" name="TargetLanguage" type="text" class="form-control" placeholder="Örn: Almanca">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">Açıklama :</label>
+                                        <textarea asp-for="Description" rows="4" name="Description" class="form-control" placeholder="İşi Tanımla :"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">İş Türü:</label>
+                                        <select asp-for="JobType" name="JobType" class="form-control form-select">
+                                            <option value="">Seçiniz</option>
+                                            <option value="TR">Çeviri</option>
+                                            <option value="LO">Yerelleştirme</option>
+                                            <option value="ED">Düzenleme</option>
+                                            <option value="PR">Son Okuma</option>
+                                            <option value="RE">Redaksiyon</option>
+                                            <option value="CW">İçerik Üretimi</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">Kategori:</label>
+                                        <select asp-for="JobCategory" name="JobCategory" class="form-control form-select">
+                                            <option value="">Seçiniz</option>
+                                            <option value="PB">Proje Bazlı</option>
+                                            <option value="OT">Tek Seferlik</option>
+                                            <option value="LT">Uzun Süreli</option>
+                                            <option value="PT">Yarı Zamanlı</option>
+                                            <option value="OTR">Diğer</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <div class="mb-3 mt-2">
+                                        <label class="form-label fw-semibold">Ücret:</label>
+                                        <input asp-for="Price" name="Price" type="number" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="mb-3 mt-2">
+                                        <label class="form-label fw-semibold">İş Son Teslim Tarihi:</label>
+                                        <input asp-for="DeliveryDate" name="DeliveryDate" type="date" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <h5 class="mb-3">Beceri & Deneyim:</h5>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">Beceriler:</label>
+                                        <input asp-for="Skills" name="Skills" type="text" class="form-control" placeholder="Her beceriden sonra ',' ekleyiniz!">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">Deneyim:</label>
+                                        <input asp-for="Experience" name="Experience" type="number" class="form-control" placeholder="Deneyimi Yıl Cinsinden Yazınız">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <h5 class="mb-3">Adres Bilgileri:</h5>
+
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label class="form-label fw-semibold">Ülke:</label>
+                                        <select asp-for="Country" id="Country" name="Country" class="form-control form-select" onchange="toggleStateInput()">
+                                            <option value="">Seçiniz</option>
+                                            <option value="TUR">Türkiye</option>
+                                            <option value="USA">Amerika Birleşik Devletleri</option>
+                                            <option value="CAD">Kanada</option>
+                                            <option value="CHINA">Çin</option>
+                                            <option value="UK">Birleşik Krallık</option>
+                                            <option value="GER">Almanya</option>
+                                            <option value="FRA">Fransa</option>
+                                            <option value="ITA">İtalya</option>
+                                            <option value="JPN">Japonya</option>
+                                            <option value="AUS">Avustralya</option>
+                                            <option value="BRA">Brezilya</option>
+                                            <option value="IND">Hindistan</option>
+                                            <option value="MEX">Meksika</option>
+                                            <option value="RUS">Rusya</option>
+                                            <option value="ESP">İspanya</option>
+                                            <option value="ARG">Arjantin</option>
+                                            <option value="KOR">Güney Kore</option>
+                                            <option value="SAU">Suudi Arabistan</option>
+                                            <option value="SAF">Güney Afrika</option>
+                                            <option value="NED">Hollanda</option>
+                                            <option value="SWE">İsveç</option>
+                                            <option value="NOR">Norveç</option>
+                                            <option value="SWI">İsviçre</option>
+                                            <option value="DEN">Danimarka</option>
+                                            <option value="BEL">Belçika</option>
+                                            <option value="AUT">Avusturya</option>
+                                            <option value="NZ">Yeni Zelanda</option>
+                                            <option value="POL">Polonya</option>
+                                            <option value="EGY">Mısır</option>
+                                            <option value="ISR">İsrail</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6" id="stateContainer">
+                                  
+                                    <div id="citySelect" class="mb-3" style="display: none;">
+                                        <label class="form-label fw-semibold">Şehir:</label>
+                                        <select asp-for="City" name="City" class="form-control form-select">
+                                            <option value="" disabled selected>Seçiniz</option>
+                                            <option value="AD">Adana</option>
+                                            <option value="ADI">Adıyaman</option>
+                                            <option value="AFY">Afyonkarahisar</option>
+                                            <option value="AGR">Ağrı</option>
+                                            <option value="AKS">Aksaray</option>
+                                            <option value="AMA">Amasya</option>
+                                            <option value="ANK">Ankara</option>
+                                            <option value="ANT">Antalya</option>
+                                            <option value="ART">Artvin</option>
+                                            <option value="AYD">Aydın</option>
+                                            <option value="BAL">Balıkesir</option>
+                                            <option value="BAR">Bartın</option>
+                                            <option value="BAT">Batman</option>
+                                            <option value="BAY">Bayburt</option>
+                                            <option value="BIL">Bilecik</option>
+                                            <option value="BIN">Bingöl</option>
+                                            <option value="BIT">Bitlis</option>
+                                            <option value="BOL">Bolu</option>
+                                            <option value="BRD">Burdur</option>
+                                            <option value="BRS">Bursa</option>
+                                            <option value="CAN">Çanakkale</option>
+                                            <option value="CKR">Çankırı</option>
+                                            <option value="COR">Çorum</option>
+                                            <option value="DEN">Denizli</option>
+                                            <option value="DIY">Diyarbakır</option>
+                                            <option value="DUZ">Düzce</option>
+                                            <option value="EDI">Edirne</option>
+                                            <option value="ELA">Elazığ</option>
+                                            <option value="ERZ">Erzincan</option>
+                                            <option value="ERU">Erzurum</option>
+                                            <option value="ESK">Eskişehir</option>
+                                            <option value="GAZ">Gaziantep</option>
+                                            <option value="GIR">Giresun</option>
+                                            <option value="GMS">Gümüşhane</option>
+                                            <option value="HAK">Hakkâri</option>
+                                            <option value="HTY">Hatay</option>
+                                            <option value="IGD">Iğdır</option>
+                                            <option value="ISP">Isparta</option>
+                                            <option value="IST">İstanbul</option>
+                                            <option value="IZM">İzmir</option>
+                                            <option value="KAH">Kahramanmaraş</option>
+                                            <option value="KRB">Karabük</option>
+                                            <option value="KRM">Karaman</option>
+                                            <option value="KRS">Kars</option>
+                                            <option value="KAS">Kastamonu</option>
+                                            <option value="KAY">Kayseri</option>
+                                            <option value="KIL">Kilis</option>
+                                            <option value="KIR">Kırıkkale</option>
+                                            <option value="KIC">Kırklareli</option>
+                                            <option value="KRH">Kırşehir</option>
+                                            <option value="KOC">Kocaeli</option>
+                                            <option value="KON">Konya</option>
+                                            <option value="KUT">Kütahya</option>
+                                            <option value="MAL">Malatya</option>
+                                            <option value="MAN">Manisa</option>
+                                            <option value="MAR">Mardin</option>
+                                            <option value="MER">Mersin</option>
+                                            <option value="MUG">Muğla</option>
+                                            <option value="MUS">Muş</option>
+                                            <option value="NEV">Nevşehir</option>
+                                            <option value="NIG">Niğde</option>
+                                            <option value="ORD">Ordu</option>
+                                            <option value="OSM">Osmaniye</option>
+                                            <option value="RIZ">Rize</option>
+                                            <option value="SAK">Sakarya</option>
+                                            <option value="SAM">Samsun</option>
+                                            <option value="SAN">Şanlıurfa</option>
+                                            <option value="SIR">Siirt</option>
+                                            <option value="SIN">Sinop</option>
+                                            <option value="SIV">Sivas</option>
+                                            <option value="SRT">Şırnak</option>
+                                            <option value="TEK">Tekirdağ</option>
+                                            <option value="TOK">Tokat</option>
+                                            <option value="TRA">Trabzon</option>
+                                            <option value="TUN">Tunceli</option>
+                                            <option value="USK">Uşak</option>
+                                            <option value="VAN">Van</option>
+                                            <option value="YAL">Yalova</option>
+                                            <option value="YOZ">Yozgat</option>
+                                            <option value="ZON">Zonguldak</option>
+                                        </select>
+                                    </div>
+                                    <div id="cityInput" class="mb-3" style="display: none;">
+                                        <label class="form-label fw-semibold">Şehir:</label>
+                                        <input type="text" asp-for="City" name="City" class="form-control" placeholder="Şehir giriniz">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h5 class="mb-3">Proje Dosyası:</h5>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Çevrilecek Dosyayı Yükleyiniz:</label>
+                                    <input type="file" id="fileInput" name="wordFile" accept=".docx" required />
+                                    <div class="form-text">Lütfen yalnızca .docx(word) formatında dosya yükleyin.</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="submit" id="submit2" class="submitBnt btn btn-primary" value="Yayınla">
+                                </div>
+                            </div>
+                        </form>
+                    </div><!--end custom-form-->
+                </div>
+            </div>
+        </div><!--end container-->
+    </section><!--end section-->
+    <!-- Job apply form End -->
+    <!-- Back to top -->
+    <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top rounded fs-5"><i data-feather="arrow-up" class="fea icon-sm align-middle"></i></a>
+    <!-- Back to top -->
+</body>
+</html>
+<script>
+    function toggleStateInput() {
+        const countrySelect = document.getElementById("Country");
+        const cityInput = document.getElementById("cityInput");
+        const citySelect = document.getElementById("citySelect");
+
+        if (countrySelect.value === "TUR") {
+            cityInput.style.display = "none"; 
+            citySelect.style.display = "block";
+        } else {
+            cityInput.style.display = "block";
+            citySelect.style.display = "none";
+        }
+    }
+
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const stars = document.querySelectorAll(".shooting-stars span");
+        stars.forEach(star => {
+            star.style.setProperty('--random-x', Math.random());
+            star.style.setProperty('--random-y', Math.random());
+        });
+    });
+</script>

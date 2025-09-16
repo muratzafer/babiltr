@@ -1,0 +1,209 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = babiltr
+build_property.RootNamespace = babiltr
+build_property.ProjectDir = /Users/muratzafer/Downloads/BabilTR-master/babiltr/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/muratzafer/Downloads/BabilTR-master/babiltr
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Gb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Account/RegisterAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3RlckFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Admin/AllApplications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQWxsQXBwbGljYXRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Admin/AllJobs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQWxsSm9icy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Admin/AllMessages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQWxsTWVzc2FnZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Admin/AllUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQWxsVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Admin/Commission.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQ29tbWlzc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Applications/JobApplications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwbGljYXRpb25zL0pvYkFwcGxpY2F0aW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Applications/JobApply.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwbGljYXRpb25zL0pvYkFwcGx5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Applications/UserApplications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwbGljYXRpb25zL1VzZXJBcHBsaWNhdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Blog/AllBlogs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmxvZy9BbGxCbG9ncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Blog/BlogAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmxvZy9CbG9nQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Blog/BlogDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmxvZy9CbG9nRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Home/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9FcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Home/MainPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9NYWluUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Info/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5mby9BYm91dFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Info/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5mby9Db250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Info/Pricing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5mby9QcmljaW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Info/PrivacyPolicy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5mby9Qcml2YWN5UG9saWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Info/SSS.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5mby9TU1MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Info/TermsOfService.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW5mby9UZXJtc09mU2VydmljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Jobs/CreateInternshipJob.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9icy9DcmVhdGVJbnRlcm5zaGlwSm9iLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Jobs/GetJobs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9icy9HZXRKb2JzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Jobs/JobCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9icy9Kb2JDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Jobs/JobDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9icy9Kb2JEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Jobs/MyCreatedJobs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9icy9NeUNyZWF0ZWRKb2JzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Jobs/MyProjects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9icy9NeVByb2plY3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Message/Chat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVzc2FnZS9DaGF0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Message/ChatUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVzc2FnZS9DaGF0VXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Payment/Failure.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF5bWVudC9GYWlsdXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Payment/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF5bWVudC9TdWNjZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Shared/adminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL2FkbWluTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Shared/_LayoutDark.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXREYXJrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Translation/ShowSegments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNsYXRpb24vU2hvd1NlZ21lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/Translation/Translation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNsYXRpb24vVHJhbnNsYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/User/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9FZGl0VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/User/GetAllTranslatorUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9HZXRBbGxUcmFuc2xhdG9yVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/User/GetUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9HZXRVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/muratzafer/Downloads/BabilTR-master/babiltr/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

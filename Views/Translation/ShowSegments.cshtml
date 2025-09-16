@@ -1,0 +1,98 @@
+﻿@{
+    ViewData["Title"] = "ShowSegments";
+    Layout = "~/Views/Shared/_LayoutDark.cshtml";
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BabilTR BabilCAT İşverenler Sayfası</title>
+    <meta name="description" content="Job Listing Bootstrap 5 Template" />
+    <meta name="keywords" content="Onepage, creative, modern, bootstrap 5, multipurpose, clean, Job Listing, Job Board, Job, Job Portal" />
+    <meta name="author" content="Shreethemes" />
+    <meta name="website" content="https://shreethemes.in" />
+    <meta name="email" content="support@shreethemes.in" />
+    <meta name="version" content="1.0.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link href="~/css/showsegments.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="info-container">
+            <div class="header-container">
+                <strong>İş Başlığı:</strong> &nbsp; @ViewBag.JobTitle
+            </div>
+            <div class="language-container">
+                <strong>Kaynak Dil:</strong> @ViewBag.OriginalLanguage
+                <i class="fas fa-arrow-right"></i>
+                <strong>Hedef Dil:</strong> @ViewBag.TargetLanguage
+            </div>
+            <div class="progress-container">
+                <strong>İlerleme:</strong>
+
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                         style="width: @ViewBag.CompletionPercentage%;" aria-valuenow="@ViewBag.CompletionPercentage"
+                         aria-valuemin="0" aria-valuemax="100">
+                        @ViewBag.CompletionPercentage%
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tablecontainer">
+            <table id="segmentsTable" class="display table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Kaynak Metin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- The rows will be filled dynamically from the DataTable script -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top rounded fs-5">
+        <i data-feather="arrow-up" class="fea icon-sm align-middle"></i>
+    </a>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#segmentsTable').DataTable({
+                "ajax": {
+                    "url": "/Translation/ShowSegmentsTable?id=@ViewBag.JobId",
+                    "type": "GET",
+                    "datatype": "json"
+                },
+                "columns": [
+                    {
+                        "data": null,  // İlk sütun numara için
+                        "render": function (data, type, row, meta) {
+                            return meta.row + 1;  // Satır numarasını verir
+                        },
+                        "className": "text-center",
+                        "width": "8%"  // "No" sütununun genişliği
+                    },
+                    {
+                        "data": "originalSentence"  // Segmentlerin tam cümlesi
+                    }
+                ],
+                "language": {
+                    "url": '//cdn.datatables.net/plug-ins/2.1.8/i18n/tr.json',
+                },
+                "responsive": true 
+            });
+        });
+    </script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+</body>
+</html>

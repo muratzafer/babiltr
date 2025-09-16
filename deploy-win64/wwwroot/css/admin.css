@@ -1,0 +1,70 @@
+/* Menü Düðmesi (Mobil) */
+.menu-extras {
+    position: absolute;
+    top: 20px; /* Üstten biraz boþluk */
+    right: 20px; /* Sað tarafta olacak þekilde konumlandýrma */
+    width: 40px; /* Düðme boyutu */
+    height: 30px; /* Düðme boyutu */
+    background-color: #000;
+    z-index: 1000;
+    cursor: pointer; /* Týklanabilirlik */
+}
+
+    /* Menü çubuklarý */
+    .menu-extras .lines span {
+        display: block;
+        height: 2px;
+        background: #fff;
+        padding: 2px;
+        margin: 4px auto;
+        width: 25px;
+    }
+
+/* Mobil Menü */
+.mobile-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 250px;
+    background: #fff; /* Beyaz arka plan */
+    color: #212529; /* Siyah metin rengi */
+    z-index: 999;
+    display: none; /* Baþlangýçta gizli */
+    flex-direction: column;
+    padding: 10px 0; /* Üst ve alt boþluk */
+    border-radius: 5px; /* Köþe yuvarlama */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+}
+
+    /* Menü listesinin düzeni */
+    .mobile-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Menü öðeleri */
+    .mobile-menu li {
+        padding: 15px 20px;
+        text-align: left;
+        transition: background-color 0.3s ease; /* Hover efekti */
+    }
+
+    /* Menü baðlantýlarý */
+    .mobile-menu a {
+        color: #212529; /* Baðlantý rengi */
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Menü elemanlarý üzerine gelindiðinde renk deðiþimi */
+    .mobile-menu li:hover {
+        background-color: #f1f1f1; /* Hover ile arka plan rengi deðiþimi */
+    }
+
+/* Sadece mobildeki menü düðmesini göstermek */
+@media (max-width: 992px) {
+    .menu-extras {
+        display: block; /* Menü düðmesini sað üstte göster */
+    }
+}

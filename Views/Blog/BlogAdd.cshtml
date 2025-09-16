@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewData["Title"] = "BlogAdd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model babiltr.EntityLayer.Blog
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BabilTR Tüm Çevirmenlerin Görüntülendiği Sayfa</title>
+    <meta name="description" content="Job Listing Bootstrap 5 Template" />
+    <meta name="keywords" content="Onepage, creative, modern, bootstrap 5, multipurpose, clean, Job Listing, Job Board, Job, Job Portal" />
+    <meta name="author" content="Shreethemes" />
+    <meta name="website" content="https://shreethemes.in" />
+    <meta name="email" content="support@shreethemes.in" />
+    <meta name="version" content="1.0.0" />
+</head>
+<body>
+    <section class="bg-half-170 d-table w-100" style="background: url(/thema/jobnova_v1.0.1/html/images/hero/bg.jpg);">
+        <div class="bg-overlay bg-gradient-overlay"></div>
+        <div class="container">
+            <div class="row mt-5 justify-content-center">
+                <div class="col-12">
+                    <div class="title-heading text-center">
+                        <h5 class="heading fw-semibold mb-0 sub-heading text-white title-dark">Yeni Blog Ekle</h5>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+    </section><!--end section-->
+    <div class="position-relative">
+        <div class="shape overflow-hidden text-white">
+            <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form asp-action="BlogAdd" method="post" enctype="multipart/form-data">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+
+                    <div class="mb-3">
+                        <label asp-for="Title" class="form-label">Başlık</label>
+                        <input type="text" asp-for="Title" class="form-control form-control-sm" placeholder="Başlık girin" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Content" class="form-label">İçerik</label>
+                        <textarea asp-for="Content" class="form-control" rows="5" placeholder="İçerik girin"></textarea>
+                        <small class="form-text text-muted">Paragraflar arasında boşluk bırakamamaya dikkat ediniz.</small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Okuma Süresi (dakika)</label>
+                        <input asp-for="ReadTime" type="number" class="form-control form-control-sm" placeholder="Örneğin: 5" id="readTime" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Tags" class="form-label">Etiketler</label>
+                        <input type="text" asp-for="Tags" class="form-control form-control-sm" placeholder="Örneğin: Sosyoloji, Psikoloji" />
+                        <small class="form-text text-muted">Her etiketten sonra "," koymayı unutmayınız.</small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Blog Görseli</label>
+                        <input type="file" name="blogImage" class="form-control form-control-sm" required accept=".jpg, .jpeg, .png, .gif" />
+                        <small class="form-text text-muted">Görsel boyutunun 760x440 olmasına dikkat ediniz.</small>
+                    </div>
+
+                    <div class="d-grid gap-2 mb-3">
+                        <button type="submit" class="btn btn-primary btn-block">Kaydet</button>
+                        <a href="@Url.Action("MainPage", "Home")" class="btn btn-secondary btn-block">Geri Dön</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('form').onsubmit = function (event) {
+            var readTimeInput = document.getElementById("readTime");
+
+            if (readTimeInput.value === "") {
+                readTimeInput.value = "0";
+            }
+        };
+    </script>
+
+</body>
+</html>
+
+
