@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("babiltr")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4221bb8dce58046261509c4350a937967d95bc14")]
 [assembly: System.Reflection.AssemblyProductAttribute("babiltr")]
 [assembly: System.Reflection.AssemblyTitleAttribute("babiltr")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
