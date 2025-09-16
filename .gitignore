@@ -1,2 +1,35 @@
-publish-win64/
-deploy-win64.zip
+# Build çıktıları
+bin/
+obj/
+out/
+publish/
+
+# Derlenmiş dosyalar
+*.exe
+*.dll
+*.pdb
+
+# Paketler
+*.nupkg
+*.snupkg
+
+# Kullanıcı ayarları
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# IDE / Editör klasörleri
+.vscode/
+.idea/
+*.swp
+
+# Log dosyaları
+*.log
+
+# Arşiv dosyaları
+*.zip
+*.tar.gz
+
+# macOS sistem dosyaları
+.DS_Store
